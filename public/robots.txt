@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://didrikssondigital.vercel.app/sitemap.xml
