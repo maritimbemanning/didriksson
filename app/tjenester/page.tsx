@@ -45,13 +45,13 @@ export default function TjenesterPage(){
   };
 
   return (
-    <div className="space-y-10">
+    <main className="space-y-10">
       <header className="space-y-2">
         <h1 className="text-3xl font-semibold tracking-tight">Tjenester & Priser</h1>
         <p className="text-neutral-600 max-w-2xl">Transparente pakker med fastpris. Du vet hva du får og hva det koster før vi starter.</p>
       </header>
 
-      <div className="grid md:grid-cols-3 gap-4">
+      <section className="grid md:grid-cols-3 gap-4" aria-label="Prispakker">
         {packs.map(p => (
           <div key={p.t} className={`border ${p.popular ? 'border-ocean ring-2 ring-ocean/20' : 'border-neutral-200'} rounded-2xl p-6 flex flex-col relative`}>
             {p.popular && (
@@ -112,10 +112,10 @@ export default function TjenesterPage(){
             </a>
           </div>
         ))}
-      </div>
+      </section>
 
       {/* Add-ons */}
-      <div className="border border-neutral-200 rounded-2xl p-6 bg-neutral-50">
+      <aside className="border border-neutral-200 rounded-2xl p-6 bg-neutral-50">
         <h3 className="text-lg font-semibold mb-3">Tillegg & Vedlikehold</h3>
         <div className="grid md:grid-cols-2 gap-4 text-sm">
           <div>
@@ -135,12 +135,13 @@ export default function TjenesterPage(){
             <p className="text-neutral-600">Pris etter vurdering (typisk 5 000–15 000 kr)</p>
           </div>
         </div>
-      </div>
+      </aside>
 
-      <div className="text-center text-sm text-neutral-600">
+      <footer className="text-center text-sm text-neutral-600">
         <p>Alle priser er eks. mva. Har du allerede en spesifikasjon? <a href="/kontakt" className="underline hover:text-ocean">Ta kontakt</a> for et skreddersydd tilbud.</p>
-      </div>
-    </div>
+        <p className="mt-3">Se <a href="/case" className="underline hover:text-ocean">tidligere prosjekter</a> og resultater fra våre kunder.</p>
+      </footer>
+    </main>
   );
 }
 

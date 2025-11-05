@@ -32,7 +32,7 @@ export default function KontaktForm() {
   }, [navn, epost, selskap, frist, melding, pakke]);
 
   return (
-    <div className="grid md:grid-cols-2 gap-8">
+    <main className="grid md:grid-cols-2 gap-8">
       <section className="space-y-3">
         <h1 className="text-3xl font-semibold tracking-tight">Kontakt</h1>
         <p className="text-neutral-600">Kort om mål og frist er nok til å starte. Jeg svarer normalt innen 1 arbeidsdag.</p>
@@ -41,6 +41,10 @@ export default function KontaktForm() {
           <p><strong>Telefon:</strong> <a className="underline" href="tel:+4792328850">+47 923 28 850</a></p>
           <p className="text-sm text-neutral-600 mt-2">Adresse: Ervikveien 110</p>
         </div>
+        <p className="text-sm text-neutral-600 mt-4">
+          Se våre <a href="/tjenester" className="underline hover:text-ocean">tjenester og priser</a> eller 
+          sjekk <a href="/case" className="underline hover:text-ocean">tidligere prosjekter</a>.
+        </p>
       </section>
 
       <form onSubmit={(e)=>{e.preventDefault(); window.location.href = mailtoHref;}} className="border border-neutral-200 rounded-2xl p-5 space-y-4">
@@ -72,6 +76,6 @@ export default function KontaktForm() {
           <a className="text-sm text-neutral-600 hover:text-ocean underline" href={mailtoHref}>eller åpne i e-postklient</a>
         </div>
       </form>
-    </div>
+    </main>
   );
 }

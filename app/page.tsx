@@ -10,27 +10,27 @@ import CTA_A from "../components/CTA_A";
 
 export default function Home() {
   return (
-    <div className="mx-auto max-w-4xl px-6 py-16 space-y-16">
+    <main className="mx-auto max-w-4xl px-6 py-16 space-y-16">
       <HeroA />
 
       <WhyChooseUs />
 
       <TrustSection />
 
-      <section id="tjenester" className="space-y-6">
+      <article id="tjenester" className="space-y-6">
         <AboutA />
         <ValueA />
-      </section>
+      </article>
 
       <ProcessA />
 
-      <section id="case">
+      <article id="case">
         <CaseA />
-      </section>
+      </article>
 
       <FAQ />
 
       <CTA_A />
-    </div>
+    </main>
   );
 }

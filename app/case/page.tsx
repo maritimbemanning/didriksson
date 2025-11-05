@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Case og Resultater — Tidligere prosjekter",
   description: "Se hvordan Bluecrew fikk 3× flere kunder og 217% økning i konvertering. Reelle resultater fra små og mellomstore bedrifter.",
+  alternates: {
+    canonical: "/case",
+  },
   openGraph: {
     title: "Case og Resultater — Didriksson Digital",
     description: "Konkrete resultater: 3× flere kunder, 85% mindre arbeid, 5 timer spart per uke.",
@@ -53,7 +56,7 @@ export default function CasePage() {
   ];
 
   return (
-    <div className="space-y-12">
+    <main className="space-y-12">
       <header className="space-y-2">
         <h1 className="text-3xl font-semibold tracking-tight">Tidligere prosjekter</h1>
         <p className="text-neutral-600 max-w-2xl">
@@ -114,10 +117,11 @@ export default function CasePage() {
       ))}
 
       {/* CTA */}
-      <div className="text-center border border-neutral-200 rounded-2xl p-8">
+      <aside className="text-center border border-neutral-200 rounded-2xl p-8">
         <h2 className="text-xl font-semibold mb-2">Ønsker lignende resultater for din bedrift?</h2>
         <p className="text-neutral-600 mb-4">
-          Ta kontakt for en uforpliktende samtale. Jeg gir deg en ærlig vurdering av hva som er mulig.
+          Ta kontakt for en uforpliktende samtale. Jeg gir deg en ærlig vurdering av hva som er mulig. 
+          Se også våre <a href="/tjenester" className="underline hover:text-ocean">tjenester og priser</a>.
         </p>
         <a
           href="/kontakt"
@@ -125,8 +129,8 @@ export default function CasePage() {
         >
           Start en samtale
         </a>
-      </div>
-    </div>
+      </aside>
+    </main>
   );
 }
 

@@ -4,6 +4,9 @@ import KontaktForm from "../../components/KontaktForm";
 export const metadata: Metadata = {
   title: "Kontakt oss — Ring 923 28 850",
   description: "Ta kontakt for gratis konsultasjon. Ring 923 28 850, book møte eller send e-post. Svar innen 1 arbeidsdag. Ervikveien 110.",
+  alternates: {
+    canonical: "/kontakt",
+  },
   openGraph: {
     title: "Kontakt — Didriksson Digital",
     description: "Ring 923 28 850 eller book gratis møte. Svar innen 1 arbeidsdag.",
