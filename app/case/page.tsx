@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Tidligere prosjekter — Didriksson Digital",
-  description: "Se hvordan små og mellomstore bedrifter har fått mer kunder, spart tid og økt omsetning med enkle, effektive løsninger.",
+  title: "Case og Resultater — Tidligere prosjekter",
+  description: "Se hvordan Bluecrew fikk 3× flere kunder og 217% økning i konvertering. Reelle resultater fra små og mellomstore bedrifter.",
   openGraph: {
-    title: "Tidligere prosjekter — Didriksson Digital",
-    description: "Konkrete resultater fra bedrifter som har fått mer kunder og spart tid.",
+    title: "Case og Resultater — Didriksson Digital",
+    description: "Konkrete resultater: 3× flere kunder, 85% mindre arbeid, 5 timer spart per uke.",
     url: "/case",
     images: [
       {

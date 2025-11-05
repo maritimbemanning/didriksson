@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import KontaktForm from "../../components/KontaktForm";
 
 export const metadata: Metadata = {
-  title: "Kontakt — Didriksson Digital",
-  description: "Ta kontakt for et uforpliktende tilbud. E-post: isak@didriksson.no, Telefon: +47 923 28 850. Jeg svarer normalt innen 1 arbeidsdag.",
+  title: "Kontakt oss — Ring 923 28 850",
+  description: "Ta kontakt for gratis konsultasjon. Ring 923 28 850, book møte eller send e-post. Svar innen 1 arbeidsdag. Ervikveien 110.",
   openGraph: {
     title: "Kontakt — Didriksson Digital",
-    description: "Ta kontakt for et uforpliktende tilbud. Jeg svarer normalt innen 1 arbeidsdag.",
+    description: "Ring 923 28 850 eller book gratis møte. Svar innen 1 arbeidsdag.",
     url: "/kontakt",
     images: [
       {

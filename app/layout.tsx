@@ -17,15 +17,15 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Didriksson Digital — Programvareutvikling og nettsider",
+    default: "Didriksson Digital — Nettside og webapp fra 15 000 kr",
     template: "%s • Didriksson Digital",
   },
   description:
-    "Ryddig tech og rask leveranse. Jeg bygger raske nettsider og små webapper for bedrifter — klar plan, fastpris og publisering når du trenger det.",
+    "Rask levering på 7-14 dager. Fastpris fra 15 000 kr. Profesjonelle nettsider og webapper for små og mellomstore bedrifter i Norge.",
   keywords: ["Next.js utvikler", "TypeScript utvikler", "nettside utvikling Norge", "webapp utvikling", "fastpris nettside", "programvareutvikling Harstad", "React utvikler", "API integrasjon"],
   authors: [{ name: "Isak Didriksson" }],
   creator: "Isak Didriksson",
-  metadataBase: new URL("https://didrikssondigital.vercel.app"),
+  metadataBase: new URL("https://didriksson.no"),
   alternates: {
     canonical: "/",
   },
@@ -44,9 +44,9 @@ export const metadata: Metadata = {
     icon: "/icon.svg",
   },
   openGraph: {
-    title: "Didriksson Digital — Programvareutvikling og nettsider",
+    title: "Didriksson Digital — Nettside og webapp fra 15 000 kr",
     description:
-      "Ryddig tech og rask leveranse. Nettsider og webapper i Next.js/TypeScript for små og mellomstore bedrifter.",
+      "Rask levering på 7-14 dager. Fastpris fra 15 000 kr. Profesjonelle nettsider og webapper for små og mellomstore bedrifter.",
     url: "/",
     siteName: "Didriksson Digital",
     locale: "nb_NO",

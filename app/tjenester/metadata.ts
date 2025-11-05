@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Tjenester — Didriksson Digital",
-  description: "Fastpris-pakker for nettsider, webapper og integrasjoner. Next.js/TypeScript, 7-14 dagers leveranse. Nettside, Webapp light, og Integrasjon.",
+  title: "Tjenester og Priser — Fra 15 000 kr",
+  description: "Transparente fastpriser: Basis 15k, Standard 30k, Premium 60k. Leveringstid 5-21 dager. Se hva som er inkludert i hver pakke.",
   openGraph: {
-    title: "Tjenester — Didriksson Digital",
-    description: "Fastpris-pakker for nettsider, webapper og integrasjoner. 7-14 dagers leveranse.",
+    title: "Tjenester og Priser — Didriksson Digital",
+    description: "Fastpris-pakker fra 15 000 kr. Levering på 5-21 dager. Se hva som er inkludert.",
     url: "/tjenester",
     images: [
       {

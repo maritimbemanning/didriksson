@@ -4,9 +4,9 @@ export default function StructuredData() {
     "@type": "LocalBusiness",
     "name": "Didriksson Digital",
     "description": "Programvareutvikling og nettsider for små og mellomstore bedrifter. Fastpris, 7-14 dagers leveranse.",
-    "url": "https://didrikssondigital.vercel.app",
-    "logo": "https://didrikssondigital.vercel.app/icon.svg",
-    "image": "https://didrikssondigital.vercel.app/api/og",
+    "url": "https://didriksson.no",
+    "logo": "https://didriksson.no/icon.svg",
+    "image": "https://didriksson.no/api/og",
     "telephone": "+47-923-28-850",
     "email": "isak@didriksson.no",
     "address": {
