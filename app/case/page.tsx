@@ -98,12 +98,12 @@ export default function CasePage() {
 
           {/* Results */}
           <div className="bg-green-50 border border-green-200 rounded-xl p-5">
-            <h3 className="text-base font-semibold mb-3">Resultater</h3>
+            <h3 className="text-base font-semibold mb-3 text-green-900">Resultater</h3>
             <ul className="space-y-2">
               {c.results.map(r => (
-                <li key={r} className="flex items-start gap-2 text-base">
-                  <span className="text-green-600 mt-0.5">✓</span>
-                  <span className="text-neutral-800">{r}</span>
+                <li key={r} className="flex items-start gap-2 text-base text-green-950">
+                  <span className="text-green-600 font-bold mt-0.5">✓</span>
+                  <span>{r}</span>
                 </li>
               ))}
             </ul>
