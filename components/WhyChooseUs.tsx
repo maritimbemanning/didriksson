@@ -26,8 +26,8 @@ export default function WhyChooseUs() {
         {reasons.map(r => (
           <div key={r.title} className="text-center space-y-2">
             <div className="text-4xl">{r.icon}</div>
-            <h3 className="font-semibold">{r.title}</h3>
-            <p className="text-sm text-neutral-600 leading-relaxed">{r.desc}</p>
+            <h3 className="font-semibold text-base">{r.title}</h3>
+            <p className="text-base text-neutral-700 leading-relaxed">{r.desc}</p>
           </div>
         ))}
       </div>

@@ -29,21 +29,21 @@ export default function CaseA(){
             target='_blank' 
             rel='noopener noreferrer'
           >
-            <h3 className='font-semibold group-hover:text-ocean transition-colors'>{c.t}</h3>
-            <p className='text-sm text-neutral-600 mt-2'>{c.d}</p>
+            <h3 className='font-semibold text-base group-hover:text-ocean transition-colors'>{c.t}</h3>
+            <p className='text-base text-neutral-700 mt-2'>{c.d}</p>
             
             <div className='mt-4 pt-4 border-t border-neutral-100 space-y-2'>
-              <div className='flex items-center gap-2 text-sm'>
+              <div className='flex items-center gap-2 text-base'>
                 <span className='text-green-600'>✓</span>
-                <span className='font-medium'>{c.impact}</span>
+                <span className='font-medium text-neutral-800'>{c.impact}</span>
               </div>
-              <div className='flex items-center gap-2 text-sm text-neutral-600'>
+              <div className='flex items-center gap-2 text-base text-neutral-700'>
                 <span>⏱️</span>
                 <span>{c.time}</span>
               </div>
             </div>
             
-            <div className='flex items-center gap-2 text-sm text-ocean mt-3 group-hover:gap-3 transition-all'>
+            <div className='flex items-center gap-2 text-base text-ocean mt-3 group-hover:gap-3 transition-all font-medium'>
               <span>Se nettside</span>
               <span>→</span>
             </div>

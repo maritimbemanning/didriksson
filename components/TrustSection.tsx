@@ -29,8 +29,8 @@ export default function TrustSection() {
         {guarantees.map(g => (
           <div key={g.title} className="text-center">
             <div className="text-3xl mb-2">{g.icon}</div>
-            <h3 className="font-semibold text-sm mb-1">{g.title}</h3>
-            <p className="text-xs text-neutral-600 leading-relaxed">{g.desc}</p>
+            <h3 className="font-semibold text-base mb-2">{g.title}</h3>
+            <p className="text-sm text-neutral-700 leading-relaxed">{g.desc}</p>
           </div>
         ))}
       </div>

@@ -32,14 +32,14 @@ export default function ProcessA() {
         {steps.map((step, idx) => (
           <li key={idx} className='border border-neutral-200 rounded-2xl p-6 space-y-3'>
             <h3 className='font-semibold text-lg'>{step.title}</h3>
-            <div className='grid md:grid-cols-2 gap-4 text-sm'>
+            <div className='grid md:grid-cols-2 gap-4 text-base'>
               <div>
-                <p className='font-medium text-neutral-700 mb-1'>✓ Du:</p>
-                <p className='text-neutral-600'>{step.customer}</p>
+                <p className='font-medium text-neutral-800 mb-1'>✓ Du:</p>
+                <p className='text-neutral-700'>{step.customer}</p>
               </div>
               <div>
-                <p className='font-medium text-neutral-700 mb-1'>✓ Vi:</p>
-                <p className='text-neutral-600'>{step.we}</p>
+                <p className='font-medium text-neutral-800 mb-1'>✓ Vi:</p>
+                <p className='text-neutral-700'>{step.we}</p>
               </div>
             </div>
           </li>
