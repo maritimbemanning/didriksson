@@ -58,13 +58,13 @@ export default function FAQ() {
               onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
               className="w-full text-left px-5 py-4 flex items-center justify-between hover:bg-neutral-50 transition-colors"
             >
-              <span className="font-semibold text-sm">{faq.q}</span>
+              <span className="font-semibold text-base">{faq.q}</span>
               <span className={`text-ocean transition-transform ${openIndex === idx ? 'rotate-180' : ''}`}>
                 ▼
               </span>
             </button>
             {openIndex === idx && (
-              <div className="px-5 pb-4 text-sm text-neutral-600 leading-relaxed">
+              <div className="px-5 pb-4 pt-2 text-base text-neutral-700 leading-relaxed">
                 {faq.a}
               </div>
             )}

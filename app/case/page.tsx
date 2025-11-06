@@ -69,48 +69,48 @@ export default function CasePage() {
           {/* Header */}
           <div className="flex items-start justify-between gap-4">
             <div>
-              <h2 className="text-xl font-semibold">{c.title}</h2>
-              <p className="text-sm text-neutral-600 mt-1">{c.industry} · {c.size}</p>
+              <h2 className="text-2xl font-semibold">{c.title}</h2>
+              <p className="text-base text-neutral-600 mt-2">{c.industry} · {c.size}</p>
             </div>
             <a
               href={c.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-ocean hover:underline whitespace-nowrap"
+              className="text-base text-ocean hover:underline whitespace-nowrap font-medium"
             >
               Besøk →
             </a>
           </div>
 
-          <p className="text-neutral-600">{c.description}</p>
+          <p className="text-base text-neutral-700 leading-relaxed">{c.description}</p>
 
           {/* Problem & Solution */}
-          <div className="space-y-3">
+          <div className="space-y-4">
             <div>
-              <h3 className="text-sm font-semibold mb-1">Situasjonen før</h3>
-              <p className="text-sm text-neutral-600 leading-relaxed">{c.problem}</p>
+              <h3 className="text-base font-semibold mb-2">Situasjonen før</h3>
+              <p className="text-base text-neutral-700 leading-relaxed">{c.problem}</p>
             </div>
             <div>
-              <h3 className="text-sm font-semibold mb-1">Hva vi gjorde</h3>
-              <p className="text-sm text-neutral-600 leading-relaxed">{c.solution}</p>
+              <h3 className="text-base font-semibold mb-2">Hva vi gjorde</h3>
+              <p className="text-base text-neutral-700 leading-relaxed">{c.solution}</p>
             </div>
           </div>
 
           {/* Results */}
-          <div className="bg-green-50 border border-green-200 rounded-xl p-4">
-            <h3 className="text-sm font-semibold mb-3">Resultater</h3>
+          <div className="bg-green-50 border border-green-200 rounded-xl p-5">
+            <h3 className="text-base font-semibold mb-3">Resultater</h3>
             <ul className="space-y-2">
               {c.results.map(r => (
-                <li key={r} className="flex items-start gap-2 text-sm">
+                <li key={r} className="flex items-start gap-2 text-base">
                   <span className="text-green-600 mt-0.5">✓</span>
-                  <span>{r}</span>
+                  <span className="text-neutral-800">{r}</span>
                 </li>
               ))}
             </ul>
           </div>
 
           {/* Timeline */}
-          <p className="text-sm text-neutral-600">
+          <p className="text-base text-neutral-700">
             <span className="font-semibold">Tidsbruk:</span> {c.timeline}
           </p>
         </article>
