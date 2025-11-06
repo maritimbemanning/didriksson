@@ -16,14 +16,7 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --ocean: #22d3ee; /* cyan-400 for dark mode */
-    --ocean-dark: #06b6d4;
-  }
-}
+/* Dark mode disabled - design is light mode only */
 
 body {
   background: var(--background);
