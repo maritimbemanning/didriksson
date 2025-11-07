@@ -30,7 +30,7 @@ export default function TrustSection() {
           <div key={g.title} className="text-center bg-white/5 backdrop-blur-md rounded-2xl p-4 hover:bg-white/10 transition-all hover:shadow-lg hover:shadow-ocean/20 border border-white/10">
             <div className="text-4xl mb-3">{g.icon}</div>
             <h3 className="font-bold text-base mb-2 text-white">{g.title}</h3>
-            <p className="text-sm text-neutral-400 leading-relaxed">{g.desc}</p>
+            <p className="text-sm text-neutral-200 leading-relaxed">{g.desc}</p>
           </div>
         ))}
       </div>

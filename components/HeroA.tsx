@@ -15,7 +15,7 @@ export default function HeroA() {
       <h1 className='text-6xl font-bold tracking-tight bg-gradient-to-br from-white via-neutral-200 to-neutral-400 bg-clip-text text-transparent'>
         Ryddig tech.<br/>Rask leveranse.
       </h1>
-      <p className='text-xl text-neutral-400 max-w-2xl mx-auto leading-relaxed'>
+      <p className='text-xl text-neutral-200 max-w-2xl mx-auto leading-relaxed'>
         Jeg bygger raske nettsider og enkle webapper for bedrifter — uten byråjargon. 
         Klar plan, tydelig pris og publisering når du trenger det.
       </p>

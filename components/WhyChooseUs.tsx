@@ -27,7 +27,7 @@ export default function WhyChooseUs() {
           <div key={r.title} className="text-center space-y-3 p-6 rounded-2xl hover:bg-white/5 transition-all border border-transparent hover:border-ocean/30 hover:shadow-xl hover:shadow-ocean/10 group backdrop-blur-sm">
             <div className="text-5xl group-hover:scale-110 transition-transform">{r.icon}</div>
             <h3 className="font-bold text-lg text-white">{r.title}</h3>
-            <p className="text-base text-neutral-400 leading-relaxed">{r.desc}</p>
+            <p className="text-base text-neutral-200 leading-relaxed">{r.desc}</p>
           </div>
         ))}
       </div>
