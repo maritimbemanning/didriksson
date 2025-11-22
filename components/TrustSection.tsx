@@ -1,22 +1,24 @@
+import { Banknote, Unlock, Zap, Check } from 'lucide-react';
+
 export default function TrustSection() {
   const guarantees = [
     {
-      icon: '💰',
+      Icon: Banknote,
       title: 'Fastpris',
       desc: 'Du får prisen på forhånd. Ingen skjulte kostnader eller overraskelser underveis.'
     },
     {
-      icon: '🔓',
+      Icon: Unlock,
       title: 'Du eier alt',
       desc: 'Full eierskap til kildekoden og alle filer. Ingen lock-in eller avhengighet.'
     },
     {
-      icon: '⚡',
+      Icon: Zap,
       title: 'Rask respons',
       desc: 'Svar innen 24 timer på hverdager. Leveranse på avtalt tid eller pengene tilbake.'
     },
     {
-      icon: '✓',
+      Icon: Check,
       title: 'Én revisjonsrunde inkludert',
       desc: 'Du får gjøre endringer før lansering. Ekstra runder tilgjengelig til fastpris.'
     }
@@ -28,7 +30,11 @@ export default function TrustSection() {
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {guarantees.map(g => (
           <div key={g.title} className="text-center bg-white/60 backdrop-blur-md rounded-2xl p-4 hover:bg-white/80 transition-all hover:shadow-lg hover:shadow-ocean/20 border border-neutral-200">
-            <div className="text-4xl mb-3">{g.icon}</div>
+            <div className="flex justify-center mb-3">
+              <div className="w-12 h-12 bg-ocean/10 rounded-xl flex items-center justify-center">
+                <g.Icon className="w-6 h-6 text-ocean" strokeWidth={1.5} />
+              </div>
+            </div>
             <h3 className="font-bold text-base mb-2 text-neutral-900">{g.title}</h3>
             <p className="text-sm text-neutral-600 leading-relaxed">{g.desc}</p>
           </div>

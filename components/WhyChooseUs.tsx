@@ -1,17 +1,19 @@
+import { DollarSign, Rocket, Target } from 'lucide-react';
+
 export default function WhyChooseUs() {
   const reasons = [
     {
-      icon: '💸',
+      Icon: DollarSign,
       title: 'Rimelig og forutsigbart',
       desc: 'Fastpris fra 15 000 kr. Du vet kostnaden før vi starter, ingen overraskelser.'
     },
     {
-      icon: '🚀',
+      Icon: Rocket,
       title: 'Rask levering',
       desc: 'Ferdig på 5–14 dager. Perfekt når du trenger noe raskt uten å vente måneder.'
     },
     {
-      icon: '🎯',
+      Icon: Target,
       title: 'Erfaring som leverer',
       desc: 'Tidligere kunder har fått 3× flere henvendelser og spart 5 timer i uken.'
     }
@@ -25,7 +27,11 @@ export default function WhyChooseUs() {
       <div className="grid md:grid-cols-3 gap-8">
         {reasons.map(r => (
           <div key={r.title} className="text-center space-y-3 p-6 rounded-2xl hover:bg-neutral-50 transition-all border border-transparent hover:border-ocean/30 hover:shadow-xl hover:shadow-ocean/10 group">
-            <div className="text-5xl group-hover:scale-110 transition-transform">{r.icon}</div>
+            <div className="flex justify-center">
+              <div className="w-14 h-14 bg-ocean/10 rounded-2xl flex items-center justify-center group-hover:bg-ocean/20 transition-colors">
+                <r.Icon className="w-7 h-7 text-ocean" strokeWidth={1.5} />
+              </div>
+            </div>
             <h3 className="font-bold text-lg text-neutral-900">{r.title}</h3>
             <p className="text-base text-neutral-600 leading-relaxed">{r.desc}</p>
           </div>
