@@ -1,36 +1,44 @@
 import HeroA from "../components/HeroA";
+import ProblemSolution from "../components/ProblemSolution";
+import StatsSection from "../components/StatsSection";
 import WhyChooseUs from "../components/WhyChooseUs";
-import AboutA from "../components/AboutA";
-import ValueA from "../components/ValueA";
+import TrustSection from "../components/TrustSection";
 import ProcessA from "../components/ProcessA";
 import CaseA from "../components/CaseA";
-import TrustSection from "../components/TrustSection";
 import FAQ from "../components/FAQ";
 import CTA_A from "../components/CTA_A";
 
 export default function Home() {
   return (
-    <main className="mx-auto max-w-4xl px-6 py-16 space-y-16">
+    <div className="space-y-12 md:space-y-20">
+      {/* Hero - Main value proposition */}
       <HeroA />
 
+      {/* Problem/Solution - Identify with customer pain */}
+      <ProblemSolution />
+
+      {/* Stats - Social proof with numbers */}
+      <StatsSection />
+
+      {/* Why Choose Us - Key differentiators */}
       <WhyChooseUs />
 
+      {/* Trust Section - Guarantees */}
       <TrustSection />
 
-      <article id="tjenester" className="space-y-6">
-        <AboutA />
-        <ValueA />
-      </article>
-
+      {/* Process - How it works */}
       <ProcessA />
 
+      {/* Case Study - Real results */}
       <article id="case">
         <CaseA />
       </article>
 
+      {/* FAQ - Answer objections */}
       <FAQ />
 
+      {/* Final CTA */}
       <CTA_A />
-    </main>
+    </div>
   );
 }
