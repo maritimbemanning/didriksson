@@ -1,0 +1,44 @@
+import HeroA from "../components/HeroA";
+import ProblemSolution from "../components/ProblemSolution";
+import StatsSection from "../components/StatsSection";
+import WhyChooseUs from "../components/WhyChooseUs";
+import TrustSection from "../components/TrustSection";
+import ProcessA from "../components/ProcessA";
+import CaseA from "../components/CaseA";
+import FAQ from "../components/FAQ";
+import CTA_A from "../components/CTA_A";
+
+export default function Home() {
+  return (
+    <div className="space-y-12 md:space-y-20">
+      {/* Hero - Main value proposition */}
+      <HeroA />
+
+      {/* Problem/Solution - Identify with customer pain */}
+      <ProblemSolution />
+
+      {/* Stats - Social proof with numbers */}
+      <StatsSection />
+
+      {/* Why Choose Us - Key differentiators */}
+      <WhyChooseUs />
+
+      {/* Trust Section - Guarantees */}
+      <TrustSection />
+
+      {/* Process - How it works */}
+      <ProcessA />
+
+      {/* Case Study - Real results */}
+      <article id="case">
+        <CaseA />
+      </article>
+
+      {/* FAQ - Answer objections */}
+      <FAQ />
+
+      {/* Final CTA */}
+      <CTA_A />
+    </div>
+  );
+}
