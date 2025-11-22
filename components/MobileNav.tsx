@@ -36,6 +36,13 @@ export default function MobileNav() {
                 Tjenester & Priser
               </a>
               <a
+                href="/eksempler"
+                className="text-neutral-700 hover:text-ocean hover:bg-ocean/5 py-3 px-4 rounded-xl font-medium transition-colors"
+                onClick={() => setOpen(false)}
+              >
+                Eksempler
+              </a>
+              <a
                 href="/case"
                 className="text-neutral-700 hover:text-ocean hover:bg-ocean/5 py-3 px-4 rounded-xl font-medium transition-colors"
                 onClick={() => setOpen(false)}
