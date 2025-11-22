@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { Dumbbell, Bike, PersonStanding, Flame, Music2, Target, Activity, Check, MapPin, Clock, Phone, PartyPopper, Weight } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Eksempel: Treningssenter-nettside | Didriksson Digital',
@@ -44,12 +45,12 @@ export default function TreningMockup() {
       {/* Hero */}
       <section className="bg-gradient-to-br from-emerald-800 to-emerald-950 text-white py-24 px-4 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 text-[200px]">💪</div>
-          <div className="absolute bottom-10 right-10 text-[150px]">🏋️</div>
+          <Dumbbell className="absolute top-20 left-10 w-48 h-48" strokeWidth={1} />
+          <Weight className="absolute bottom-10 right-10 w-36 h-36" strokeWidth={1} />
         </div>
         <div className="max-w-4xl mx-auto text-center space-y-6 relative">
           <div className="inline-flex items-center gap-2 bg-emerald-700/50 rounded-full px-4 py-2 text-sm">
-            🎉 Nyåpnet! 50% på første måned
+            <PartyPopper className="w-4 h-4" /> Nyåpnet! 50% på første måned
           </div>
           <h1 className="text-4xl md:text-6xl font-black">
             STERKERE<br/>
@@ -110,7 +111,7 @@ export default function TreningMockup() {
                 <ul className="space-y-2 mb-6">
                   {plan.features.map((feature, j) => (
                     <li key={j} className="flex items-center gap-2 text-sm">
-                      <span className={plan.popular ? 'text-emerald-300' : 'text-emerald-500'}>✓</span>
+                      <Check className={`w-4 h-4 ${plan.popular ? 'text-emerald-300' : 'text-emerald-500'}`} />
                       {feature}
                     </li>
                   ))}
@@ -133,17 +134,19 @@ export default function TreningMockup() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { name: 'Spinning', icon: '🚴' },
-              { name: 'Yoga', icon: '🧘' },
-              { name: 'HIIT', icon: '🔥' },
-              { name: 'Styrke', icon: '💪' },
-              { name: 'Dans', icon: '💃' },
-              { name: 'Boksing', icon: '🥊' },
-              { name: 'Pilates', icon: '🤸' },
-              { name: 'Crossfit', icon: '🏋️' },
+              { name: 'Spinning', Icon: Bike },
+              { name: 'Yoga', Icon: PersonStanding },
+              { name: 'HIIT', Icon: Flame },
+              { name: 'Styrke', Icon: Dumbbell },
+              { name: 'Dans', Icon: Music2 },
+              { name: 'Boksing', Icon: Target },
+              { name: 'Pilates', Icon: Activity },
+              { name: 'Crossfit', Icon: Weight },
             ].map((cls, i) => (
               <div key={i} className="bg-white p-4 rounded-xl text-center hover:shadow-lg transition cursor-pointer">
-                <span className="text-3xl mb-2 block">{cls.icon}</span>
+                <div className="flex justify-center mb-2">
+                  <cls.Icon className="w-8 h-8 text-emerald-600" strokeWidth={1.5} />
+                </div>
                 <h3 className="font-bold">{cls.name}</h3>
               </div>
             ))}
@@ -163,7 +166,7 @@ export default function TreningMockup() {
             <ul className="space-y-3 mb-6">
               {['Gratis kartlegging', 'Individuelt program', 'Ernæringsveiledning', 'Ukentlig oppfølging'].map((item, i) => (
                 <li key={i} className="flex items-center gap-2">
-                  <span className="text-emerald-400">✓</span> {item}
+                  <Check className="w-5 h-5 text-emerald-400" /> {item}
                 </li>
               ))}
             </ul>
@@ -173,8 +176,8 @@ export default function TreningMockup() {
           </div>
           <div className="grid grid-cols-2 gap-4">
             {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="aspect-square bg-emerald-800 rounded-xl flex items-center justify-center text-4xl">
-                🏃
+              <div key={i} className="aspect-square bg-emerald-800 rounded-xl flex items-center justify-center">
+                <PersonStanding className="w-12 h-12 text-emerald-400" strokeWidth={1.5} />
               </div>
             ))}
           </div>
@@ -203,17 +206,23 @@ export default function TreningMockup() {
       <section className="bg-neutral-900 text-white py-12 px-4">
         <div className="max-w-4xl mx-auto grid md:grid-cols-3 gap-8 text-center">
           <div>
-            <span className="text-2xl mb-2 block">📍</span>
+            <div className="flex justify-center mb-2">
+              <MapPin className="w-6 h-6 text-emerald-400" />
+            </div>
             <h3 className="font-bold mb-1">Adresse</h3>
             <p className="text-neutral-400 text-sm">Industriveien 10<br/>9480 Harstad</p>
           </div>
           <div>
-            <span className="text-2xl mb-2 block">🕐</span>
+            <div className="flex justify-center mb-2">
+              <Clock className="w-6 h-6 text-emerald-400" />
+            </div>
             <h3 className="font-bold mb-1">Åpent</h3>
             <p className="text-neutral-400 text-sm">24/7 med medlemskort<br/>Bemannet: 07-21</p>
           </div>
           <div>
-            <span className="text-2xl mb-2 block">📱</span>
+            <div className="flex justify-center mb-2">
+              <Phone className="w-6 h-6 text-emerald-400" />
+            </div>
             <h3 className="font-bold mb-1">Kontakt</h3>
             <p className="text-neutral-400 text-sm">123 45 678<br/>hei@nordfit.no</p>
           </div>

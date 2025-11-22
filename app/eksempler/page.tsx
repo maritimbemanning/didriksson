@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import CalendlyWidget from '../../components/CalendlyWidget';
-import { Wrench, UtensilsCrossed, Scale, Scissors, Dumbbell, Lightbulb } from 'lucide-react';
+import { Wrench, UtensilsCrossed, Scale, Scissors, Dumbbell, Lightbulb, Sparkles } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Eksempler på nettsider | Didriksson Digital',
@@ -64,6 +64,17 @@ const mockups = [
     Icon: Dumbbell,
     price: 'Fra 18 000 kr',
   },
+  {
+    id: 'barber',
+    href: '/eksempler/barber',
+    title: 'Barbershop',
+    industry: 'Grooming',
+    description: 'Premium maskulint design for barbershops med fokus på anmeldelser og booking.',
+    features: ['Online booking', 'Prisliste', 'Reviews', 'Team-presentasjon'],
+    gradient: 'from-amber-500 to-neutral-900',
+    Icon: Scissors,
+    price: 'Fra 15 000 kr',
+  },
 ];
 
 export default function EksemplerPage() {
@@ -73,7 +84,7 @@ export default function EksemplerPage() {
       <section className="text-center space-y-4">
         <div className="inline-flex items-center gap-2 text-sm font-medium bg-ocean/10 text-ocean rounded-full px-4 py-2">
           <span className="w-2 h-2 bg-ocean rounded-full animate-pulse" />
-          5 komplette demo-nettsider
+          6 komplette demo-nettsider
         </div>
         <h1 className="text-3xl md:text-5xl font-bold text-neutral-900">
           Se hva du kan få
