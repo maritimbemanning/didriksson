@@ -24,7 +24,7 @@ export default function CalendlyWidget({
   buttonClassName = ''
 }: CalendlyWidgetProps) {
   const [isScriptLoaded, setIsScriptLoaded] = useState(false);
-  const calendlyUrl = 'https://calendly.com/didriksson/30min';
+  const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL || 'https://calendly.com/didriksson/30min';
 
   useEffect(() => {
     // Load Calendly script
