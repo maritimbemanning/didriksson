@@ -157,7 +157,7 @@ export default function RootLayout({
               </div>
             </div>
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-8 border-t border-neutral-100 text-sm text-neutral-500">
-              <p>&copy; {new Date().getFullYear()} Didriksson Digital. Org.nr: 123 456 789</p>
+              <p>&copy; {new Date().getFullYear()} Didriksson Digital. Org.nr: 936 351 371</p>
               <p>Nettsider for små og mellomstore bedrifter i Norge</p>
             </div>
           </footer>
