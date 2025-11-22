@@ -103,6 +103,7 @@ export default function RootLayout({
             </a>
             <nav className="hidden md:flex items-center gap-6 text-sm">
               <a href="/tjenester" className="text-neutral-600 hover:text-ocean transition-colors font-medium">Tjenester & Priser</a>
+              <a href="/eksempler" className="text-neutral-600 hover:text-ocean transition-colors font-medium">Eksempler</a>
               <a href="/case" className="text-neutral-600 hover:text-ocean transition-colors font-medium">Resultater</a>
               <a href="/book" className="text-neutral-600 hover:text-ocean transition-colors font-medium">Book møte</a>
               <a href="tel:+4792328850" className="bg-ocean text-white px-5 py-2.5 rounded-xl hover:bg-ocean-dark transition-colors font-semibold shadow-lg shadow-ocean/20">
