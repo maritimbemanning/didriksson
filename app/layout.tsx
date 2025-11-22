@@ -98,7 +98,7 @@ export default function RootLayout({
         <div className="mx-auto max-w-5xl px-4 sm:px-6 py-4 sm:py-6">
           <header className="flex items-center justify-between py-3 border-b border-neutral-100">
             <a href="/" className="flex items-center">
-              <img src="/images/logo.png" alt="Didriksson Digital" className="h-24 w-auto" />
+              <img src="/images/logo.svg" alt="Didriksson Digital" className="h-24 w-auto" />
             </a>
             <nav className="hidden md:flex items-center gap-6 text-sm">
               <a href="/tjenester" className="text-neutral-600 hover:text-ocean transition-colors font-medium">Tjenester & Priser</a>
