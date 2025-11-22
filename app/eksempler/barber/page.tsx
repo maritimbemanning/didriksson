@@ -209,7 +209,7 @@ export default function BarberMockup() {
             Book time online eller bare stikk innom. Walk-ins alltid velkommen!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#" className="bg-neutral-950 text-white px-8 py-4 rounded font-bold hover:bg-neutral-800 transition">
+            <a href="https://timma.no/salong/Rebel" target="_blank" rel="noopener noreferrer" className="bg-neutral-950 text-white px-8 py-4 rounded font-bold hover:bg-neutral-800 transition">
               Book på Timma
             </a>
             <a href="tel:+4741641137" className="border-2 border-neutral-950 px-8 py-4 rounded font-bold hover:bg-amber-400 transition">
