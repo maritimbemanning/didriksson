@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { Wrench, ShowerHead, Flame, AlertTriangle, Home, ClipboardList, Phone, Mail, MapPin, Check } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Eksempel: Håndverker-nettside | Didriksson Digital',
@@ -7,6 +8,15 @@ export const metadata: Metadata = {
 };
 
 export default function HandverkerMockup() {
+  const services = [
+    { Icon: ShowerHead, title: 'Bad & renovering', desc: 'Komplett baderomsrenovering fra A til Å' },
+    { Icon: Flame, title: 'Varme & VVS', desc: 'Varmepumper, gulvvarme og rørlegging' },
+    { Icon: AlertTriangle, title: 'Akutt rørlegger', desc: 'Vannlekkasje? Vi kommer innen 2 timer' },
+    { Icon: Home, title: 'Nybygg', desc: 'VVS-installasjon for nye boliger' },
+    { Icon: Wrench, title: 'Reparasjoner', desc: 'Tette rør, kraner og toaletter' },
+    { Icon: ClipboardList, title: 'Inspeksjon', desc: 'Rør-TV og tilstandsrapport' },
+  ];
+
   return (
     <div className="space-y-0 -mx-4 sm:-mx-6 -my-4 sm:-my-6">
       {/* Demo banner */}
@@ -21,7 +31,9 @@ export default function HandverkerMockup() {
       <header className="bg-amber-600 text-white">
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center text-xl">🔧</div>
+            <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
+              <Wrench className="w-5 h-5" />
+            </div>
             <span className="font-bold text-lg">Nordvik Rørlegger</span>
           </div>
           <nav className="hidden md:flex items-center gap-6 text-sm">
@@ -54,7 +66,7 @@ export default function HandverkerMockup() {
               Få gratis befaring
             </a>
             <a href="tel:+4712345678" className="border-2 border-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition flex items-center justify-center gap-2">
-              <span>📞</span> Akutt? Ring nå
+              <Phone className="w-5 h-5" /> Akutt? Ring nå
             </a>
           </div>
         </div>
@@ -63,18 +75,11 @@ export default function HandverkerMockup() {
       {/* Trust badges */}
       <section className="bg-white py-8 px-4 border-b">
         <div className="max-w-4xl mx-auto flex flex-wrap justify-center gap-8 text-sm text-neutral-600">
-          <div className="flex items-center gap-2">
-            <span className="text-green-500">✓</span> Autorisert rørlegger
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="text-green-500">✓</span> Mesterbrev
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="text-green-500">✓</span> 5 års garanti
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="text-green-500">✓</span> Forsikret arbeid
-          </div>
+          {['Autorisert rørlegger', 'Mesterbrev', '5 års garanti', 'Forsikret arbeid'].map((item, i) => (
+            <div key={i} className="flex items-center gap-2">
+              <Check className="w-4 h-4 text-green-500" /> {item}
+            </div>
+          ))}
         </div>
       </section>
 
@@ -83,16 +88,9 @@ export default function HandverkerMockup() {
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Våre tjenester</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            {[
-              { icon: '🚿', title: 'Bad & renovering', desc: 'Komplett baderomsrenovering fra A til Å' },
-              { icon: '🔥', title: 'Varme & VVS', desc: 'Varmepumper, gulvvarme og rørlegging' },
-              { icon: '🚨', title: 'Akutt rørlegger', desc: 'Vannlekkasje? Vi kommer innen 2 timer' },
-              { icon: '🏠', title: 'Nybygg', desc: 'VVS-installasjon for nye boliger' },
-              { icon: '🔧', title: 'Reparasjoner', desc: 'Tette rør, kraner og toaletter' },
-              { icon: '📋', title: 'Inspeksjon', desc: 'Rør-TV og tilstandsrapport' },
-            ].map((service, i) => (
+            {services.map((service, i) => (
               <div key={i} className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
-                <span className="text-3xl mb-4 block">{service.icon}</span>
+                <service.Icon className="w-8 h-8 text-amber-600 mb-4" strokeWidth={1.5} />
                 <h3 className="font-bold text-lg mb-2">{service.title}</h3>
                 <p className="text-neutral-600 text-sm">{service.desc}</p>
               </div>
@@ -130,7 +128,7 @@ export default function HandverkerMockup() {
       {/* Testimonial */}
       <section className="bg-amber-50 py-16 px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="text-5xl mb-6">"</div>
+          <div className="text-5xl mb-6 text-amber-300">"</div>
           <p className="text-xl text-neutral-700 italic mb-6">
             Fantastisk jobb med badet vårt! Profesjonelle fra start til slutt,
             ryddig og punktlig. Anbefales på det sterkeste.
@@ -157,21 +155,21 @@ export default function HandverkerMockup() {
             </p>
             <div className="space-y-4">
               <div className="flex items-center gap-3">
-                <span className="text-2xl">📞</span>
+                <Phone className="w-5 h-5 text-amber-400" />
                 <div>
                   <p className="text-sm text-neutral-400">Telefon</p>
                   <p className="font-bold">123 45 678</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
-                <span className="text-2xl">📧</span>
+                <Mail className="w-5 h-5 text-amber-400" />
                 <div>
                   <p className="text-sm text-neutral-400">E-post</p>
                   <p className="font-bold">post@nordvik-ror.no</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
-                <span className="text-2xl">📍</span>
+                <MapPin className="w-5 h-5 text-amber-400" />
                 <div>
                   <p className="text-sm text-neutral-400">Område</p>
                   <p className="font-bold">Harstad og omegn</p>

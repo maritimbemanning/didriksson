@@ -1,25 +1,14 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import CalendlyWidget from '../../components/CalendlyWidget';
+import { Wrench, UtensilsCrossed, Scale, Scissors, Dumbbell, Lightbulb } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Eksempler på nettsider | Didriksson Digital',
   description: 'Se eksempler på nettsider vi kan lage for din bransje. Håndverker, restaurant, advokat, frisør og treningssenter.',
 };
 
-interface MockupData {
-  id: string;
-  href: string;
-  title: string;
-  industry: string;
-  description: string;
-  gradient: string;
-  icon: string;
-  price: string;
-  features: string[];
-}
-
-const mockups: MockupData[] = [
+const mockups = [
   {
     id: 'handverker',
     href: '/eksempler/handverker',
@@ -28,7 +17,7 @@ const mockups: MockupData[] = [
     description: 'Profesjonell nettside for håndverkere med fokus på tillit og lokale søk.',
     features: ['Før/etter galleri', 'Prisindikator', 'Sertifiseringer', 'Akutt-knapp'],
     gradient: 'from-amber-500 to-orange-600',
-    icon: '🔧',
+    Icon: Wrench,
     price: 'Fra 15 000 kr',
   },
   {
@@ -39,7 +28,7 @@ const mockups: MockupData[] = [
     description: 'Appetittvekkende design med meny, reservasjon og stemningsbilder.',
     features: ['Digital meny', 'Bordreservasjon', 'Instagram-feed', 'Google Maps'],
     gradient: 'from-rose-500 to-pink-600',
-    icon: '🍽️',
+    Icon: UtensilsCrossed,
     price: 'Fra 18 000 kr',
   },
   {
@@ -50,7 +39,7 @@ const mockups: MockupData[] = [
     description: 'Troverdig og seriøs profil som bygger tillit hos potensielle klienter.',
     features: ['Fagområder', 'Team-presentasjon', 'Booking-system', 'Ressurser/artikler'],
     gradient: 'from-slate-600 to-slate-800',
-    icon: '⚖️',
+    Icon: Scale,
     price: 'Fra 20 000 kr',
   },
   {
@@ -61,7 +50,7 @@ const mockups: MockupData[] = [
     description: 'Moderne og visuell nettside som viser frem ditt arbeid.',
     features: ['Online booking', 'Prisliste', 'Behandlinger', 'Før/etter bilder'],
     gradient: 'from-purple-500 to-violet-600',
-    icon: '💇',
+    Icon: Scissors,
     price: 'Fra 15 000 kr',
   },
   {
@@ -72,7 +61,7 @@ const mockups: MockupData[] = [
     description: 'Energisk design som motiverer til handling og medlemskap.',
     features: ['Timeplan', 'Medlemsportal', 'Prøvetime-booking', 'Transformasjoner'],
     gradient: 'from-emerald-500 to-teal-600',
-    icon: '💪',
+    Icon: Dumbbell,
     price: 'Fra 18 000 kr',
   },
 ];
@@ -106,7 +95,7 @@ export default function EksemplerPage() {
             {/* Preview Image */}
             <div className={`aspect-video bg-gradient-to-br ${mockup.gradient} relative overflow-hidden`}>
               <div className="absolute inset-0 flex items-center justify-center">
-                <span className="text-6xl opacity-30">{mockup.icon}</span>
+                <mockup.Icon className="w-16 h-16 text-white/30" strokeWidth={1.5} />
               </div>
               {/* Fake browser chrome */}
               <div className="absolute top-3 left-3 flex gap-1.5">
@@ -129,7 +118,7 @@ export default function EksemplerPage() {
                   <p className="text-xs text-ocean font-semibold uppercase tracking-wide">{mockup.industry}</p>
                   <h3 className="text-lg font-bold text-neutral-900 mt-1">{mockup.title}</h3>
                 </div>
-                <span className="text-2xl">{mockup.icon}</span>
+                <mockup.Icon className="w-6 h-6 text-neutral-400" strokeWidth={1.5} />
               </div>
               <p className="text-sm text-neutral-600 line-clamp-2">{mockup.description}</p>
 
@@ -154,7 +143,7 @@ export default function EksemplerPage() {
       {/* Info box */}
       <section className="bg-neutral-50 rounded-2xl p-6 md:p-8">
         <div className="flex items-start gap-4">
-          <span className="text-3xl">💡</span>
+          <Lightbulb className="w-8 h-8 text-amber-500 flex-shrink-0" strokeWidth={1.5} />
           <div>
             <h3 className="font-bold text-lg mb-2">Dette er konseptdesign</h3>
             <p className="text-neutral-600">
