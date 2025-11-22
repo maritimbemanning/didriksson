@@ -97,9 +97,12 @@ export default function RootLayout({
         <Analytics />
         <div className="mx-auto max-w-5xl px-4 sm:px-6 py-4 sm:py-6">
           <header className="flex items-center justify-between py-3 border-b border-neutral-100">
-            <a href="/" className="group">
-              <span className="text-2xl font-black tracking-tighter text-neutral-900">
-                didriksson<span className="text-ocean">.</span>
+            <a href="/" className="group flex items-center gap-2">
+              <span className="text-xl font-bold tracking-wide text-neutral-900">
+                DIDRIKSSON
+              </span>
+              <span className="text-xs font-medium text-neutral-400 tracking-widest uppercase">
+                Digital
               </span>
             </a>
             <nav className="hidden md:flex items-center gap-6 text-sm">
