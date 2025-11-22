@@ -9,16 +9,16 @@ export const metadata: Metadata = {
 
 export default function BarberMockup() {
   const services = [
-    { name: 'Klassisk herreklipp', price: '450,-', duration: '30 min' },
-    { name: 'Skjeggtrim', price: '250,-', duration: '20 min' },
-    { name: 'Klipp + Skjegg', price: '650,-', duration: '45 min' },
-    { name: 'Knivbarbering', price: '400,-', duration: '30 min' },
-    { name: 'Skin fade', price: '500,-', duration: '45 min' },
-    { name: 'Barn (u/12 år)', price: '350,-', duration: '25 min' },
+    { name: 'Herreklipp', price: 'fra 850,-', duration: '45 min', desc: 'Ny frisyre/designklipp' },
+    { name: 'Fade kun på sider og bak', price: '600,-', duration: '30 min', desc: 'Kun fade, ikke klipp' },
+    { name: 'Skjegg (stuss)', price: '550,-', duration: '15 min', desc: 'Forming av linjer med maskin' },
+    { name: 'Skjegg (medium)', price: '700,-', duration: '30 min', desc: 'Forming med kniv på øvre linje' },
+    { name: 'Skjegg (full)', price: '950,-', duration: '45 min', desc: 'Full forming med kniv og varme omslag' },
   ];
 
   const team = [
-    { name: 'Tommy', role: 'Eier / Master Barber', years: 'Rebel Harstad', initials: 'T' },
+    { name: 'Tommy', role: 'Eier / Master Barber', initials: 'T' },
+    { name: 'Stine', role: 'Barber', initials: 'S' },
   ];
 
   return (
@@ -155,15 +155,14 @@ export default function BarberMockup() {
             <p className="text-amber-500 font-medium tracking-widest uppercase text-sm mb-2">Vårt team</p>
             <h2 className="text-3xl font-bold">Mestere i faget</h2>
           </div>
-          <div className="grid md:grid-cols-1 gap-8 max-w-xs mx-auto">
+          <div className="grid grid-cols-2 gap-8 max-w-md mx-auto">
             {team.map((person, i) => (
               <div key={i} className="text-center group">
-                <div className="w-32 h-32 bg-gradient-to-br from-amber-500 to-amber-700 rounded-full mx-auto mb-4 flex items-center justify-center text-4xl font-black text-neutral-950 group-hover:scale-105 transition">
+                <div className="w-28 h-28 bg-gradient-to-br from-amber-500 to-amber-700 rounded-full mx-auto mb-4 flex items-center justify-center text-3xl font-black text-neutral-950 group-hover:scale-105 transition">
                   {person.initials}
                 </div>
                 <h3 className="font-bold text-lg">{person.name}</h3>
                 <p className="text-amber-500 text-sm">{person.role}</p>
-                <p className="text-neutral-500 text-xs mt-1">{person.years}</p>
               </div>
             ))}
           </div>
