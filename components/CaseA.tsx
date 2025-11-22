@@ -6,9 +6,9 @@ export default function CaseA() {
   const [activeImage, setActiveImage] = useState(0);
 
   const screenshots = [
-    { src: '/images/bluecrew-admin.jpg', alt: 'Bluecrew Admin Portal - Hovedmeny' },
-    { src: '/images/bluecrew-import.jpg', alt: 'Bluecrew Import Management' },
-    { src: '/images/bluecrew-iso.jpg', alt: 'Bluecrew ISO 9001 Internstyring' },
+    { src: '/images/bluecrew-admin.webp', alt: 'Bluecrew Admin Portal - Hovedmeny' },
+    { src: '/images/bluecrew-import.webp', alt: 'Bluecrew Import Management' },
+    { src: '/images/bluecrew-iso.webp', alt: 'Bluecrew ISO 9001 Internstyring' },
   ];
 
   return (

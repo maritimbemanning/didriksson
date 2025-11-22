@@ -9,7 +9,7 @@ export default function AboutMe() {
           <div className="relative w-full aspect-square max-w-md mx-auto">
             <div className="absolute inset-0 bg-gradient-to-br from-ocean/20 to-cyan-500/20 rounded-3xl transform rotate-3" />
             <img
-              src="/images/isak-profil.jpg"
+              src="/images/isak-profil.webp"
               alt="Isak Didriksson - Webutvikler"
               className="relative w-full h-full object-cover rounded-3xl shadow-2xl"
             />
