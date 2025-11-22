@@ -3,6 +3,7 @@ import ProblemSolution from "../components/ProblemSolution";
 import StatsSection from "../components/StatsSection";
 import WhyChooseUs from "../components/WhyChooseUs";
 import TrustSection from "../components/TrustSection";
+import AboutMe from "../components/AboutMe";
 import ProcessA from "../components/ProcessA";
 import CaseA from "../components/CaseA";
 import FAQ from "../components/FAQ";
@@ -10,7 +11,7 @@ import CTA_A from "../components/CTA_A";
 
 export default function Home() {
   return (
-    <div className="space-y-12 md:space-y-20">
+    <div className="space-y-16 md:space-y-24">
       {/* Hero - Main value proposition */}
       <HeroA />
 
@@ -19,6 +20,9 @@ export default function Home() {
 
       {/* Stats - Social proof with numbers */}
       <StatsSection />
+
+      {/* About Me - Personal connection */}
+      <AboutMe />
 
       {/* Why Choose Us - Key differentiators */}
       <WhyChooseUs />
