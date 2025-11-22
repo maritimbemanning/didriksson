@@ -9,18 +9,16 @@ export const metadata: Metadata = {
 
 export default function BarberMockup() {
   const services = [
-    { name: 'Herreklipp', price: '450,-', duration: '30 min' },
-    { name: 'Skjegg trim', price: '250,-', duration: '20 min' },
+    { name: 'Klassisk herreklipp', price: '450,-', duration: '30 min' },
+    { name: 'Skjeggtrim', price: '250,-', duration: '20 min' },
     { name: 'Klipp + Skjegg', price: '650,-', duration: '45 min' },
-    { name: 'Hot towel shave', price: '350,-', duration: '30 min' },
+    { name: 'Knivbarbering', price: '400,-', duration: '30 min' },
     { name: 'Skin fade', price: '500,-', duration: '45 min' },
-    { name: 'Kids cut (u/12)', price: '350,-', duration: '25 min' },
+    { name: 'Barn (u/12 år)', price: '350,-', duration: '25 min' },
   ];
 
   const team = [
-    { name: 'Tommy', role: 'Eier / Master Barber', years: '12 år erfaring', initials: 'T' },
-    { name: 'Marcus', role: 'Senior Barber', years: '8 år erfaring', initials: 'M' },
-    { name: 'Erik', role: 'Barber', years: '5 år erfaring', initials: 'E' },
+    { name: 'Tommy', role: 'Eier / Master Barber', years: 'Rebel Harstad', initials: 'T' },
   ];
 
   return (
@@ -64,22 +62,22 @@ export default function BarberMockup() {
                 <Star key={i} className="w-4 h-4 text-amber-500" fill="currentColor" />
               ))}
             </div>
-            <span className="text-amber-400 font-medium">5.0 fra 1700+ anmeldelser</span>
+            <span className="text-amber-400 font-medium">5.0 stjerner på Timma</span>
           </div>
 
           <h1 className="text-5xl md:text-7xl font-black tracking-tight">
             REBEL<br/>
-            <span className="text-amber-500">BARBERSHOP</span>
+            <span className="text-amber-500">HARSTAD</span>
           </h1>
           <p className="text-xl text-neutral-400 max-w-2xl mx-auto">
-            Premium herreklipp og skjeggpleie i hjertet av byen.
-            Tradisjonelt håndverk møter moderne stil.
+            Herrenes fristed. Din lokale barbershop i hjertet av Harstad.
+            Klassisk håndverk og tradisjonell knivbarbering.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <a href="#book" className="bg-amber-500 text-neutral-950 px-8 py-4 rounded font-bold text-lg hover:bg-amber-400 transition shadow-lg shadow-amber-500/20">
               Book time nå
             </a>
-            <a href="tel:+4712345678" className="border border-neutral-700 text-white px-8 py-4 rounded font-bold text-lg hover:bg-neutral-800 transition">
+            <a href="tel:+4741641137" className="border border-neutral-700 text-white px-8 py-4 rounded font-bold text-lg hover:bg-neutral-800 transition">
               Ring oss
             </a>
           </div>
@@ -90,9 +88,9 @@ export default function BarberMockup() {
       <section className="bg-neutral-900 text-white py-8 px-4 border-t border-neutral-800">
         <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {[
-            { Icon: Star, number: '5.0', label: 'Stjerner' },
-            { Icon: Users, number: '1700+', label: 'Anmeldelser' },
-            { Icon: Award, number: '12+', label: 'År erfaring' },
+            { Icon: Star, number: '5.0', label: 'På Timma' },
+            { Icon: Users, number: '100%', label: 'Fornøyde' },
+            { Icon: Award, number: 'Harstad', label: 'Lokasjon' },
             { Icon: Flame, number: '#1', label: 'I byen' },
           ].map((stat, i) => (
             <div key={i} className="flex flex-col items-center">
@@ -114,7 +112,7 @@ export default function BarberMockup() {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               { Icon: Scissors, title: 'Klassisk klipp', desc: 'Presisjonskutt tilpasset din stil og ansiktsform' },
-              { Icon: Scissors, title: 'Skjegg styling', desc: 'Fra trim til full shave med varme håndklær' },
+              { Icon: Scissors, title: 'Knivbarbering', desc: 'Tradisjonell barbering med varme håndklær' },
               { Icon: Scissors, title: 'Skin Fade', desc: 'Sømløs overgang fra kort til lang' },
             ].map((service, i) => (
               <div key={i} className="bg-neutral-900 border border-neutral-800 rounded-xl p-6 text-center hover:border-amber-500/50 transition group">
@@ -157,7 +155,7 @@ export default function BarberMockup() {
             <p className="text-amber-500 font-medium tracking-widest uppercase text-sm mb-2">Vårt team</p>
             <h2 className="text-3xl font-bold">Mestere i faget</h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-1 gap-8 max-w-xs mx-auto">
             {team.map((person, i) => (
               <div key={i} className="text-center group">
                 <div className="w-32 h-32 bg-gradient-to-br from-amber-500 to-amber-700 rounded-full mx-auto mb-4 flex items-center justify-center text-4xl font-black text-neutral-950 group-hover:scale-105 transition">
@@ -182,13 +180,13 @@ export default function BarberMockup() {
               ))}
             </div>
             <h2 className="text-3xl font-bold text-white">Hva kundene sier</h2>
-            <p className="text-neutral-500 mt-2">1700+ fornøyde kunder</p>
+            <p className="text-neutral-500 mt-2">5 av 5 stjerner på Timma</p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { name: 'Martin S.', text: 'Beste barbershopen i byen! Tommy er en mester. Har gått her i 3 år nå.' },
-              { name: 'Andreas K.', text: 'Alltid fornøyd med resultatet. Proffe gutta og god stemning.' },
-              { name: 'Ole H.', text: 'Endelig en barbershop som skjønner hva jeg vil ha. Anbefales!' },
+              { name: 'Kunde', text: 'Tommy utfører jobben til punkt og prikke, med fantastisk presisjon.' },
+              { name: 'Kunde', text: 'En glimrende opplevelse! Anbefales på det sterkeste.' },
+              { name: 'Kunde', text: 'Beste barbershopen i Harstad. Tommy er en mester.' },
             ].map((review, i) => (
               <div key={i} className="bg-neutral-950 border border-neutral-800 rounded-xl p-6">
                 <div className="flex gap-1 mb-3">
@@ -215,8 +213,8 @@ export default function BarberMockup() {
             <a href="#" className="bg-neutral-950 text-white px-8 py-4 rounded font-bold hover:bg-neutral-800 transition">
               Book på Timma
             </a>
-            <a href="tel:+4712345678" className="border-2 border-neutral-950 px-8 py-4 rounded font-bold hover:bg-amber-400 transition">
-              Ring 123 45 678
+            <a href="tel:+4741641137" className="border-2 border-neutral-950 px-8 py-4 rounded font-bold hover:bg-amber-400 transition">
+              Ring 416 41 137
             </a>
           </div>
         </div>
@@ -230,7 +228,7 @@ export default function BarberMockup() {
               <MapPin className="w-6 h-6 text-amber-500" />
             </div>
             <h3 className="font-bold mb-1">Adresse</h3>
-            <p className="text-neutral-500 text-sm">Storgata 1<br/>Oslo</p>
+            <p className="text-neutral-500 text-sm">Rikard Kaarbos plass 1<br/>9405 Harstad</p>
           </div>
           <div>
             <div className="flex justify-center mb-2">
@@ -244,21 +242,21 @@ export default function BarberMockup() {
               <Phone className="w-6 h-6 text-amber-500" />
             </div>
             <h3 className="font-bold mb-1">Kontakt</h3>
-            <p className="text-neutral-500 text-sm">123 45 678</p>
+            <p className="text-neutral-500 text-sm">416 41 137</p>
           </div>
           <div>
             <div className="flex justify-center mb-2">
               <Instagram className="w-6 h-6 text-amber-500" />
             </div>
             <h3 className="font-bold mb-1">Instagram</h3>
-            <p className="text-neutral-500 text-sm">@rebelbarbershop</p>
+            <p className="text-neutral-500 text-sm">@rebel_harstad</p>
           </div>
         </div>
       </section>
 
       {/* Footer */}
       <footer className="bg-neutral-950 text-neutral-500 py-8 px-4 text-center text-sm border-t border-neutral-900">
-        <p>&copy; 2025 Rebel Barbershop</p>
+        <p>&copy; 2025 Rebel Harstad</p>
         <p className="mt-2">
           Demo-nettside laget av{' '}
           <Link href="/" className="text-amber-500 hover:underline">
