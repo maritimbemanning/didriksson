@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { Scale, Home, Users, Building2, Star, Phone, Mail, MapPin } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Eksempel: Advokat-nettside | Didriksson Digital',
@@ -8,10 +9,10 @@ export const metadata: Metadata = {
 
 export default function KonsulentMockup() {
   const services = [
-    { icon: '⚖️', title: 'Arbeidsrett', desc: 'Ansettelser, oppsigelser og arbeidskonfliker' },
-    { icon: '🏠', title: 'Eiendom', desc: 'Kjøp, salg og tvister' },
-    { icon: '👨‍👩‍👧', title: 'Familierett', desc: 'Skilsmisse, arv og barnefordeling' },
-    { icon: '🏢', title: 'Selskapsrett', desc: 'Etablering, avtaler og tvister' },
+    { Icon: Scale, title: 'Arbeidsrett', desc: 'Ansettelser, oppsigelser og arbeidskonfliker' },
+    { Icon: Home, title: 'Eiendom', desc: 'Kjøp, salg og tvister' },
+    { Icon: Users, title: 'Familierett', desc: 'Skilsmisse, arv og barnefordeling' },
+    { Icon: Building2, title: 'Selskapsrett', desc: 'Etablering, avtaler og tvister' },
   ];
 
   const team = [
@@ -77,15 +78,15 @@ export default function KonsulentMockup() {
       <section className="bg-slate-800 text-white py-6 px-4">
         <div className="max-w-4xl mx-auto flex flex-wrap justify-center gap-8 text-sm">
           <div className="flex items-center gap-2">
-            <span className="text-amber-400">★</span>
+            <Star className="w-4 h-4 text-amber-400" fill="currentColor" />
             <span>Medlem av Advokatforeningen</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-amber-400">★</span>
+            <Star className="w-4 h-4 text-amber-400" fill="currentColor" />
             <span>Sikkerhet for klienter</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-amber-400">★</span>
+            <Star className="w-4 h-4 text-amber-400" fill="currentColor" />
             <span>Profesjonsansvar</span>
           </div>
         </div>
@@ -103,7 +104,9 @@ export default function KonsulentMockup() {
           <div className="grid md:grid-cols-2 gap-6">
             {services.map((service, i) => (
               <div key={i} className="border border-neutral-200 rounded-xl p-6 hover:border-amber-300 hover:shadow-lg transition group">
-                <span className="text-3xl mb-4 block">{service.icon}</span>
+                <div className="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
+                  <service.Icon className="w-7 h-7 text-amber-600" strokeWidth={1.5} />
+                </div>
                 <h3 className="font-bold text-xl mb-2 group-hover:text-amber-600 transition">{service.title}</h3>
                 <p className="text-neutral-600">{service.desc}</p>
                 <a href="#kontakt" className="text-amber-600 font-medium mt-4 inline-block hover:underline">
@@ -172,13 +175,13 @@ export default function KonsulentMockup() {
             </p>
             <div className="space-y-3 text-slate-300">
               <p className="flex items-center gap-3">
-                <span>📞</span> 123 45 678
+                <Phone className="w-5 h-5 text-amber-400" /> 123 45 678
               </p>
               <p className="flex items-center gap-3">
-                <span>📧</span> post@strandadvokat.no
+                <Mail className="w-5 h-5 text-amber-400" /> post@strandadvokat.no
               </p>
               <p className="flex items-center gap-3">
-                <span>📍</span> Storgata 1, 9008 Tromsø
+                <MapPin className="w-5 h-5 text-amber-400" /> Storgata 1, 9008 Tromsø
               </p>
             </div>
           </div>

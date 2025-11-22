@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { Sparkles, Scissors, Palette, HandMetal, Brush, Heart, ShoppingBag, User, Image, MapPin, Clock, Phone } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Eksempel: Frisør-nettside | Didriksson Digital',
@@ -30,7 +31,7 @@ export default function FrisorMockup() {
       <header className="bg-white border-b">
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <span className="text-2xl">✨</span>
+            <Sparkles className="w-6 h-6 text-purple-600" />
             <span className="font-bold text-xl tracking-tight">Studio<span className="text-purple-600">Lux</span></span>
           </div>
           <nav className="hidden md:flex items-center gap-6 text-sm">
@@ -79,15 +80,19 @@ export default function FrisorMockup() {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { icon: '✂️', title: 'Klipp', desc: 'Dame, herre og barn' },
-              { icon: '🎨', title: 'Farge', desc: 'Helfarging, balayage, striper' },
-              { icon: '💆', title: 'Behandling', desc: 'Olaplex, keratinbehandling' },
-              { icon: '💅', title: 'Styling', desc: 'Oppsett og føning' },
-              { icon: '👰', title: 'Bryllup', desc: 'Brud og bryllupsgjester' },
-              { icon: '🧴', title: 'Produkter', desc: 'Kvalitetsprodukter for hjemmebruk' },
+              { Icon: Scissors, title: 'Klipp', desc: 'Dame, herre og barn' },
+              { Icon: Palette, title: 'Farge', desc: 'Helfarging, balayage, striper' },
+              { Icon: HandMetal, title: 'Behandling', desc: 'Olaplex, keratinbehandling' },
+              { Icon: Brush, title: 'Styling', desc: 'Oppsett og føning' },
+              { Icon: Heart, title: 'Bryllup', desc: 'Brud og bryllupsgjester' },
+              { Icon: ShoppingBag, title: 'Produkter', desc: 'Kvalitetsprodukter for hjemmebruk' },
             ].map((service, i) => (
               <div key={i} className="bg-purple-50 p-6 rounded-2xl text-center hover:bg-purple-100 transition">
-                <span className="text-4xl mb-4 block">{service.icon}</span>
+                <div className="flex justify-center mb-4">
+                  <div className="w-14 h-14 bg-purple-200 rounded-xl flex items-center justify-center">
+                    <service.Icon className="w-7 h-7 text-purple-600" strokeWidth={1.5} />
+                  </div>
+                </div>
                 <h3 className="font-bold text-lg mb-1">{service.title}</h3>
                 <p className="text-neutral-600 text-sm">{service.desc}</p>
               </div>
@@ -128,8 +133,8 @@ export default function FrisorMockup() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="aspect-square bg-gradient-to-br from-purple-200 to-pink-200 rounded-xl flex items-center justify-center text-4xl">
-                💇
+              <div key={i} className="aspect-square bg-gradient-to-br from-purple-200 to-pink-200 rounded-xl flex items-center justify-center">
+                <Image className="w-10 h-10 text-purple-400" strokeWidth={1} />
               </div>
             ))}
           </div>
@@ -149,8 +154,8 @@ export default function FrisorMockup() {
               { name: 'Sofia Nilsen', role: 'Frisør', years: '5 år erfaring' },
             ].map((person, i) => (
               <div key={i} className="text-center">
-                <div className="w-32 h-32 bg-gradient-to-br from-purple-300 to-pink-300 rounded-full mx-auto mb-4 flex items-center justify-center text-4xl">
-                  👩
+                <div className="w-32 h-32 bg-gradient-to-br from-purple-300 to-pink-300 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <User className="w-12 h-12 text-purple-600" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-bold text-lg">{person.name}</h3>
                 <p className="text-purple-600 text-sm">{person.role}</p>
@@ -183,17 +188,23 @@ export default function FrisorMockup() {
       <section className="bg-neutral-900 text-white py-12 px-4">
         <div className="max-w-4xl mx-auto grid md:grid-cols-3 gap-8 text-center">
           <div>
-            <span className="text-2xl mb-2 block">📍</span>
+            <div className="flex justify-center mb-2">
+              <MapPin className="w-6 h-6 text-purple-400" />
+            </div>
             <h3 className="font-bold mb-1">Besøk oss</h3>
             <p className="text-neutral-400 text-sm">Strandgata 15<br/>9480 Harstad</p>
           </div>
           <div>
-            <span className="text-2xl mb-2 block">🕐</span>
+            <div className="flex justify-center mb-2">
+              <Clock className="w-6 h-6 text-purple-400" />
+            </div>
             <h3 className="font-bold mb-1">Åpningstider</h3>
             <p className="text-neutral-400 text-sm">Man-Fre: 09-18<br/>Lør: 10-16</p>
           </div>
           <div>
-            <span className="text-2xl mb-2 block">📱</span>
+            <div className="flex justify-center mb-2">
+              <Phone className="w-6 h-6 text-purple-400" />
+            </div>
             <h3 className="font-bold mb-1">Kontakt</h3>
             <p className="text-neutral-400 text-sm">123 45 678<br/>hei@studiolux.no</p>
           </div>

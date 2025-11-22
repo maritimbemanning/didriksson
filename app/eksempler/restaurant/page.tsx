@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { UtensilsCrossed, Wine, MapPin, Phone, Mail, Image } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Eksempel: Restaurant-nettside | Didriksson Digital',
@@ -28,7 +29,7 @@ export default function RestaurantMockup() {
       <header className="bg-rose-900 text-white">
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <span className="text-2xl">🍽️</span>
+            <UtensilsCrossed className="w-6 h-6" />
             <span className="font-serif font-bold text-xl">Sjøkanten</span>
           </div>
           <nav className="hidden md:flex items-center gap-6 text-sm">
@@ -112,8 +113,8 @@ export default function RestaurantMockup() {
       {/* About */}
       <section id="om" className="bg-neutral-100 py-16 px-4">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          <div className="aspect-square bg-rose-200 rounded-2xl flex items-center justify-center text-6xl">
-            🍷
+          <div className="aspect-square bg-rose-200 rounded-2xl flex items-center justify-center">
+            <Wine className="w-24 h-24 text-rose-400" strokeWidth={1} />
           </div>
           <div>
             <p className="text-rose-600 font-medium tracking-widest uppercase text-sm mb-2">Vår historie</p>
@@ -140,8 +141,8 @@ export default function RestaurantMockup() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
             {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="aspect-square bg-gradient-to-br from-rose-100 to-rose-200 rounded-lg flex items-center justify-center text-4xl">
-                {['🍝', '🥗', '🍮', '🍷'][i - 1]}
+              <div key={i} className="aspect-square bg-gradient-to-br from-rose-100 to-rose-200 rounded-lg flex items-center justify-center">
+                <Image className="w-10 h-10 text-rose-300" strokeWidth={1} />
               </div>
             ))}
           </div>
@@ -181,17 +182,23 @@ export default function RestaurantMockup() {
       <section id="kontakt" className="bg-neutral-900 text-white py-12 px-4">
         <div className="max-w-4xl mx-auto grid md:grid-cols-3 gap-8 text-center">
           <div>
-            <span className="text-2xl mb-2 block">📍</span>
+            <div className="flex justify-center mb-2">
+              <MapPin className="w-6 h-6 text-rose-400" />
+            </div>
             <h3 className="font-bold mb-1">Adresse</h3>
             <p className="text-neutral-400 text-sm">Havnegata 12<br/>9480 Harstad</p>
           </div>
           <div>
-            <span className="text-2xl mb-2 block">📞</span>
+            <div className="flex justify-center mb-2">
+              <Phone className="w-6 h-6 text-rose-400" />
+            </div>
             <h3 className="font-bold mb-1">Telefon</h3>
             <p className="text-neutral-400 text-sm">123 45 678</p>
           </div>
           <div>
-            <span className="text-2xl mb-2 block">📧</span>
+            <div className="flex justify-center mb-2">
+              <Mail className="w-6 h-6 text-rose-400" />
+            </div>
             <h3 className="font-bold mb-1">E-post</h3>
             <p className="text-neutral-400 text-sm">hei@sjokanten.no</p>
           </div>
