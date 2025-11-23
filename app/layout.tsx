@@ -5,6 +5,7 @@ import StructuredData from "../components/StructuredData";
 import Analytics from "../components/Analytics";
 import { ThemeProvider } from "../components/ThemeProvider";
 import ThemeToggle from "../components/ThemeToggle";
+import WhatsAppButton from "../components/WhatsAppButton";
 
 export const metadata: Metadata = {
   title: {
@@ -170,6 +171,7 @@ export default function RootLayout({
             </div>
           </footer>
         </div>
+        <WhatsAppButton />
         </ThemeProvider>
       </body>
     </html>

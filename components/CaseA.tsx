@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import BeforeAfterSlider from './BeforeAfterSlider';
 
 export default function CaseA() {
   const [activeImage, setActiveImage] = useState(0);
@@ -20,6 +21,22 @@ export default function CaseA() {
         </h2>
         <p className='text-lg text-muted mt-3 max-w-2xl mx-auto'>
           Se hvordan Bluecrew gikk fra en treg, utdatert nettside til et komplett system som sparer dem timer hver uke.
+        </p>
+      </div>
+
+      {/* Before/After Comparison */}
+      <div className='space-y-3'>
+        <h3 className='text-center text-sm font-semibold text-muted uppercase tracking-wider'>
+          Se forskjellen selv
+        </h3>
+        <BeforeAfterSlider
+          beforeImage='/images/bluecrew-before.jpg'
+          afterImage='/images/bluecrew-after.jpg'
+          beforeLabel='Gammel side'
+          afterLabel='Ny side'
+        />
+        <p className='text-center text-sm text-muted'>
+          Dra slideren for å se transformasjonen
         </p>
       </div>
 
@@ -114,7 +131,7 @@ export default function CaseA() {
         </div>
       </div>
 
-      {/* Testimonial placeholder */}
+      {/* Testimonial */}
       <div className='bg-ocean/5 border border-ocean/20 rounded-2xl p-8 text-center'>
         <svg className='w-10 h-10 text-ocean/40 mx-auto mb-4' fill='currentColor' viewBox='0 0 24 24'>
           <path d='M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z' />
