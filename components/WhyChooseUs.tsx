@@ -1,3 +1,6 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import { DollarSign, Rocket, Target } from 'lucide-react';
 
 export default function WhyChooseUs() {
@@ -21,20 +24,38 @@ export default function WhyChooseUs() {
 
   return (
     <section className="py-8 space-y-8">
-      <div className="text-center">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-50px' }}
+        transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
+        className="text-center"
+      >
         <h2 className="text-3xl font-bold text-foreground">Hvorfor velge Didriksson Digital?</h2>
-      </div>
+      </motion.div>
       <div className="grid md:grid-cols-3 gap-8">
-        {reasons.map(r => (
-          <div key={r.title} className="text-center space-y-3 p-6 rounded-2xl hover:bg-card transition-all border border-transparent hover:border-ocean/30 hover:shadow-xl hover:shadow-ocean/10 group">
+        {reasons.map((r, idx) => (
+          <motion.div
+            key={r.title}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-50px' }}
+            transition={{ duration: 0.5, delay: 0.1 + idx * 0.15, ease: [0.25, 0.1, 0.25, 1] }}
+            whileHover={{ y: -5 }}
+            className="text-center space-y-3 p-6 rounded-2xl hover:bg-card transition-all border border-transparent hover:border-ocean/30 hover:shadow-xl hover:shadow-ocean/10 group"
+          >
             <div className="flex justify-center">
-              <div className="w-14 h-14 bg-ocean/10 rounded-2xl flex items-center justify-center group-hover:bg-ocean/20 transition-colors">
+              <motion.div
+                whileHover={{ rotate: 5, scale: 1.1 }}
+                transition={{ type: 'spring', stiffness: 300 }}
+                className="w-14 h-14 bg-ocean/10 rounded-2xl flex items-center justify-center group-hover:bg-ocean/20 transition-colors"
+              >
                 <r.Icon className="w-7 h-7 text-ocean" strokeWidth={1.5} />
-              </div>
+              </motion.div>
             </div>
             <h3 className="font-bold text-lg text-foreground">{r.title}</h3>
             <p className="text-base text-muted leading-relaxed">{r.desc}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -50,30 +51,66 @@ export default function FAQ() {
 
   return (
     <section className="space-y-4">
-      <h2 className="text-2xl font-semibold text-foreground">Ofte stilte spørsmål</h2>
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-50px' }}
+        transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
+        className="text-2xl font-semibold text-foreground"
+      >
+        Ofte stilte spørsmål
+      </motion.h2>
       <div className="space-y-2">
         {faqs.map((faq, idx) => (
-          <div key={idx} className="border border-border rounded-xl overflow-hidden">
-            <button
+          <motion.div
+            key={idx}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-30px' }}
+            transition={{ duration: 0.4, delay: idx * 0.05, ease: [0.25, 0.1, 0.25, 1] }}
+            className="border border-border rounded-xl overflow-hidden"
+          >
+            <motion.button
               onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
-              className="w-full text-left px-5 py-4 flex items-center justify-between hover:bg-card transition-colors"
+              whileHover={{ backgroundColor: 'var(--card)' }}
+              className="w-full text-left px-5 py-4 flex items-center justify-between transition-colors"
             >
               <span className="font-semibold text-base text-foreground">{faq.q}</span>
-              <span className={`text-ocean transition-transform ${openIndex === idx ? 'rotate-180' : ''}`}>
+              <motion.span
+                animate={{ rotate: openIndex === idx ? 180 : 0 }}
+                transition={{ duration: 0.3 }}
+                className="text-ocean"
+              >
                 ▼
-              </span>
-            </button>
-            {openIndex === idx && (
-              <div className="px-5 pb-4 pt-2 text-base text-muted leading-relaxed">
-                {faq.a}
-              </div>
-            )}
-          </div>
+              </motion.span>
+            </motion.button>
+            <AnimatePresence>
+              {openIndex === idx && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+                  className="overflow-hidden"
+                >
+                  <div className="px-5 pb-4 pt-2 text-base text-muted leading-relaxed">
+                    {faq.a}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.div>
         ))}
       </div>
-      <p className="text-sm text-muted text-center mt-6">
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="text-sm text-muted text-center mt-6"
+      >
         Fant du ikke svar? <a href="/kontakt" className="underline hover:text-ocean">Ta kontakt</a> så hjelper jeg deg.
-      </p>
+      </motion.p>
     </section>
   );
 }
