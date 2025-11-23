@@ -6,7 +6,7 @@ import Analytics from "../components/Analytics";
 
 export const metadata: Metadata = {
   title: {
-    default: "Nettside for bedrift fra 15 000 kr | Didriksson Digital",
+    default: "Profesjonelle nettsider for bedrifter | Didriksson Digital",
     template: "%s | Didriksson Digital",
   },
   description:
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     icon: "/icon.svg",
   },
   openGraph: {
-    title: "Nettside for bedrift fra 15 000 kr | Didriksson Digital",
+    title: "Profesjonelle nettsider for bedrifter | Didriksson Digital",
     description:
       "Profesjonelle nettsider for små og mellomstore bedrifter. Fastpris, ferdig på 7-14 dager. Book gratis strategimøte.",
     url: "/",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/api/og?title=Nettside for bedrift&subtitle=Fastpris fra 15 000 kr • Ferdig på 7-14 dager",
+        url: "/api/og?title=Profesjonelle nettsider&subtitle=For små og mellomstore bedrifter",
         width: 1200,
         height: 630,
         alt: "Didriksson Digital - Nettsider for små og mellomstore bedrifter",
@@ -73,10 +73,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nettside for bedrift fra 15 000 kr",
+    title: "Profesjonelle nettsider for bedrifter",
     description:
       "Profesjonelle nettsider for SMB. Fastpris, ferdig på 7-14 dager.",
-    images: ["/api/og?title=Nettside for bedrift&subtitle=Fastpris fra 15 000 kr"],
+    images: ["/api/og?title=Profesjonelle nettsider&subtitle=For små og mellomstore bedrifter"],
   },
   verification: {
     google: "din-google-verification-kode", // Legg til senere
