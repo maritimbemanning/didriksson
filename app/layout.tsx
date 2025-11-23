@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/icon.svg",
+    icon: "/images/logo.png",
   },
   openGraph: {
     title: "Profesjonelle nettsider for bedrifter | Didriksson Digital",
