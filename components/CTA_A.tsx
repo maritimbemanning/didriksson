@@ -21,7 +21,7 @@ export default function CTA_A() {
         <div className='flex flex-col sm:flex-row items-center justify-center gap-4 pt-2'>
           <CalendlyWidget
             buttonText='Book gratis møte'
-            buttonClassName='inline-flex items-center gap-3 bg-white text-ocean hover:bg-neutral-100 transition-all rounded-xl px-8 py-4 font-bold text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1'
+            buttonClassName='inline-flex items-center gap-3 bg-white text-ocean hover:bg-white/90 transition-all rounded-xl px-8 py-4 font-bold text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1'
           />
           <a
             href='tel:+4792328850'

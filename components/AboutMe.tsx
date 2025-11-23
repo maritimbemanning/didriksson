@@ -20,19 +20,19 @@ export default function AboutMe() {
         <div className="space-y-6">
           <div>
             <p className="text-ocean font-semibold mb-2">Om meg</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
               Hei, jeg er Isak
             </h2>
           </div>
 
-          <div className="space-y-4 text-lg text-neutral-600 leading-relaxed">
+          <div className="space-y-4 text-lg text-muted leading-relaxed">
             <p>
               Jeg hjelper små og mellomstore bedrifter med å få nettsider som faktisk gir resultater
               – uten byråpriser og lang ventetid.
             </p>
             <p>
               Med bakgrunn fra både maritim næring og tech, forstår jeg hva bedrifter trenger:
-              <strong className="text-neutral-800"> enkle løsninger som fungerer</strong>.
+              <strong className="text-foreground"> enkle løsninger som fungerer</strong>.
             </p>
             <p>
               Jeg bygger alt selv, fra design til kode, så du slipper å forholde deg til flere ledd.
@@ -42,13 +42,13 @@ export default function AboutMe() {
 
           {/* Quick facts */}
           <div className="grid grid-cols-2 gap-4 pt-4">
-            <div className="bg-ocean/5 rounded-xl p-4">
+            <div className="bg-ocean/10 rounded-xl p-4">
               <div className="text-2xl font-bold text-ocean">Harstad</div>
-              <div className="text-sm text-neutral-600">Basert i Nord-Norge</div>
+              <div className="text-sm text-muted">Basert i Nord-Norge</div>
             </div>
-            <div className="bg-ocean/5 rounded-xl p-4">
+            <div className="bg-ocean/10 rounded-xl p-4">
               <div className="text-2xl font-bold text-ocean">24t</div>
-              <div className="text-sm text-neutral-600">Maks responstid</div>
+              <div className="text-sm text-muted">Maks responstid</div>
             </div>
           </div>
         </div>

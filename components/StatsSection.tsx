@@ -33,10 +33,10 @@ export default function StatsSection() {
             <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-ocean to-cyan-600 bg-clip-text text-transparent">
               {stat.value}
             </div>
-            <div className="text-base font-semibold text-neutral-800 mt-2">
+            <div className="text-base font-semibold text-foreground mt-2">
               {stat.label}
             </div>
-            <div className="text-sm text-neutral-600 mt-1">
+            <div className="text-sm text-muted mt-1">
               {stat.description}
             </div>
           </div>
