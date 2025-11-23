@@ -12,9 +12,9 @@ export default function MobileNav() {
         className="flex flex-col gap-1.5 p-2"
         aria-label="Toggle menu"
       >
-        <span className={`block h-0.5 w-6 bg-neutral-800 transition-all duration-200 ${open ? 'rotate-45 translate-y-2' : ''}`} />
-        <span className={`block h-0.5 w-6 bg-neutral-800 transition-all duration-200 ${open ? 'opacity-0' : ''}`} />
-        <span className={`block h-0.5 w-6 bg-neutral-800 transition-all duration-200 ${open ? '-rotate-45 -translate-y-2' : ''}`} />
+        <span className={`block h-0.5 w-6 bg-foreground transition-all duration-200 ${open ? 'rotate-45 translate-y-2' : ''}`} />
+        <span className={`block h-0.5 w-6 bg-foreground transition-all duration-200 ${open ? 'opacity-0' : ''}`} />
+        <span className={`block h-0.5 w-6 bg-foreground transition-all duration-200 ${open ? '-rotate-45 -translate-y-2' : ''}`} />
       </button>
 
       {open && (
@@ -26,44 +26,44 @@ export default function MobileNav() {
           />
 
           {/* Menu */}
-          <nav className="fixed top-16 left-0 right-0 bg-white border-b border-neutral-200 shadow-xl z-50">
+          <nav className="fixed top-16 left-0 right-0 bg-background border-b border-border shadow-xl z-50">
             <div className="flex flex-col p-6 space-y-1">
               <a
                 href="/tjenester"
-                className="text-neutral-700 hover:text-ocean hover:bg-ocean/5 py-3 px-4 rounded-xl font-medium transition-colors"
+                className="text-muted hover:text-ocean hover:bg-ocean/5 py-3 px-4 rounded-xl font-medium transition-colors"
                 onClick={() => setOpen(false)}
               >
                 Tjenester & Priser
               </a>
               <a
                 href="/eksempler"
-                className="text-neutral-700 hover:text-ocean hover:bg-ocean/5 py-3 px-4 rounded-xl font-medium transition-colors"
+                className="text-muted hover:text-ocean hover:bg-ocean/5 py-3 px-4 rounded-xl font-medium transition-colors"
                 onClick={() => setOpen(false)}
               >
                 Eksempler
               </a>
               <a
                 href="/case"
-                className="text-neutral-700 hover:text-ocean hover:bg-ocean/5 py-3 px-4 rounded-xl font-medium transition-colors"
+                className="text-muted hover:text-ocean hover:bg-ocean/5 py-3 px-4 rounded-xl font-medium transition-colors"
                 onClick={() => setOpen(false)}
               >
                 Resultater
               </a>
               <a
                 href="/book"
-                className="text-neutral-700 hover:text-ocean hover:bg-ocean/5 py-3 px-4 rounded-xl font-medium transition-colors"
+                className="text-muted hover:text-ocean hover:bg-ocean/5 py-3 px-4 rounded-xl font-medium transition-colors"
                 onClick={() => setOpen(false)}
               >
                 Book gratis møte
               </a>
               <a
                 href="/kontakt"
-                className="text-neutral-700 hover:text-ocean hover:bg-ocean/5 py-3 px-4 rounded-xl font-medium transition-colors"
+                className="text-muted hover:text-ocean hover:bg-ocean/5 py-3 px-4 rounded-xl font-medium transition-colors"
                 onClick={() => setOpen(false)}
               >
                 Kontakt
               </a>
-              <div className="pt-4 border-t border-neutral-100 mt-2">
+              <div className="pt-4 border-t border-border mt-2">
                 <a
                   href="tel:+4792328850"
                   className="flex items-center justify-center gap-2 bg-ocean text-white py-3 px-4 rounded-xl font-semibold"

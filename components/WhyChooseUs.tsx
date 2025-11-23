@@ -22,18 +22,18 @@ export default function WhyChooseUs() {
   return (
     <section className="py-8 space-y-8">
       <div className="text-center">
-        <h2 className="text-3xl font-bold text-neutral-900">Hvorfor velge Didriksson Digital?</h2>
+        <h2 className="text-3xl font-bold text-foreground">Hvorfor velge Didriksson Digital?</h2>
       </div>
       <div className="grid md:grid-cols-3 gap-8">
         {reasons.map(r => (
-          <div key={r.title} className="text-center space-y-3 p-6 rounded-2xl hover:bg-neutral-50 transition-all border border-transparent hover:border-ocean/30 hover:shadow-xl hover:shadow-ocean/10 group">
+          <div key={r.title} className="text-center space-y-3 p-6 rounded-2xl hover:bg-card transition-all border border-transparent hover:border-ocean/30 hover:shadow-xl hover:shadow-ocean/10 group">
             <div className="flex justify-center">
               <div className="w-14 h-14 bg-ocean/10 rounded-2xl flex items-center justify-center group-hover:bg-ocean/20 transition-colors">
                 <r.Icon className="w-7 h-7 text-ocean" strokeWidth={1.5} />
               </div>
             </div>
-            <h3 className="font-bold text-lg text-neutral-900">{r.title}</h3>
-            <p className="text-base text-neutral-600 leading-relaxed">{r.desc}</p>
+            <h3 className="font-bold text-lg text-foreground">{r.title}</h3>
+            <p className="text-base text-muted leading-relaxed">{r.desc}</p>
           </div>
         ))}
       </div>

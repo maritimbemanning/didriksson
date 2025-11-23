@@ -29,14 +29,14 @@ export default function TrustSection() {
       <h2 className="text-2xl font-bold mb-6 text-center text-ocean">Ingen risiko, kun resultater</h2>
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {guarantees.map(g => (
-          <div key={g.title} className="text-center bg-white/60 backdrop-blur-md rounded-2xl p-4 hover:bg-white/80 transition-all hover:shadow-lg hover:shadow-ocean/20 border border-neutral-200">
+          <div key={g.title} className="text-center bg-background/60 backdrop-blur-md rounded-2xl p-4 hover:bg-background/80 transition-all hover:shadow-lg hover:shadow-ocean/20 border border-border">
             <div className="flex justify-center mb-3">
               <div className="w-12 h-12 bg-ocean/10 rounded-xl flex items-center justify-center">
                 <g.Icon className="w-6 h-6 text-ocean" strokeWidth={1.5} />
               </div>
             </div>
-            <h3 className="font-bold text-base mb-2 text-neutral-900">{g.title}</h3>
-            <p className="text-sm text-neutral-600 leading-relaxed">{g.desc}</p>
+            <h3 className="font-bold text-base mb-2 text-foreground">{g.title}</h3>
+            <p className="text-sm text-muted leading-relaxed">{g.desc}</p>
           </div>
         ))}
       </div>

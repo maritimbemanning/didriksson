@@ -25,21 +25,21 @@ export default function ProcessA() {
   return (
     <section className='space-y-6'>
       <div>
-        <h2 className='text-2xl font-semibold mb-2 text-neutral-900'>Hvordan det fungerer</h2>
-        <p className='text-neutral-600'>Enkel prosess fra første møte til ferdig løsning</p>
+        <h2 className='text-2xl font-semibold mb-2 text-foreground'>Hvordan det fungerer</h2>
+        <p className='text-muted'>Enkel prosess fra første møte til ferdig løsning</p>
       </div>
       <ol className='space-y-4'>
         {steps.map((step, idx) => (
-          <li key={idx} className='border border-neutral-200 rounded-2xl p-6 space-y-3 hover:bg-neutral-50 hover:border-ocean/30 transition-all hover:shadow-md'>
-            <h3 className='font-semibold text-lg text-neutral-900'>{step.title}</h3>
+          <li key={idx} className='border border-border rounded-2xl p-6 space-y-3 hover:bg-card hover:border-ocean/30 transition-all hover:shadow-md'>
+            <h3 className='font-semibold text-lg text-foreground'>{step.title}</h3>
             <div className='grid md:grid-cols-2 gap-4 text-base'>
               <div>
                 <p className='font-medium text-ocean mb-1'>✓ Du:</p>
-                <p className='text-neutral-600'>{step.customer}</p>
+                <p className='text-muted'>{step.customer}</p>
               </div>
               <div>
                 <p className='font-medium text-ocean mb-1'>✓ Vi:</p>
-                <p className='text-neutral-600'>{step.we}</p>
+                <p className='text-muted'>{step.we}</p>
               </div>
             </div>
           </li>
