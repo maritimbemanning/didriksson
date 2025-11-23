@@ -58,19 +58,19 @@ export default function CasePage() {
   return (
     <main className="space-y-12">
       <header className="space-y-2">
-        <h1 className="text-3xl font-semibold tracking-tight">Tidligere prosjekter</h1>
-        <p className="text-neutral-600 max-w-2xl">
+        <h1 className="text-3xl font-semibold tracking-tight text-foreground">Tidligere prosjekter</h1>
+        <p className="text-muted max-w-2xl">
           Små og mellomstore bedrifter som har fått flere kunder, spart tid eller økt omsetning.
         </p>
       </header>
 
       {cases.map((c, idx) => (
-        <article key={c.title} className="border border-neutral-200 rounded-2xl p-6 space-y-5">
+        <article key={c.title} className="border border-border rounded-2xl p-6 space-y-5 bg-card">
           {/* Header */}
           <div className="flex items-start justify-between gap-4">
             <div>
-              <h2 className="text-2xl font-semibold">{c.title}</h2>
-              <p className="text-base text-neutral-600 mt-2">{c.industry} · {c.size}</p>
+              <h2 className="text-2xl font-semibold text-foreground">{c.title}</h2>
+              <p className="text-base text-muted mt-2">{c.industry} · {c.size}</p>
             </div>
             <a
               href={c.url}
@@ -82,27 +82,27 @@ export default function CasePage() {
             </a>
           </div>
 
-          <p className="text-base text-neutral-700 leading-relaxed">{c.description}</p>
+          <p className="text-base text-muted leading-relaxed">{c.description}</p>
 
           {/* Problem & Solution */}
           <div className="space-y-4">
             <div>
-              <h3 className="text-base font-semibold mb-2">Situasjonen før</h3>
-              <p className="text-base text-neutral-700 leading-relaxed">{c.problem}</p>
+              <h3 className="text-base font-semibold mb-2 text-foreground">Situasjonen før</h3>
+              <p className="text-base text-muted leading-relaxed">{c.problem}</p>
             </div>
             <div>
-              <h3 className="text-base font-semibold mb-2">Hva vi gjorde</h3>
-              <p className="text-base text-neutral-700 leading-relaxed">{c.solution}</p>
+              <h3 className="text-base font-semibold mb-2 text-foreground">Hva vi gjorde</h3>
+              <p className="text-base text-muted leading-relaxed">{c.solution}</p>
             </div>
           </div>
 
           {/* Results */}
-          <div className="bg-green-50 border border-green-200 rounded-xl p-5">
-            <h3 className="text-base font-semibold mb-3 text-green-900">Resultater</h3>
+          <div className="bg-green-500/10 border border-green-500/30 rounded-xl p-5">
+            <h3 className="text-base font-semibold mb-3 text-green-600 dark:text-green-400">Resultater</h3>
             <ul className="space-y-2">
               {c.results.map(r => (
-                <li key={r} className="flex items-start gap-2 text-base text-green-950">
-                  <span className="text-green-600 font-bold mt-0.5">✓</span>
+                <li key={r} className="flex items-start gap-2 text-base text-foreground">
+                  <span className="text-green-500 font-bold mt-0.5">✓</span>
                   <span>{r}</span>
                 </li>
               ))}
@@ -110,17 +110,17 @@ export default function CasePage() {
           </div>
 
           {/* Timeline */}
-          <p className="text-base text-neutral-700">
-            <span className="font-semibold">Tidsbruk:</span> {c.timeline}
+          <p className="text-base text-muted">
+            <span className="font-semibold text-foreground">Tidsbruk:</span> {c.timeline}
           </p>
         </article>
       ))}
 
       {/* CTA */}
-      <aside className="text-center border border-neutral-200 rounded-2xl p-8">
-        <h2 className="text-xl font-semibold mb-2">Ønsker lignende resultater for din bedrift?</h2>
-        <p className="text-neutral-600 mb-4">
-          Ta kontakt for en uforpliktende samtale. Jeg gir deg en ærlig vurdering av hva som er mulig. 
+      <aside className="text-center border border-border rounded-2xl p-8 bg-card">
+        <h2 className="text-xl font-semibold mb-2 text-foreground">Ønsker lignende resultater for din bedrift?</h2>
+        <p className="text-muted mb-4">
+          Ta kontakt for en uforpliktende samtale. Jeg gir deg en ærlig vurdering av hva som er mulig.
           Se også våre <a href="/tjenester" className="underline hover:text-ocean">tjenester og priser</a>.
         </p>
         <a
