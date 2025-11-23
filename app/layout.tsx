@@ -6,7 +6,7 @@ import Analytics from "../components/Analytics";
 
 export const metadata: Metadata = {
   title: {
-    default: "Nettside for bedrift fra 15 000 kr | Didriksson Digital",
+    default: "Profesjonelle nettsider for bedrifter | Didriksson Digital",
     template: "%s | Didriksson Digital",
   },
   description:
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     icon: "/icon.svg",
   },
   openGraph: {
-    title: "Nettside for bedrift fra 15 000 kr | Didriksson Digital",
+    title: "Profesjonelle nettsider for bedrifter | Didriksson Digital",
     description:
       "Profesjonelle nettsider for små og mellomstore bedrifter. Fastpris, ferdig på 7-14 dager. Book gratis strategimøte.",
     url: "/",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/api/og?title=Nettside for bedrift&subtitle=Fastpris fra 15 000 kr • Ferdig på 7-14 dager",
+        url: "/api/og?title=Profesjonelle nettsider&subtitle=For små og mellomstore bedrifter",
         width: 1200,
         height: 630,
         alt: "Didriksson Digital - Nettsider for små og mellomstore bedrifter",
@@ -73,10 +73,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nettside for bedrift fra 15 000 kr",
+    title: "Profesjonelle nettsider for bedrifter",
     description:
       "Profesjonelle nettsider for SMB. Fastpris, ferdig på 7-14 dager.",
-    images: ["/api/og?title=Nettside for bedrift&subtitle=Fastpris fra 15 000 kr"],
+    images: ["/api/og?title=Profesjonelle nettsider&subtitle=For små og mellomstore bedrifter"],
   },
   verification: {
     google: "din-google-verification-kode", // Legg til senere
@@ -97,9 +97,12 @@ export default function RootLayout({
         <Analytics />
         <div className="mx-auto max-w-5xl px-4 sm:px-6 py-4 sm:py-6">
           <header className="flex items-center justify-between py-3 border-b border-neutral-100">
-            <a href="/" className="group">
-              <span className="text-2xl font-black tracking-tighter text-neutral-900">
-                didriksson<span className="text-ocean">.</span>
+            <a href="/" className="group flex items-center gap-2">
+              <span className="text-xl font-bold tracking-wide text-neutral-900">
+                DIDRIKSSON
+              </span>
+              <span className="text-xs font-medium text-neutral-400 tracking-widest uppercase">
+                Digital
               </span>
             </a>
             <nav className="hidden md:flex items-center gap-6 text-sm">
