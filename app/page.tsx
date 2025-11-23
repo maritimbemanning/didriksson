@@ -6,6 +6,7 @@ import TrustSection from "../components/TrustSection";
 import AboutMe from "../components/AboutMe";
 import ProcessA from "../components/ProcessA";
 import CaseA from "../components/CaseA";
+import PriceComparison from "../components/PriceComparison";
 import FAQ from "../components/FAQ";
 import CTA_A from "../components/CTA_A";
 
@@ -26,6 +27,9 @@ export default function Home() {
 
       {/* Why Choose Us - Key differentiators */}
       <WhyChooseUs />
+
+      {/* Price Comparison - Byrå vs Meg */}
+      <PriceComparison />
 
       {/* Trust Section - Guarantees */}
       <TrustSection />
