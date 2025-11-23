@@ -54,3 +54,56 @@ html {
   background: var(--ocean);
   color: white;
 }
+
+/* Animate on scroll - elements start hidden */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-on-scroll.from-left {
+  transform: translateX(-30px);
+}
+
+.animate-on-scroll.from-left.visible {
+  transform: translateX(0);
+}
+
+.animate-on-scroll.from-right {
+  transform: translateX(30px);
+}
+
+.animate-on-scroll.from-right.visible {
+  transform: translateX(0);
+}
+
+/* Stagger delays */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+.delay-500 { transition-delay: 0.5s; }
+
+/* Hover animations */
+.hover-lift {
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+/* Scale on hover */
+.hover-scale {
+  transition: transform 0.2s ease-out;
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}
