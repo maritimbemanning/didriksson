@@ -47,35 +47,35 @@ export default function TjenesterPage(){
   return (
     <main className="space-y-10">
       <header className="space-y-2">
-        <h1 className="text-3xl font-semibold tracking-tight">Tjenester & Priser</h1>
-        <p className="text-neutral-600 max-w-2xl">Transparente pakker med fastpris. Du vet hva du får og hva det koster før vi starter.</p>
+        <h1 className="text-3xl font-semibold tracking-tight text-foreground">Tjenester & Priser</h1>
+        <p className="text-muted max-w-2xl">Transparente pakker med fastpris. Du vet hva du får og hva det koster før vi starter.</p>
       </header>
 
       <section className="grid md:grid-cols-3 gap-4" aria-label="Prispakker">
         {packs.map(p => (
-          <div key={p.t} className={`border ${p.popular ? 'border-ocean ring-2 ring-ocean/20' : 'border-neutral-200'} rounded-2xl p-6 flex flex-col relative`}>
+          <div key={p.t} className={`border ${p.popular ? 'border-ocean ring-2 ring-ocean/20' : 'border-border'} rounded-2xl p-6 flex flex-col relative bg-card`}>
             {p.popular && (
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-ocean text-white text-xs font-semibold px-3 py-1 rounded-full">
                 Mest populær
               </div>
             )}
-            
+
             <div className="mb-4">
-              <h2 className="text-xl font-semibold">{p.t}</h2>
-              <p className="text-sm text-neutral-600">{p.subtitle}</p>
+              <h2 className="text-xl font-semibold text-foreground">{p.t}</h2>
+              <p className="text-sm text-muted">{p.subtitle}</p>
               <p className="text-2xl font-bold text-ocean mt-3">{p.price}</p>
-              <p className="text-xs text-neutral-500 mt-1">Engangspris, ingen abonnement</p>
+              <p className="text-xs text-muted mt-1">Engangspris, ingen abonnement</p>
             </div>
 
-            <p className="text-sm text-neutral-600 mb-4">{p.d}</p>
+            <p className="text-sm text-muted mb-4">{p.d}</p>
 
             <div className="space-y-3 mb-4 grow">
               <div>
-                <p className="text-xs font-semibold text-neutral-700 mb-2">Inkludert:</p>
+                <p className="text-xs font-semibold text-foreground mb-2">Inkludert:</p>
                 <ul className="space-y-1.5">
                   {p.f.map(x => (
-                    <li key={x} className="flex items-start gap-2 text-sm">
-                      <span className="text-green-600 mt-0.5">✓</span>
+                    <li key={x} className="flex items-start gap-2 text-sm text-foreground">
+                      <span className="text-green-500 mt-0.5">✓</span>
                       <span>{x}</span>
                     </li>
                   ))}
@@ -84,10 +84,10 @@ export default function TjenesterPage(){
 
               {p.notIncluded && (
                 <div>
-                  <p className="text-xs font-semibold text-neutral-700 mb-2">Ikke inkludert:</p>
+                  <p className="text-xs font-semibold text-foreground mb-2">Ikke inkludert:</p>
                   <ul className="space-y-1.5">
                     {p.notIncluded.map(x => (
-                      <li key={x} className="flex items-start gap-2 text-sm text-neutral-500">
+                      <li key={x} className="flex items-start gap-2 text-sm text-muted">
                         <span className="mt-0.5">–</span>
                         <span>{x}</span>
                       </li>
@@ -97,14 +97,14 @@ export default function TjenesterPage(){
               )}
             </div>
 
-            <div className="border-t border-neutral-200 pt-4 mb-4">
-              <p className="text-sm">
+            <div className="border-t border-border pt-4 mb-4">
+              <p className="text-sm text-foreground">
                 <span className="font-semibold">Leveringstid:</span> {p.delivery}
               </p>
             </div>
 
-            <a 
-              href={`/kontakt?pakke=${p.q}`} 
+            <a
+              href={`/kontakt?pakke=${p.q}`}
               onClick={() => handlePackageClick(p.t, p.priceNum)}
               className="inline-flex items-center justify-center bg-ocean text-white hover:bg-ocean-dark transition-colors rounded-xl px-4 py-2.5 font-medium"
             >
@@ -115,29 +115,29 @@ export default function TjenesterPage(){
       </section>
 
       {/* Add-ons */}
-      <aside className="border border-neutral-200 rounded-2xl p-6 bg-neutral-50">
-        <h3 className="text-lg font-semibold mb-3">Tillegg & Vedlikehold</h3>
+      <aside className="border border-border rounded-2xl p-6 bg-card">
+        <h3 className="text-lg font-semibold mb-3 text-foreground">Tillegg & Vedlikehold</h3>
         <div className="grid md:grid-cols-2 gap-4 text-sm">
           <div>
-            <p className="font-semibold mb-1">Ekstra sider</p>
-            <p className="text-neutral-600">+ 2 000 kr per side</p>
+            <p className="font-semibold mb-1 text-foreground">Ekstra sider</p>
+            <p className="text-muted">+ 2 000 kr per side</p>
           </div>
           <div>
-            <p className="font-semibold mb-1">Vedlikeholdspakke</p>
-            <p className="text-neutral-600">Fra 1 500 kr/mnd (oppdateringer, overvåkning, support)</p>
+            <p className="font-semibold mb-1 text-foreground">Vedlikeholdspakke</p>
+            <p className="text-muted">Fra 1 500 kr/mnd (oppdateringer, overvåkning, support)</p>
           </div>
           <div>
-            <p className="font-semibold mb-1">Ekstra revisjonsrunde</p>
-            <p className="text-neutral-600">+ 3 000 kr</p>
+            <p className="font-semibold mb-1 text-foreground">Ekstra revisjonsrunde</p>
+            <p className="text-muted">+ 3 000 kr</p>
           </div>
           <div>
-            <p className="font-semibold mb-1">API-integrasjon</p>
-            <p className="text-neutral-600">Pris etter vurdering (typisk 5 000–15 000 kr)</p>
+            <p className="font-semibold mb-1 text-foreground">API-integrasjon</p>
+            <p className="text-muted">Pris etter vurdering (typisk 5 000–15 000 kr)</p>
           </div>
         </div>
       </aside>
 
-      <footer className="text-center text-sm text-neutral-600">
+      <footer className="text-center text-sm text-muted">
         <p>Alle priser er eks. mva. Har du allerede en spesifikasjon? <a href="/kontakt" className="underline hover:text-ocean">Ta kontakt</a> for et skreddersydd tilbud.</p>
         <p className="mt-3">Se <a href="/case" className="underline hover:text-ocean">tidligere prosjekter</a> og resultater fra våre kunder.</p>
       </footer>

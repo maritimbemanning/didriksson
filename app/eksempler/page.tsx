@@ -86,10 +86,10 @@ export default function EksemplerPage() {
           <span className="w-2 h-2 bg-ocean rounded-full animate-pulse" />
           6 komplette demo-nettsider
         </div>
-        <h1 className="text-3xl md:text-5xl font-bold text-neutral-900">
+        <h1 className="text-3xl md:text-5xl font-bold text-foreground">
           Se hva du kan få
         </h1>
-        <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
+        <p className="text-lg text-muted max-w-2xl mx-auto">
           Klikk på en bransje for å se en komplett demo-nettside.
           Alle kan tilpasses din bedrift.
         </p>
@@ -101,7 +101,7 @@ export default function EksemplerPage() {
           <Link
             key={mockup.id}
             href={mockup.href}
-            className="group text-left bg-white border border-neutral-200 rounded-2xl overflow-hidden hover:shadow-xl hover:border-ocean/30 transition-all duration-300"
+            className="group text-left bg-card border border-border rounded-2xl overflow-hidden hover:shadow-xl hover:border-ocean/30 transition-all duration-300"
           >
             {/* Preview Image */}
             <div className={`aspect-video bg-gradient-to-br ${mockup.gradient} relative overflow-hidden`}>
@@ -127,24 +127,24 @@ export default function EksemplerPage() {
               <div className="flex items-start justify-between">
                 <div>
                   <p className="text-xs text-ocean font-semibold uppercase tracking-wide">{mockup.industry}</p>
-                  <h3 className="text-lg font-bold text-neutral-900 mt-1">{mockup.title}</h3>
+                  <h3 className="text-lg font-bold text-foreground mt-1">{mockup.title}</h3>
                 </div>
-                <mockup.Icon className="w-6 h-6 text-neutral-400" strokeWidth={1.5} />
+                <mockup.Icon className="w-6 h-6 text-muted" strokeWidth={1.5} />
               </div>
-              <p className="text-sm text-neutral-600 line-clamp-2">{mockup.description}</p>
+              <p className="text-sm text-muted line-clamp-2">{mockup.description}</p>
 
               {/* Features preview */}
               <div className="flex flex-wrap gap-1">
                 {mockup.features.slice(0, 3).map((feature, idx) => (
-                  <span key={idx} className="text-xs bg-neutral-100 text-neutral-600 px-2 py-1 rounded">
+                  <span key={idx} className="text-xs bg-card border border-border text-muted px-2 py-1 rounded">
                     {feature}
                   </span>
                 ))}
               </div>
 
-              <div className="flex items-center justify-between pt-2 border-t border-neutral-100">
+              <div className="flex items-center justify-between pt-2 border-t border-border">
                 <span className="text-ocean font-bold">{mockup.price}</span>
-                <span className="text-xs text-neutral-500 group-hover:text-ocean transition-colors">Se komplett demo →</span>
+                <span className="text-xs text-muted group-hover:text-ocean transition-colors">Se komplett demo →</span>
               </div>
             </div>
           </Link>
@@ -152,12 +152,12 @@ export default function EksemplerPage() {
       </section>
 
       {/* Info box */}
-      <section className="bg-neutral-50 rounded-2xl p-6 md:p-8">
+      <section className="bg-card rounded-2xl p-6 md:p-8 border border-border">
         <div className="flex items-start gap-4">
           <Lightbulb className="w-8 h-8 text-amber-500 flex-shrink-0" strokeWidth={1.5} />
           <div>
-            <h3 className="font-bold text-lg mb-2">Dette er konseptdesign</h3>
-            <p className="text-neutral-600">
+            <h3 className="font-bold text-lg mb-2 text-foreground">Dette er konseptdesign</h3>
+            <p className="text-muted">
               Nettsidene du ser her er demo-versjoner som viser hva vi kan lage for deg.
               Fiktive bedriftsnavn er brukt for illustrasjon. Din nettside blir selvfølgelig
               tilpasset din bedrift, ditt innhold og din merkevare.
