@@ -3,6 +3,8 @@ import "./globals.css";
 import MobileNav from "../components/MobileNav";
 import StructuredData from "../components/StructuredData";
 import Analytics from "../components/Analytics";
+import { ThemeProvider } from "../components/ThemeProvider";
+import ThemeToggle from "../components/ThemeToggle";
 
 export const metadata: Metadata = {
   title: {
@@ -93,28 +95,31 @@ export default function RootLayout({
       <head>
         <StructuredData />
       </head>
-      <body className="antialiased bg-white font-sans">
+      <body className="antialiased bg-background text-foreground font-sans transition-colors">
+        <ThemeProvider>
         <Analytics />
         <div className="mx-auto max-w-5xl px-4 sm:px-6 py-4 sm:py-6">
-          <header className="flex items-center justify-between py-3 border-b border-neutral-100">
+          <header className="flex items-center justify-between py-3 border-b border-border">
             <a href="/" className="group flex items-center gap-2">
-              <span className="text-xl font-bold tracking-wide text-neutral-900">
+              <span className="text-xl font-bold tracking-wide text-foreground">
                 DIDRIKSSON
               </span>
-              <span className="text-xs font-medium text-neutral-400 tracking-widest uppercase">
+              <span className="text-xs font-medium text-muted tracking-widest uppercase">
                 Digital
               </span>
             </a>
             <nav className="hidden md:flex items-center gap-6 text-sm">
-              <a href="/tjenester" className="text-neutral-600 hover:text-ocean transition-colors font-medium">Tjenester & Priser</a>
-              <a href="/eksempler" className="text-neutral-600 hover:text-ocean transition-colors font-medium">Eksempler</a>
-              <a href="/case" className="text-neutral-600 hover:text-ocean transition-colors font-medium">Resultater</a>
-              <a href="/book" className="text-neutral-600 hover:text-ocean transition-colors font-medium">Book møte</a>
+              <a href="/tjenester" className="text-muted hover:text-ocean transition-colors font-medium">Tjenester & Priser</a>
+              <a href="/eksempler" className="text-muted hover:text-ocean transition-colors font-medium">Eksempler</a>
+              <a href="/case" className="text-muted hover:text-ocean transition-colors font-medium">Resultater</a>
+              <a href="/book" className="text-muted hover:text-ocean transition-colors font-medium">Book møte</a>
+              <ThemeToggle />
               <a href="tel:+4792328850" className="bg-ocean text-white px-5 py-2.5 rounded-xl hover:bg-ocean-dark transition-colors font-semibold shadow-lg shadow-ocean/20">
                 923 28 850
               </a>
             </nav>
             <div className="flex items-center gap-3 md:hidden">
+              <ThemeToggle />
               <a href="tel:+4792328850" className="bg-ocean text-white px-4 py-2 rounded-lg text-sm font-semibold">
                 Ring
               </a>
@@ -126,45 +131,46 @@ export default function RootLayout({
             {children}
           </main>
 
-          <footer className="pt-12 pb-8 border-t border-neutral-200">
+          <footer className="pt-12 pb-8 border-t border-border">
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
               <div>
-                <h3 className="font-bold text-neutral-900 mb-3">Didriksson Digital</h3>
-                <p className="text-sm text-neutral-600 leading-relaxed">
+                <h3 className="font-bold text-foreground mb-3">Didriksson Digital</h3>
+                <p className="text-sm text-muted leading-relaxed">
                   Profesjonelle nettsider for små og mellomstore bedrifter i Norge.
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-neutral-900 mb-3">Tjenester</h3>
-                <ul className="space-y-2 text-sm text-neutral-600">
+                <h3 className="font-bold text-foreground mb-3">Tjenester</h3>
+                <ul className="space-y-2 text-sm text-muted">
                   <li><a href="/tjenester" className="hover:text-ocean transition-colors">Nettside for bedrift</a></li>
                   <li><a href="/tjenester" className="hover:text-ocean transition-colors">Webapp & system</a></li>
                   <li><a href="/tjenester" className="hover:text-ocean transition-colors">SEO-optimalisering</a></li>
                 </ul>
               </div>
               <div>
-                <h3 className="font-bold text-neutral-900 mb-3">Kontakt</h3>
-                <ul className="space-y-2 text-sm text-neutral-600">
+                <h3 className="font-bold text-foreground mb-3">Kontakt</h3>
+                <ul className="space-y-2 text-sm text-muted">
                   <li><a href="tel:+4792328850" className="hover:text-ocean transition-colors">+47 923 28 850</a></li>
                   <li><a href="mailto:isak@didriksson.no" className="hover:text-ocean transition-colors">isak@didriksson.no</a></li>
                   <li><a href="/book" className="hover:text-ocean transition-colors">Book gratis møte</a></li>
                 </ul>
               </div>
               <div>
-                <h3 className="font-bold text-neutral-900 mb-3">Lokasjon</h3>
-                <p className="text-sm text-neutral-600">
+                <h3 className="font-bold text-foreground mb-3">Lokasjon</h3>
+                <p className="text-sm text-muted">
                   Ervikveien 110<br/>
                   Harstad, Norge<br/>
-                  <span className="text-xs text-neutral-500">Betjener hele Norge</span>
+                  <span className="text-xs opacity-75">Betjener hele Norge</span>
                 </p>
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-8 border-t border-neutral-100 text-sm text-neutral-500">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-8 border-t border-border text-sm text-muted">
               <p>&copy; {new Date().getFullYear()} Didriksson Digital. Org.nr: 936 351 371</p>
               <p>Nettsider for små og mellomstore bedrifter i Norge</p>
             </div>
           </footer>
         </div>
+        </ThemeProvider>
       </body>
     </html>
   );
