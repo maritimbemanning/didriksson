@@ -79,11 +79,13 @@ export default function HeroA() {
         {/* Right side - Personal intro */}
         <div className='lg:col-span-2'>
           <div className='bg-card border border-border rounded-3xl p-6 space-y-4'>
-            {/* Photo placeholder - bytt ut med ekte bilde */}
+            {/* Profile photo */}
             <div className='relative'>
-              <div className='w-24 h-24 mx-auto rounded-full bg-gradient-to-br from-ocean to-cyan-500 flex items-center justify-center text-white text-2xl font-bold shadow-lg'>
-                ID
-              </div>
+              <img
+                src='/images/isak-hero.jpg'
+                alt='Isak Didriksson - Webutvikler'
+                className='w-24 h-24 mx-auto rounded-full object-cover shadow-lg border-2 border-ocean/20'
+              />
               {/* Online indicator */}
               <div className='absolute bottom-1 right-1/2 translate-x-8 w-5 h-5 bg-green-500 rounded-full border-2 border-card' />
             </div>
