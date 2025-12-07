@@ -79,55 +79,55 @@ export default function HeroA() {
 
         {/* Right side - Personal intro */}
         <div className='lg:col-span-2'>
-          <div className='bg-card border border-border rounded-3xl p-6 space-y-4'>
+          <div className='bg-card border border-border rounded-3xl p-3 md:p-6 space-y-3 md:space-y-4'>
             {/* Profile photo */}
             <div className='relative'>
               <Image
                 src='/images/isak-hero.jpg'
                 alt='Isak Didriksson - Webutvikler'
-                width={96}
-                height={96}
-                className='w-24 h-24 mx-auto rounded-full object-cover shadow-lg border-2 border-ocean/20'
+                width={80}
+                height={80}
+                className='w-16 h-16 md:w-24 md:h-24 mx-auto rounded-full object-cover shadow-lg border-2 border-ocean/20'
                 priority
               />
               {/* Online indicator */}
-              <div className='absolute bottom-1 right-1/2 translate-x-8 w-5 h-5 bg-green-500 rounded-full border-2 border-card' />
+              <div className='absolute bottom-0 right-1/2 translate-x-6 md:translate-x-8 w-4 h-4 md:w-5 md:h-5 bg-green-500 rounded-full border-2 border-card' />
             </div>
 
             <div className='text-center'>
-              <h2 className='text-xl font-bold text-foreground'>Isak Didriksson</h2>
-              <p className='text-sm text-ocean font-medium'>Webutvikler & Designer</p>
+              <h2 className='text-base md:text-xl font-bold text-foreground'>Isak Didriksson</h2>
+              <p className='text-xs md:text-sm text-ocean font-medium'>Webutvikler & Designer</p>
             </div>
 
-            <p className='text-sm text-muted text-center leading-relaxed'>
+            <p className='text-xs md:text-sm text-muted text-center leading-relaxed'>
               &quot;Jeg hjelper små bedrifter med å få nettsider som faktisk gir resultater.
               Ikke fancy byråpriser - bare ærlig arbeid.&quot;
             </p>
 
             {/* Quick stats */}
-            <div className='grid grid-cols-3 gap-2 pt-2'>
-              <div className='text-center p-2 bg-background rounded-xl'>
-                <div className='text-lg font-bold text-ocean'>5+</div>
-                <div className='text-xs text-muted'>År erfaring</div>
+            <div className='grid grid-cols-3 gap-1 md:gap-2 pt-1 md:pt-2'>
+              <div className='text-center p-1.5 md:p-2 bg-background rounded-xl'>
+                <div className='text-sm md:text-lg font-bold text-ocean'>5+</div>
+                <div className='text-[10px] md:text-xs text-muted'>År erfaring</div>
               </div>
-              <div className='text-center p-2 bg-background rounded-xl'>
-                <div className='text-lg font-bold text-ocean'>20+</div>
-                <div className='text-xs text-muted'>Prosjekter</div>
+              <div className='text-center p-1.5 md:p-2 bg-background rounded-xl'>
+                <div className='text-sm md:text-lg font-bold text-ocean'>20+</div>
+                <div className='text-[10px] md:text-xs text-muted'>Prosjekter</div>
               </div>
-              <div className='text-center p-2 bg-background rounded-xl'>
-                <div className='text-lg font-bold text-ocean'>100%</div>
-                <div className='text-xs text-muted'>Fornøyde</div>
+              <div className='text-center p-1.5 md:p-2 bg-background rounded-xl'>
+                <div className='text-sm md:text-lg font-bold text-ocean'>100%</div>
+                <div className='text-[10px] md:text-xs text-muted'>Fornøyde</div>
               </div>
             </div>
 
             {/* Social proof */}
-            <div className='flex items-center justify-center gap-2 pt-2'>
+            <div className='flex items-center justify-center gap-2 pt-1 md:pt-2'>
               <div className='flex -space-x-2'>
-                <div className='w-8 h-8 rounded-full bg-gradient-to-br from-emerald-500 to-green-600 border-2 border-card flex items-center justify-center text-white text-xs font-bold'>BC</div>
-                <div className='w-8 h-8 rounded-full bg-gradient-to-br from-violet-500 to-purple-600 border-2 border-card flex items-center justify-center text-white text-xs font-bold'>NK</div>
-                <div className='w-8 h-8 rounded-full bg-gradient-to-br from-orange-500 to-red-500 border-2 border-card flex items-center justify-center text-white text-xs font-bold'>HT</div>
+                <div className='w-6 h-6 md:w-8 md:h-8 rounded-full bg-gradient-to-br from-emerald-500 to-green-600 border-2 border-card flex items-center justify-center text-white text-[10px] md:text-xs font-bold'>BC</div>
+                <div className='w-6 h-6 md:w-8 md:h-8 rounded-full bg-gradient-to-br from-violet-500 to-purple-600 border-2 border-card flex items-center justify-center text-white text-[10px] md:text-xs font-bold'>NK</div>
+                <div className='w-6 h-6 md:w-8 md:h-8 rounded-full bg-gradient-to-br from-orange-500 to-red-500 border-2 border-card flex items-center justify-center text-white text-[10px] md:text-xs font-bold'>HT</div>
               </div>
-              <p className='text-xs text-muted'>
+              <p className='text-[10px] md:text-xs text-muted'>
                 <span className='font-semibold text-foreground'>3× flere leads</span>
               </p>
             </div>
