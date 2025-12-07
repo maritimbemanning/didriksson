@@ -64,7 +64,7 @@ export default function CasePage() {
         </p>
       </header>
 
-      {cases.map((c, idx) => (
+      {cases.map((c) => (
         <article key={c.title} className="border border-border rounded-2xl p-6 space-y-5 bg-card">
           {/* Header */}
           <div className="flex items-start justify-between gap-4">
