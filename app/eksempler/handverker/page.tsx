@@ -128,7 +128,7 @@ export default function HandverkerMockup() {
       {/* Testimonial */}
       <section className="bg-amber-50 py-16 px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="text-5xl mb-6 text-amber-300">"</div>
+          <div className="text-5xl mb-6 text-amber-300">&ldquo;</div>
           <p className="text-xl text-neutral-700 italic mb-6">
             Fantastisk jobb med badet vårt! Profesjonelle fra start til slutt,
             ryddig og punktlig. Anbefales på det sterkeste.

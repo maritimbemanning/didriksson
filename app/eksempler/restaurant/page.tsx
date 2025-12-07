@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { UtensilsCrossed, Wine, MapPin, Phone, Mail, Image } from 'lucide-react';
+import { UtensilsCrossed, Wine, MapPin, Phone, Mail, ImageIcon } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Eksempel: Restaurant-nettside | Didriksson Digital',
@@ -142,7 +142,7 @@ export default function RestaurantMockup() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
             {[1, 2, 3, 4].map((i) => (
               <div key={i} className="aspect-square bg-gradient-to-br from-rose-100 to-rose-200 rounded-lg flex items-center justify-center">
-                <Image className="w-10 h-10 text-rose-300" strokeWidth={1} />
+                <ImageIcon className="w-10 h-10 text-rose-300" strokeWidth={1} />
               </div>
             ))}
           </div>

@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { trackPhoneClick } from '../lib/tracking';
 import CalendlyWidget from './CalendlyWidget';
 
@@ -81,10 +82,13 @@ export default function HeroA() {
           <div className='bg-card border border-border rounded-3xl p-6 space-y-4'>
             {/* Profile photo */}
             <div className='relative'>
-              <img
+              <Image
                 src='/images/isak-hero.jpg'
                 alt='Isak Didriksson - Webutvikler'
+                width={96}
+                height={96}
                 className='w-24 h-24 mx-auto rounded-full object-cover shadow-lg border-2 border-ocean/20'
+                priority
               />
               {/* Online indicator */}
               <div className='absolute bottom-1 right-1/2 translate-x-8 w-5 h-5 bg-green-500 rounded-full border-2 border-card' />

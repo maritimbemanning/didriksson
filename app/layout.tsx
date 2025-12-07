@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import "./globals.css";
 import MobileNav from "../components/MobileNav";
 import StructuredData from "../components/StructuredData";
@@ -103,14 +104,14 @@ export default function RootLayout({
         <Analytics />
         <div className="mx-auto max-w-5xl px-4 sm:px-6 py-4 sm:py-6">
           <header className="flex items-center justify-between py-3 border-b border-border">
-            <a href="/" className="group flex items-center gap-2">
+            <Link href="/" className="group flex items-center gap-2">
               <span className="text-xl font-bold tracking-wide text-foreground">
                 DIDRIKSSON
               </span>
               <span className="text-xs font-medium text-muted tracking-widest uppercase">
                 Digital
               </span>
-            </a>
+            </Link>
             <nav className="hidden md:flex items-center gap-6 text-sm">
               <a href="/tjenester" className="text-muted hover:text-ocean transition-colors font-medium">Tjenester & Priser</a>
               <a href="/eksempler" className="text-muted hover:text-ocean transition-colors font-medium">Eksempler</a>

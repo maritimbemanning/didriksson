@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Sparkles, Scissors, Palette, HandMetal, Brush, Heart, ShoppingBag, User, Image, MapPin, Clock, Phone } from 'lucide-react';
+import { Sparkles, Scissors, Palette, HandMetal, Brush, Heart, ShoppingBag, User, ImageIcon, MapPin, Clock, Phone } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Eksempel: Frisør-nettside | Didriksson Digital',
@@ -134,7 +134,7 @@ export default function FrisorMockup() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[1, 2, 3, 4].map((i) => (
               <div key={i} className="aspect-square bg-gradient-to-br from-purple-200 to-pink-200 rounded-xl flex items-center justify-center">
-                <Image className="w-10 h-10 text-purple-400" strokeWidth={1} />
+                <ImageIcon className="w-10 h-10 text-purple-400" strokeWidth={1} />
               </div>
             ))}
           </div>
