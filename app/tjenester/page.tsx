@@ -2,17 +2,34 @@
 
 import { trackPackageInterest } from '../../lib/tracking';
 
-const packs = [
+interface Package {
+  t: string;
+  subtitle: string;
+  price: string;
+  originalPrice?: string;
+  priceNum: number;
+  d: string;
+  f: string[];
+  notIncluded?: string[];
+  delivery: string;
+  q: string;
+  popular?: boolean;
+  christmasOffer?: boolean;
+}
+
+const packs: Package[] = [
   {
     t: 'Basis',
     subtitle: 'Enkel nettside',
-    price: 'fra 15 000 kr',
-    priceNum: 15000,
+    price: '10 000 kr',
+    originalPrice: '15 000 kr',
+    priceNum: 10000,
     d: 'Perfekt for små bedrifter som trenger en rask og profesjonell nettside.',
     f: ['2–3 sider (Hjem, Om, Kontakt)', 'Mobilresponsiv design', 'Kontaktskjema', 'Grunnleggende SEO', 'Publisering og opplæring'],
     notIncluded: ['Ikke CMS (du må kontakte for endringer)', 'Ikke integrasjoner'],
     delivery: '5–7 dager',
     q: 'Basis',
+    christmasOffer: true,
   },
   {
     t: 'Standard',
@@ -46,7 +63,11 @@ export default function TjenesterPage(){
 
   return (
     <main className="space-y-10">
-      <header className="space-y-2">
+      <header className="space-y-4">
+        <div className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-600 to-green-700 text-white px-5 py-2.5 rounded-full text-sm font-bold shadow-lg">
+          <span className='w-2 h-2 bg-white rounded-full animate-pulse' />
+          <span>DESEMBERTILBUD AKTIV - SPAR 5 000 KR</span>
+        </div>
         <h1 className="text-3xl font-semibold tracking-tight text-foreground">Tjenester & Priser</h1>
         <p className="text-muted max-w-2xl">Transparente pakker med fastpris. Du vet hva du får og hva det koster før vi starter.</p>
       </header>
@@ -59,11 +80,22 @@ export default function TjenesterPage(){
                 Mest populær
               </div>
             )}
+            {p.christmasOffer && (
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-emerald-600 to-green-700 text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-lg">
+                DESEMBERTILBUD
+              </div>
+            )}
 
             <div className="mb-4">
               <h2 className="text-xl font-semibold text-foreground">{p.t}</h2>
               <p className="text-sm text-muted">{p.subtitle}</p>
-              <p className="text-2xl font-bold text-ocean mt-3">{p.price}</p>
+              {p.originalPrice && (
+                <p className="text-lg line-through text-muted/50 mt-3">{p.originalPrice}</p>
+              )}
+              <p className={`text-2xl font-bold mt-${p.originalPrice ? '1' : '3'} ${p.christmasOffer ? 'text-emerald-600 dark:text-emerald-400' : 'text-ocean'}`}>{p.price}</p>
+              {p.christmasOffer && (
+                <p className="text-xs text-emerald-700 dark:text-emerald-400 font-semibold mt-1">Spar 5 000 kr · Kun i desember</p>
+              )}
               <p className="text-xs text-muted mt-1">Engangspris, ingen abonnement</p>
             </div>
 

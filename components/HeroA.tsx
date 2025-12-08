@@ -19,10 +19,10 @@ export default function HeroA() {
       <div className='grid lg:grid-cols-5 gap-10 items-center'>
         {/* Left side - Content */}
         <div className='lg:col-span-3 space-y-6'>
-          {/* Urgency Badge */}
-          <div className='inline-flex items-center gap-2 text-sm font-medium bg-gradient-to-r from-orange-500/15 to-red-500/15 text-orange-600 dark:text-orange-400 border border-orange-500/25 rounded-full px-4 py-2 backdrop-blur-sm'>
-            <span className='w-2 h-2 bg-orange-500 rounded-full animate-pulse' />
-            <span>Kun 2 ledige plasser i {currentMonth}</span>
+          {/* Christmas Offer Badge */}
+          <div className='inline-flex items-center gap-2 text-sm font-bold bg-gradient-to-r from-emerald-600 to-green-700 text-white border border-white/20 rounded-full px-5 py-2.5 shadow-lg'>
+            <span className='w-2 h-2 bg-white rounded-full animate-pulse' />
+            <span>DESEMBERTILBUD: Profesjonell nettside for 10.000kr</span>
           </div>
 
           {/* Main headline */}
@@ -36,7 +36,13 @@ export default function HeroA() {
           {/* Value proposition */}
           <p className='text-lg md:text-xl text-muted max-w-xl leading-relaxed'>
             Profesjonelle nettsider for <strong className='text-foreground'>små og mellomstore bedrifter</strong>.
-            Fastpris fra 15 000 kr, ferdig på under 2 uker.
+            <span className='block mt-3 p-4 bg-gradient-to-r from-emerald-50 to-green-50 dark:from-emerald-950/30 dark:to-green-950/30 rounded-xl border border-emerald-200 dark:border-emerald-800'>
+              <span className='block text-sm text-muted uppercase tracking-wide mb-1'>Desembertilbud</span>
+              <span className='line-through text-muted/60 text-base'>Normalpris 15 000 kr</span>
+              <span className='ml-3 text-emerald-600 dark:text-emerald-400 font-bold text-3xl'>10 000 kr</span>
+              <span className='block text-sm text-emerald-700 dark:text-emerald-400 mt-1 font-medium'>Spar 5 000 kr · Gjelder hele desember</span>
+            </span>
+            Ferdig på under 2 uker.
           </p>
 
           {/* Trust indicators */}
@@ -79,7 +85,7 @@ export default function HeroA() {
 
         {/* Right side - Personal intro */}
         <div className='lg:col-span-2'>
-          <div className='bg-card border border-border rounded-3xl p-6 space-y-4'>
+          <div className='bg-card border border-border rounded-3xl p-3 md:p-6 space-y-3 md:space-y-4'>
             {/* Profile photo */}
             <div className='relative'>
               <Image
@@ -87,47 +93,49 @@ export default function HeroA() {
                 alt='Isak Didriksson - Webutvikler'
                 width={96}
                 height={96}
-                className='w-24 h-24 mx-auto rounded-full object-cover shadow-lg border-2 border-ocean/20'
+                quality={90}
+                className='w-16 h-16 md:w-24 md:h-24 mx-auto rounded-full object-cover shadow-lg border-2 border-ocean/20'
                 priority
+                sizes='(max-width: 768px) 64px, 96px'
               />
               {/* Online indicator */}
-              <div className='absolute bottom-1 right-1/2 translate-x-8 w-5 h-5 bg-green-500 rounded-full border-2 border-card' />
+              <div className='absolute bottom-0 right-1/2 translate-x-6 md:translate-x-8 w-4 h-4 md:w-5 md:h-5 bg-green-500 rounded-full border-2 border-card' />
             </div>
 
             <div className='text-center'>
-              <h2 className='text-xl font-bold text-foreground'>Isak Didriksson</h2>
-              <p className='text-sm text-ocean font-medium'>Webutvikler & Designer</p>
+              <h2 className='text-base md:text-xl font-bold text-foreground'>Isak Didriksson</h2>
+              <p className='text-xs md:text-sm text-ocean font-medium'>Webutvikler & Designer</p>
             </div>
 
-            <p className='text-sm text-muted text-center leading-relaxed'>
+            <p className='text-xs md:text-sm text-muted text-center leading-relaxed'>
               &quot;Jeg hjelper små bedrifter med å få nettsider som faktisk gir resultater.
               Ikke fancy byråpriser - bare ærlig arbeid.&quot;
             </p>
 
             {/* Quick stats */}
-            <div className='grid grid-cols-3 gap-2 pt-2'>
-              <div className='text-center p-2 bg-background rounded-xl'>
-                <div className='text-lg font-bold text-ocean'>5+</div>
-                <div className='text-xs text-muted'>År erfaring</div>
+            <div className='grid grid-cols-3 gap-1 md:gap-2 pt-1 md:pt-2'>
+              <div className='text-center p-1.5 md:p-2 bg-background rounded-xl'>
+                <div className='text-sm md:text-lg font-bold text-ocean'>5+</div>
+                <div className='text-[10px] md:text-xs text-muted'>År erfaring</div>
               </div>
-              <div className='text-center p-2 bg-background rounded-xl'>
-                <div className='text-lg font-bold text-ocean'>20+</div>
-                <div className='text-xs text-muted'>Prosjekter</div>
+              <div className='text-center p-1.5 md:p-2 bg-background rounded-xl'>
+                <div className='text-sm md:text-lg font-bold text-ocean'>20+</div>
+                <div className='text-[10px] md:text-xs text-muted'>Prosjekter</div>
               </div>
-              <div className='text-center p-2 bg-background rounded-xl'>
-                <div className='text-lg font-bold text-ocean'>100%</div>
-                <div className='text-xs text-muted'>Fornøyde</div>
+              <div className='text-center p-1.5 md:p-2 bg-background rounded-xl'>
+                <div className='text-sm md:text-lg font-bold text-ocean'>100%</div>
+                <div className='text-[10px] md:text-xs text-muted'>Fornøyde</div>
               </div>
             </div>
 
             {/* Social proof */}
-            <div className='flex items-center justify-center gap-2 pt-2'>
+            <div className='flex items-center justify-center gap-2 pt-1 md:pt-2'>
               <div className='flex -space-x-2'>
-                <div className='w-8 h-8 rounded-full bg-gradient-to-br from-emerald-500 to-green-600 border-2 border-card flex items-center justify-center text-white text-xs font-bold'>BC</div>
-                <div className='w-8 h-8 rounded-full bg-gradient-to-br from-violet-500 to-purple-600 border-2 border-card flex items-center justify-center text-white text-xs font-bold'>NK</div>
-                <div className='w-8 h-8 rounded-full bg-gradient-to-br from-orange-500 to-red-500 border-2 border-card flex items-center justify-center text-white text-xs font-bold'>HT</div>
+                <div className='w-6 h-6 md:w-8 md:h-8 rounded-full bg-gradient-to-br from-emerald-500 to-green-600 border-2 border-card flex items-center justify-center text-white text-[10px] md:text-xs font-bold'>BC</div>
+                <div className='w-6 h-6 md:w-8 md:h-8 rounded-full bg-gradient-to-br from-violet-500 to-purple-600 border-2 border-card flex items-center justify-center text-white text-[10px] md:text-xs font-bold'>NK</div>
+                <div className='w-6 h-6 md:w-8 md:h-8 rounded-full bg-gradient-to-br from-orange-500 to-red-500 border-2 border-card flex items-center justify-center text-white text-[10px] md:text-xs font-bold'>HT</div>
               </div>
-              <p className='text-xs text-muted'>
+              <p className='text-[10px] md:text-xs text-muted'>
                 <span className='font-semibold text-foreground'>3× flere leads</span>
               </p>
             </div>

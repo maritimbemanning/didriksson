@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import BeforeAfterSlider from './BeforeAfterSlider';
 
 export default function CaseA() {
@@ -46,10 +47,13 @@ export default function CaseA() {
           {/* Screenshots carousel */}
           <div className='space-y-4'>
             <div className='relative aspect-video bg-background rounded-2xl shadow-2xl overflow-hidden border border-border'>
-              <img
+              <Image
                 src={screenshots[activeImage].src}
                 alt={screenshots[activeImage].alt}
-                className='w-full h-full object-cover object-top transition-opacity duration-300'
+                fill
+                quality={85}
+                className='object-cover object-top transition-opacity duration-300'
+                sizes='(max-width: 768px) 100vw, 50vw'
               />
             </div>
             <div className='flex gap-2 justify-center'>

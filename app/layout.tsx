@@ -9,6 +9,7 @@ import ThemeToggle from "../components/ThemeToggle";
 import WhatsAppButton from "../components/WhatsAppButton";
 import StickyCTA from "../components/StickyCTA";
 import CrispChat from "../components/CrispChat";
+import ChristmasSnow from "../components/ChristmasSnow";
 
 export const metadata: Metadata = {
   title: {
@@ -177,6 +178,7 @@ export default function RootLayout({
         <WhatsAppButton />
         <StickyCTA />
         <CrispChat />
+        <ChristmasSnow />
         </ThemeProvider>
       </body>
     </html>

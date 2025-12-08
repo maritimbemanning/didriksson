@@ -11,11 +11,21 @@ export default function CTA_A() {
       <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.1),transparent)]' />
 
       <div className='relative text-center p-8 md:p-12 space-y-6'>
+        <div className='inline-flex items-center gap-2 bg-emerald-600 text-white px-5 py-2 rounded-full text-sm font-bold mb-2 shadow-lg'>
+          <span className='w-2 h-2 bg-white rounded-full animate-pulse' />
+          <span>DESEMBERTILBUD AKTIV</span>
+        </div>
         <h2 className='text-2xl md:text-3xl font-bold text-white'>
           Klar for å få flere kunder?
         </h2>
         <p className='text-lg text-white/90 max-w-xl mx-auto'>
           Book et gratis 30-minutters strategimøte. Vi diskuterer dine mål og lager en konkret plan.
+          <span className='block mt-3 text-xl font-bold text-white'>
+            Profesjonell nettside for 10 000 kr
+          </span>
+          <span className='block text-sm text-white/80 mt-1'>
+            Normalpris 15 000 kr · Spar 5 000 kr i desember
+          </span>
         </p>
 
         <div className='flex flex-col sm:flex-row items-center justify-center gap-4 pt-2'>
