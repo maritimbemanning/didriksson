@@ -36,12 +36,23 @@ export default function HeroA() {
           {/* Value proposition */}
           <p className='text-lg md:text-xl text-muted max-w-xl leading-relaxed'>
             Profesjonelle nettsider for <strong className='text-foreground'>små og mellomstore bedrifter</strong>.
-            <span className='block mt-3 p-4 bg-gradient-to-r from-emerald-50 to-green-50 dark:from-emerald-950/30 dark:to-green-950/30 rounded-xl border border-emerald-200 dark:border-emerald-800'>
-              <span className='block text-sm text-muted uppercase tracking-wide mb-1'>Desembertilbud</span>
-              <span className='line-through text-muted/60 text-base'>Normalpris 15 000 kr</span>
-              <span className='ml-3 text-emerald-600 dark:text-emerald-400 font-bold text-3xl'>10 000 kr</span>
-              <span className='block text-sm text-emerald-700 dark:text-emerald-400 mt-1 font-medium'>Spar 5 000 kr · Gjelder hele desember</span>
-            </span>
+          </p>
+          
+          {/* December Offer Box */}
+          <div className='p-5 bg-gradient-to-br from-emerald-600 to-green-700 rounded-2xl shadow-xl max-w-md'>
+            <div className='space-y-2'>
+              <div className='text-xs font-bold text-white/80 uppercase tracking-wider'>Desembertilbud</div>
+              <div className='flex items-baseline gap-3'>
+                <span className='text-2xl line-through text-white/50'>15 000 kr</span>
+                <span className='text-5xl font-bold text-white'>10 000 kr</span>
+              </div>
+              <div className='text-sm text-white/90 font-medium'>
+                Spar 5 000 kr · Gjelder hele desember
+              </div>
+            </div>
+          </div>
+          
+          <p className='text-base text-muted'>
             Ferdig på under 2 uker.
           </p>
 
