@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nOptimaliser profilbilde-kort for mobil\n\n- Legg til oppdatert profilbilde\n- Reduser padding på mobil (p-3 vs p-6)\n- Mindre tekststørrelser på mobil\n- Mindre profilbilde på mobil (w-16 vs w-24)\n- Mindre avatarer og stats på mobil\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git push:*)",
+      "Bash(npx next build:*)",
+      "Bash(npm run build:*)",
+      "Bash(du:*)",
+      "Bash(find:*)",
+      "Bash(grep:*)",
+      "Bash(git restore:*)",
+      "Bash(git commit:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

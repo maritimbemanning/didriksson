@@ -48,7 +48,7 @@ export default function StickyCTA() {
           {/* Message */}
           <div className="hidden sm:block">
             <p className="text-sm font-medium text-foreground">
-              Klar for ny nettside? <span className="text-muted">Gratis strategimøte, ingen forpliktelser.</span>
+              Desembertilbud: <span className="text-emerald-600 dark:text-emerald-400 font-bold">Nettside for 10 000 kr</span> <span className="text-muted">(spar 5 000 kr)</span>
             </p>
           </div>
 

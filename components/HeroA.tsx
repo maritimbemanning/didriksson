@@ -19,10 +19,10 @@ export default function HeroA() {
       <div className='grid lg:grid-cols-5 gap-10 items-center'>
         {/* Left side - Content */}
         <div className='lg:col-span-3 space-y-6'>
-          {/* Urgency Badge */}
-          <div className='inline-flex items-center gap-2 text-sm font-medium bg-gradient-to-r from-orange-500/15 to-red-500/15 text-orange-600 dark:text-orange-400 border border-orange-500/25 rounded-full px-4 py-2 backdrop-blur-sm'>
-            <span className='w-2 h-2 bg-orange-500 rounded-full animate-pulse' />
-            <span>Kun 2 ledige plasser i {currentMonth}</span>
+          {/* Christmas Offer Badge */}
+          <div className='inline-flex items-center gap-2 text-sm font-bold bg-gradient-to-r from-emerald-600 to-green-700 text-white border border-white/20 rounded-full px-5 py-2.5 shadow-lg'>
+            <span className='w-2 h-2 bg-white rounded-full animate-pulse' />
+            <span>DESEMBERTILBUD: Profesjonell nettside for 10.000kr</span>
           </div>
 
           {/* Main headline */}
@@ -36,7 +36,13 @@ export default function HeroA() {
           {/* Value proposition */}
           <p className='text-lg md:text-xl text-muted max-w-xl leading-relaxed'>
             Profesjonelle nettsider for <strong className='text-foreground'>små og mellomstore bedrifter</strong>.
-            Fastpris fra 15 000 kr, ferdig på under 2 uker.
+            <span className='block mt-3 p-4 bg-gradient-to-r from-emerald-50 to-green-50 dark:from-emerald-950/30 dark:to-green-950/30 rounded-xl border border-emerald-200 dark:border-emerald-800'>
+              <span className='block text-sm text-muted uppercase tracking-wide mb-1'>Desembertilbud</span>
+              <span className='line-through text-muted/60 text-base'>Normalpris 15 000 kr</span>
+              <span className='ml-3 text-emerald-600 dark:text-emerald-400 font-bold text-3xl'>10 000 kr</span>
+              <span className='block text-sm text-emerald-700 dark:text-emerald-400 mt-1 font-medium'>Spar 5 000 kr · Gjelder hele desember</span>
+            </span>
+            Ferdig på under 2 uker.
           </p>
 
           {/* Trust indicators */}

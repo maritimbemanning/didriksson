@@ -14,7 +14,7 @@ const XIcon = ({ className }: { className?: string }) => (
 
 export default function PriceComparison() {
   const comparisons = [
-    { feature: 'Pris', agency: '50 000 - 150 000 kr', me: 'Fra 15 000 kr', winner: 'me' },
+    { feature: 'Pris', agency: '50 000 - 150 000 kr', me: '10 000 kr', winner: 'me' },
     { feature: 'Leveringstid', agency: '2-4 måneder', me: '7-14 dager', winner: 'me' },
     { feature: 'Dedikert kontakt', agency: 'Ofte nei', me: 'Alltid direkte', winner: 'me' },
     { feature: 'Revisjoner', agency: 'Ekstra kostnad', me: '1 runde inkludert', winner: 'me' },
@@ -26,7 +26,11 @@ export default function PriceComparison() {
 
   return (
     <section className="py-8 space-y-6">
-      <div className="text-center">
+      <div className="text-center space-y-3">
+        <div className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-600 to-green-700 text-white px-5 py-2 rounded-full text-sm font-bold mb-2 shadow-lg">
+          <span className='w-2 h-2 bg-white rounded-full animate-pulse' />
+          <span>DESEMBERTILBUD AKTIV</span>
+        </div>
         <h2 className="text-2xl font-bold text-foreground">Byrå vs. Didriksson Digital</h2>
         <p className="text-muted mt-2">Hvorfor betale mer for mindre?</p>
       </div>
@@ -73,7 +77,7 @@ export default function PriceComparison() {
       {/* Bottom CTA */}
       <div className="text-center pt-4">
         <p className="text-muted mb-4">
-          Spar <span className="text-green-600 dark:text-green-400 font-bold">35 000 - 135 000 kr</span> og få nettsiden raskere
+          Spar <span className="text-emerald-600 dark:text-emerald-400 font-bold">40 000 - 140 000 kr</span> med desembertilbudet
         </p>
         <a
           href="/book"
