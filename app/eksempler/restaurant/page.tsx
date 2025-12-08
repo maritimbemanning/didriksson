@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { UtensilsCrossed, Wine, MapPin, Phone, Mail, ImageIcon } from 'lucide-react';
+import { UtensilsCrossed, Wine, MapPin, Phone, Mail, ImageIcon } from '../../../components/icons';
 
 export const metadata: Metadata = {
   title: 'Eksempel: Restaurant-nettside | Didriksson Digital',

@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Sparkles, Scissors, Palette, HandMetal, Brush, Heart, ShoppingBag, User, ImageIcon, MapPin, Clock, Phone } from 'lucide-react';
+import { Sparkles, Scissors, Palette, HandMetal, Brush, Heart, ShoppingBag, User, ImageIcon, MapPin, Clock, Phone } from '../../../components/icons';
 
 export const metadata: Metadata = {
   title: 'Eksempel: Frisør-nettside | Didriksson Digital',

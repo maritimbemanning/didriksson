@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import CalendlyWidget from '../../components/CalendlyWidget';
-import { Wrench, UtensilsCrossed, Scale, Scissors, Dumbbell, Lightbulb } from 'lucide-react';
+import { Wrench, UtensilsCrossed, Scale, Scissors, Dumbbell, Lightbulb } from '../../components/icons';
 
 export const metadata: Metadata = {
   title: 'Eksempler på nettsider | Didriksson Digital',

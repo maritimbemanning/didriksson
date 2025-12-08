@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Dumbbell, Bike, PersonStanding, Flame, Music2, Target, Activity, Check, MapPin, Clock, Phone, PartyPopper, Weight } from 'lucide-react';
+import { Dumbbell, Bike, PersonStanding, Flame, Music2, Target, Activity, Check, MapPin, Clock, Phone, PartyPopper, Weight } from '../../../components/icons';
 
 export const metadata: Metadata = {
   title: 'Eksempel: Treningssenter-nettside | Didriksson Digital',

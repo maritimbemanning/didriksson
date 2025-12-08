@@ -1,0 +1,43 @@
+// Optimized icon imports - only load what we use
+import dynamic from 'next/dynamic';
+
+// Dynamically import only the icons we need
+export { 
+  Activity, 
+  AlertTriangle, 
+  Award,
+  Bike,
+  Building2,
+  Brush,
+  Check,
+  ClipboardList,
+  Clock,
+  Dumbbell,
+  Flame,
+  HandMetal,
+  Heart,
+  Home,
+  ImageIcon,
+  Instagram,
+  Lightbulb,
+  Mail,
+  MapPin,
+  Music2,
+  Palette,
+  PartyPopper,
+  PersonStanding,
+  Phone,
+  Scale,
+  Scissors,
+  ShoppingBag,
+  ShowerHead,
+  Sparkles,
+  Star,
+  Target,
+  User,
+  Users,
+  UtensilsCrossed,
+  Weight,
+  Wine,
+  Wrench
+} from 'lucide-react';

@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Wrench, ShowerHead, Flame, AlertTriangle, Home, ClipboardList, Phone, Mail, MapPin, Check } from 'lucide-react';
+import { Wrench, ShowerHead, Flame, AlertTriangle, Home, ClipboardList, Phone, Mail, MapPin, Check } from '../../../components/icons';
 
 export const metadata: Metadata = {
   title: 'Eksempel: Håndverker-nettside | Didriksson Digital',

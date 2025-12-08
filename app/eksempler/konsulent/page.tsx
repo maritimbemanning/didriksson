@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Scale, Home, Users, Building2, Star, Phone, Mail, MapPin } from 'lucide-react';
+import { Scale, Home, Users, Building2, Star, Phone, Mail, MapPin } from '../../../components/icons';
 
 export const metadata: Metadata = {
   title: 'Eksempel: Advokat-nettside | Didriksson Digital',
