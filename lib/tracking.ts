@@ -2,33 +2,39 @@
 
 import { useEffect } from 'react';
 
+type TrackingPayload = Record<string, string | number | boolean | undefined>;
+
+declare global {
+  interface Window {
+    gtag?: (command: 'event', eventName: string, params?: TrackingPayload) => void;
+    fbq?: (command: 'track' | 'trackCustom', eventName: string, params?: TrackingPayload) => void;
+  }
+}
+
+const hasBrowserContext = () => typeof window !== 'undefined';
+
 // Tracking events for conversions
-export const trackEvent = (eventName: string, params?: Record<string, any>) => {
-  // Google Analytics event
-  if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('event', eventName, params);
+export const trackEvent = (eventName: string, params?: TrackingPayload) => {
+  if (!hasBrowserContext()) {
+    return;
   }
 
-  // Meta Pixel event
-  if (typeof window !== 'undefined' && (window as any).fbq) {
-    (window as any).fbq('track', eventName, params);
-  }
+  window.gtag?.('event', eventName, params);
+  window.fbq?.('track', eventName, params);
 };
 
 // Specific conversion events
 export const trackPhoneClick = () => {
   trackEvent('Contact', { method: 'phone' });
-  // Meta standard event
-  if (typeof window !== 'undefined' && (window as any).fbq) {
-    (window as any).fbq('track', 'Contact');
+  if (hasBrowserContext()) {
+    window.fbq?.('track', 'Contact');
   }
 };
 
 export const trackCalendlyClick = () => {
   trackEvent('Lead', { method: 'calendly' });
-  // Meta standard event
-  if (typeof window !== 'undefined' && (window as any).fbq) {
-    (window as any).fbq('track', 'Schedule');
+  if (hasBrowserContext()) {
+    window.fbq?.('track', 'Schedule');
   }
 };
 
@@ -52,9 +58,8 @@ export const trackPackageInterest = (packageName: string, price: number) => {
     value: price,
     currency: 'NOK',
   });
-  // Meta standard event
-  if (typeof window !== 'undefined' && (window as any).fbq) {
-    (window as any).fbq('track', 'AddToCart', {
+  if (hasBrowserContext()) {
+    window.fbq?.('track', 'AddToCart', {
       content_name: packageName,
       value: price,
       currency: 'NOK',

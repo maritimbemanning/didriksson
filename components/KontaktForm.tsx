@@ -11,9 +11,23 @@ export default function KontaktForm() {
   const [melding, setMelding] = useState("");
 
   useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
     const params = new URLSearchParams(window.location.search);
-    const p = params.get("pakke");
-    if (p) setPakke(p.replace(/%20/g, " "));
+    const selectedPackage = params.get("pakke");
+    if (!selectedPackage) {
+      return;
+    }
+
+    const frameId = window.requestAnimationFrame(() => {
+      setPakke(selectedPackage.trim());
+    });
+
+    return () => {
+      window.cancelAnimationFrame(frameId);
+    };
   }, []);
 
   const mailtoHref = useMemo(() => {
