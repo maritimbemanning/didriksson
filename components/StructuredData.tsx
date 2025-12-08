@@ -87,10 +87,12 @@ export default function StructuredData() {
         {
           "@type": "Offer",
           "name": "Basis nettside",
-          "description": "Enkel 2-3 siders nettside for små bedrifter. Mobilresponsiv, SEO-optimalisert, kontaktskjema inkludert.",
-          "price": "15000",
+          "description": "Enkel 2-3 siders nettside for små bedrifter. Mobilresponsiv, SEO-optimalisert, kontaktskjema inkludert. Desembertilbud!",
+          "price": "10000",
           "priceCurrency": "NOK",
-          "availability": "https://schema.org/InStock",
+          "availability": "https://schema.org/LimitedAvailability",
+          "priceValidUntil": "2025-12-31",
+          "validFrom": "2025-12-01",
           "deliveryLeadTime": {
             "@type": "QuantitativeValue",
             "minValue": "5",

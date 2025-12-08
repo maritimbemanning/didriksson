@@ -1,17 +1,21 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import "./globals.css";
 import MobileNav from "../components/MobileNav";
 import StructuredData from "../components/StructuredData";
 import Analytics from "../components/Analytics";
 import { ThemeProvider } from "../components/ThemeProvider";
 import ThemeToggle from "../components/ThemeToggle";
-import WhatsAppButton from "../components/WhatsAppButton";
 import StickyCTA from "../components/StickyCTA";
-import CrispChat from "../components/CrispChat";
-import ChristmasSnow from "../components/ChristmasSnow";
+
+// Lazy load non-critical components
+const WhatsAppButton = dynamic(() => import("../components/WhatsAppButton"), { ssr: false });
+const ChristmasSnow = dynamic(() => import("../components/ChristmasSnow"), { ssr: false });
+const CookieConsent = dynamic(() => import("../components/CookieConsent"), { ssr: false });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://didriksson.no"),
   title: {
     default: "Profesjonelle nettsider for bedrifter | Didriksson Digital",
     template: "%s | Didriksson Digital",
@@ -43,9 +47,13 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Isak Didriksson" }],
   creator: "Isak Didriksson",
-  metadataBase: new URL("https://didriksson.no"),
   alternates: {
     canonical: "/",
+  },
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
   },
   robots: {
     index: true,
@@ -60,7 +68,9 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: "/images/logo.png",
+    apple: "/images/logo.png",
   },
+  manifest: "/manifest.json",
   openGraph: {
     title: "Profesjonelle nettsider for bedrifter | Didriksson Digital",
     description:
@@ -171,14 +181,18 @@ export default function RootLayout({
             </div>
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-8 border-t border-border text-sm text-muted">
               <p>&copy; {new Date().getFullYear()} Didriksson Digital. Org.nr: 936 351 371</p>
-              <p>Nettsider for små og mellomstore bedrifter i Norge</p>
+              <div className="flex gap-4">
+                <a href="/personvern" className="hover:text-ocean transition-colors">Personvern</a>
+                <span>·</span>
+                <p>Nettsider for små og mellomstore bedrifter i Norge</p>
+              </div>
             </div>
           </footer>
         </div>
         <WhatsAppButton />
         <StickyCTA />
-        <CrispChat />
         <ChristmasSnow />
+        <CookieConsent />
         </ThemeProvider>
       </body>
     </html>
