@@ -19,6 +19,11 @@ export default function Home() {
       {/* Problem/Solution - Identify with customer pain */}
       <ProblemSolution />
 
+      {/* Case Study - Real results (moved up for social proof) */}
+      <article id="case">
+        <CaseA />
+      </article>
+
       {/* Stats - Social proof with numbers */}
       <StatsSection />
 
@@ -28,19 +33,14 @@ export default function Home() {
       {/* Why Choose Us - Key differentiators */}
       <WhyChooseUs />
 
-      {/* Price Comparison - Byrå vs Meg */}
-      <PriceComparison />
-
       {/* Trust Section - Guarantees */}
       <TrustSection />
 
+      {/* Price Comparison - Byrå vs Meg */}
+      <PriceComparison />
+
       {/* Process - How it works */}
       <ProcessA />
-
-      {/* Case Study - Real results */}
-      <article id="case">
-        <CaseA />
-      </article>
 
       {/* FAQ - Answer objections */}
       <FAQ />

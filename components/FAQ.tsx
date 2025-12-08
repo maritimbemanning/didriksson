@@ -5,7 +5,7 @@ import { useState } from "react";
 const faqs = [
   {
     q: 'Hva koster en enkel nettside?',
-    a: 'En enkel nettside (2-3 sider) starter på 10 000 kr eks. mva (desembertilbud, normalt 15 000 kr). Du får fastpris før vi starter, så det blir ingen overraskelser.'
+    a: 'En enkel nettside (2-3 sider) starter på 10 000 kr eks. mva (juletilbud, normalt 15 000 kr). Du får fastpris før vi starter, så det blir ingen overraskelser.'
   },
   {
     q: 'Hvor lang tid tar det?',

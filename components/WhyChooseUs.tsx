@@ -26,7 +26,7 @@ export default function WhyChooseUs() {
     {
       icon: <DollarIcon />,
       title: 'Rimelig og forutsigbart',
-      desc: 'Fastpris fra 10 000 kr (desembertilbud). Du vet kostnaden før vi starter, ingen overraskelser.'
+      desc: 'Fastpris fra 10 000 kr (juletilbud). Du vet kostnaden før vi starter, ingen overraskelser.'
     },
     {
       icon: <RocketIcon />,
