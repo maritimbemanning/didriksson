@@ -1,7 +1,7 @@
 'use client';
 
 const CheckIcon = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
   </svg>
 );
@@ -25,65 +25,61 @@ export default function PriceComparison() {
   ];
 
   return (
-    <section className="py-8 space-y-6">
-      <div className="text-center space-y-3">
-        <div className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-600 to-green-700 text-white px-5 py-2 rounded-full text-sm font-bold mb-2 shadow-lg">
-          <span className='w-2 h-2 bg-white rounded-full animate-pulse' />
-          <span>DESEMBERTILBUD AKTIV</span>
-        </div>
-        <h2 className="text-2xl font-bold text-foreground">Byrå vs. Didriksson Digital</h2>
-        <p className="text-muted mt-2">Hvorfor betale mer for mindre?</p>
+    <section className="py-12 space-y-8">
+      <div className="text-center space-y-4">
+        <p className="text-ocean font-semibold text-sm uppercase tracking-wider">Sammenligning</p>
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground">Byrå vs. Didriksson Digital</h2>
+        <p className="text-muted text-lg">Hvorfor betale mer for mindre?</p>
       </div>
 
-      <div className="overflow-x-auto">
-        <table className="w-full border-collapse">
-          <thead>
-            <tr>
-              <th className="text-left p-4 font-medium text-muted"></th>
-              <th className="p-4 text-center">
-                <div className="inline-block bg-red-500/10 text-red-600 dark:text-red-400 px-4 py-2 rounded-xl font-bold">
-                  Typisk byrå
-                </div>
-              </th>
-              <th className="p-4 text-center">
-                <div className="inline-block bg-green-500/10 text-green-600 dark:text-green-400 px-4 py-2 rounded-xl font-bold">
-                  Didriksson Digital
-                </div>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {comparisons.map((row, idx) => (
-              <tr key={row.feature} className={idx % 2 === 0 ? 'bg-card/50' : ''}>
-                <td className="p-4 font-medium text-foreground">{row.feature}</td>
-                <td className="p-4 text-center">
-                  <div className="flex items-center justify-center gap-2 text-red-600 dark:text-red-400">
-                    <XIcon className="w-4 h-4 flex-shrink-0" />
-                    <span className="text-sm">{row.agency}</span>
+      <div className="overflow-x-auto -mx-4 px-4">
+        <div className="bg-card rounded-2xl border border-border overflow-hidden min-w-[600px]">
+          <table className="w-full border-collapse">
+            <thead>
+              <tr className="border-b border-border">
+                <th className="text-left p-4 md:p-5 font-medium text-muted w-1/3"></th>
+                <th className="p-4 md:p-5 text-center w-1/3">
+                  <div className="inline-flex items-center gap-2 bg-red-500/10 text-red-600 dark:text-red-400 px-4 py-2 rounded-xl font-bold text-sm">
+                    <XIcon className="w-4 h-4" />
+                    Typisk byrå
                   </div>
-                </td>
-                <td className="p-4 text-center">
-                  <div className="flex items-center justify-center gap-2 text-green-600 dark:text-green-400">
-                    <CheckIcon className="w-4 h-4 flex-shrink-0" />
-                    <span className="text-sm font-medium">{row.me}</span>
+                </th>
+                <th className="p-4 md:p-5 text-center w-1/3">
+                  <div className="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 px-4 py-2 rounded-xl font-bold text-sm">
+                    <CheckIcon className="w-4 h-4" />
+                    Didriksson Digital
                   </div>
-                </td>
+                </th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {comparisons.map((row, idx) => (
+                <tr key={row.feature} className={`border-b border-border/50 last:border-b-0 ${idx % 2 === 0 ? 'bg-background/50' : ''}`}>
+                  <td className="p-4 md:p-5 font-medium text-foreground">{row.feature}</td>
+                  <td className="p-4 md:p-5 text-center">
+                    <span className="text-sm text-red-600/80 dark:text-red-400/80">{row.agency}</span>
+                  </td>
+                  <td className="p-4 md:p-5 text-center">
+                    <span className="text-sm font-semibold text-emerald-600 dark:text-emerald-400">{row.me}</span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
 
       {/* Bottom CTA */}
-      <div className="text-center pt-4">
-        <p className="text-muted mb-4">
+      <div className="text-center pt-4 space-y-4">
+        <p className="text-muted">
           Spar <span className="text-emerald-600 dark:text-emerald-400 font-bold">40 000 - 140 000 kr</span> med desembertilbudet
         </p>
         <a
           href="/book"
-          className="inline-flex items-center gap-2 bg-ocean hover:bg-ocean-dark text-white px-6 py-3 rounded-xl font-semibold transition-colors shadow-lg shadow-ocean/20"
+          className="inline-flex items-center gap-2 bg-ocean hover:bg-ocean-dark text-white px-8 py-4 rounded-xl font-semibold transition-colors shadow-lg shadow-ocean/20 hover:shadow-xl hover:-translate-y-0.5"
         >
           Book gratis strategimøte
+          <span>→</span>
         </a>
       </div>
     </section>

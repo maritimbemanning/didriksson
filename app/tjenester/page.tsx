@@ -72,42 +72,48 @@ export default function TjenesterPage(){
         <p className="text-muted max-w-2xl">Transparente pakker med fastpris. Du vet hva du får og hva det koster før vi starter.</p>
       </header>
 
-      <section className="grid md:grid-cols-3 gap-4" aria-label="Prispakker">
+      <section className="grid md:grid-cols-3 gap-6" aria-label="Prispakker">
         {packs.map(p => (
-          <div key={p.t} className={`border ${p.popular ? 'border-ocean ring-2 ring-ocean/20' : 'border-border'} rounded-2xl p-6 flex flex-col relative bg-card`}>
-            {p.popular && (
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-ocean text-white text-xs font-semibold px-3 py-1 rounded-full">
+          <div key={p.t} className={`border ${p.christmasOffer ? 'border-emerald-300 dark:border-emerald-700 ring-2 ring-emerald-500/20' : p.popular ? 'border-ocean ring-2 ring-ocean/20' : 'border-border'} rounded-2xl p-6 flex flex-col relative bg-card hover:shadow-xl transition-shadow`}>
+            {p.popular && !p.christmasOffer && (
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-ocean text-white text-xs font-semibold px-4 py-1.5 rounded-full shadow-lg">
                 Mest populær
               </div>
             )}
             {p.christmasOffer && (
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-emerald-600 to-green-700 text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-lg">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-emerald-600 to-green-600 text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-lg flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse" />
                 DESEMBERTILBUD
               </div>
             )}
 
-            <div className="mb-4">
-              <h2 className="text-xl font-semibold text-foreground">{p.t}</h2>
-              <p className="text-sm text-muted">{p.subtitle}</p>
-              {p.originalPrice && (
-                <p className="text-lg line-through text-muted/50 mt-3">{p.originalPrice}</p>
-              )}
-              <p className={`text-2xl font-bold mt-${p.originalPrice ? '1' : '3'} ${p.christmasOffer ? 'text-emerald-600 dark:text-emerald-400' : 'text-ocean'}`}>{p.price}</p>
-              {p.christmasOffer && (
-                <p className="text-xs text-emerald-700 dark:text-emerald-400 font-semibold mt-1">Spar 5 000 kr · Kun i desember</p>
-              )}
-              <p className="text-xs text-muted mt-1">Engangspris, ingen abonnement</p>
+            <div className="mb-5 pt-2">
+              <h2 className="text-xl font-bold text-foreground">{p.t}</h2>
+              <p className="text-sm text-muted mt-0.5">{p.subtitle}</p>
+
+              <div className="mt-4">
+                {p.originalPrice && (
+                  <p className="text-base line-through text-muted/60">{p.originalPrice}</p>
+                )}
+                <p className={`text-3xl font-bold ${p.christmasOffer ? 'text-emerald-600 dark:text-emerald-400' : 'text-ocean'}`}>{p.price}</p>
+                {p.christmasOffer && (
+                  <p className="text-sm text-emerald-600 dark:text-emerald-400 font-medium mt-1">Spar 5 000 kr i desember</p>
+                )}
+                <p className="text-xs text-muted mt-2">Engangspris, ingen abonnement</p>
+              </div>
             </div>
 
-            <p className="text-sm text-muted mb-4">{p.d}</p>
+            <p className="text-sm text-muted mb-5 leading-relaxed">{p.d}</p>
 
-            <div className="space-y-3 mb-4 grow">
+            <div className="space-y-4 mb-6 grow">
               <div>
-                <p className="text-xs font-semibold text-foreground mb-2">Inkludert:</p>
-                <ul className="space-y-1.5">
+                <p className="text-xs font-semibold text-foreground uppercase tracking-wider mb-3">Inkludert:</p>
+                <ul className="space-y-2">
                   {p.f.map(x => (
-                    <li key={x} className="flex items-start gap-2 text-sm text-foreground">
-                      <span className="text-green-500 mt-0.5">✓</span>
+                    <li key={x} className="flex items-start gap-2.5 text-sm text-foreground">
+                      <svg className="w-4 h-4 text-emerald-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                      </svg>
                       <span>{x}</span>
                     </li>
                   ))}
@@ -115,12 +121,12 @@ export default function TjenesterPage(){
               </div>
 
               {p.notIncluded && (
-                <div>
-                  <p className="text-xs font-semibold text-foreground mb-2">Ikke inkludert:</p>
-                  <ul className="space-y-1.5">
+                <div className="pt-2">
+                  <p className="text-xs font-semibold text-muted uppercase tracking-wider mb-3">Ikke inkludert:</p>
+                  <ul className="space-y-2">
                     {p.notIncluded.map(x => (
-                      <li key={x} className="flex items-start gap-2 text-sm text-muted">
-                        <span className="mt-0.5">–</span>
+                      <li key={x} className="flex items-start gap-2.5 text-sm text-muted">
+                        <span className="mt-0.5 text-muted/50">—</span>
                         <span>{x}</span>
                       </li>
                     ))}
@@ -130,7 +136,10 @@ export default function TjenesterPage(){
             </div>
 
             <div className="border-t border-border pt-4 mb-4">
-              <p className="text-sm text-foreground">
+              <p className="text-sm text-foreground flex items-center gap-2">
+                <svg className="w-4 h-4 text-ocean" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
                 <span className="font-semibold">Leveringstid:</span> {p.delivery}
               </p>
             </div>
@@ -138,9 +147,10 @@ export default function TjenesterPage(){
             <a
               href={`/kontakt?pakke=${p.q}`}
               onClick={() => handlePackageClick(p.t, p.priceNum)}
-              className="inline-flex items-center justify-center bg-ocean text-white hover:bg-ocean-dark transition-colors rounded-xl px-4 py-2.5 font-medium"
+              className={`inline-flex items-center justify-center gap-2 ${p.christmasOffer ? 'bg-emerald-600 hover:bg-emerald-700' : 'bg-ocean hover:bg-ocean-dark'} text-white transition-all rounded-xl px-5 py-3 font-semibold shadow-lg ${p.christmasOffer ? 'shadow-emerald-500/20' : 'shadow-ocean/20'} hover:-translate-y-0.5`}
             >
               Forespørsel
+              <span>→</span>
             </a>
           </div>
         ))}

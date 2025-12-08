@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import dynamic from "next/dynamic";
 import "./globals.css";
 import MobileNav from "../components/MobileNav";
 import StructuredData from "../components/StructuredData";
@@ -8,11 +7,7 @@ import Analytics from "../components/Analytics";
 import { ThemeProvider } from "../components/ThemeProvider";
 import ThemeToggle from "../components/ThemeToggle";
 import StickyCTA from "../components/StickyCTA";
-
-// Lazy load non-critical components
-const WhatsAppButton = dynamic(() => import("../components/WhatsAppButton"), { ssr: false });
-const ChristmasSnow = dynamic(() => import("../components/ChristmasSnow"), { ssr: false });
-const CookieConsent = dynamic(() => import("../components/CookieConsent"), { ssr: false });
+import ClientOnlyComponents from "../components/ClientOnlyComponents";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://didriksson.no"),
@@ -189,10 +184,8 @@ export default function RootLayout({
             </div>
           </footer>
         </div>
-        <WhatsAppButton />
         <StickyCTA />
-        <ChristmasSnow />
-        <CookieConsent />
+        <ClientOnlyComponents />
         </ThemeProvider>
       </body>
     </html>

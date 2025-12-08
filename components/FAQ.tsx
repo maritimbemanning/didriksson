@@ -5,7 +5,7 @@ import { useState } from "react";
 const faqs = [
   {
     q: 'Hva koster en enkel nettside?',
-    a: 'En enkel nettside (2-3 sider) starter på 15 000 kr eks. mva. Du får fastpris før vi starter, så det blir ingen overraskelser.'
+    a: 'En enkel nettside (2-3 sider) starter på 10 000 kr eks. mva (desembertilbud, normalt 15 000 kr). Du får fastpris før vi starter, så det blir ingen overraskelser.'
   },
   {
     q: 'Hvor lang tid tar det?',
@@ -72,35 +72,40 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="space-y-4">
+    <section className="py-12 space-y-8">
       <FAQSchema />
-      <h2 className="text-2xl font-semibold text-foreground">Ofte stilte spørsmål</h2>
-      <div className="space-y-2">
+      <div className="text-center">
+        <p className="text-ocean font-semibold text-sm uppercase tracking-wider mb-3">Spørsmål?</p>
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground">Ofte stilte spørsmål</h2>
+      </div>
+      <div className="space-y-3 max-w-3xl mx-auto">
         {faqs.map((faq, idx) => (
-          <div key={idx} className="border border-border rounded-xl overflow-hidden">
+          <div key={idx} className={`border rounded-2xl overflow-hidden transition-all ${openIndex === idx ? 'border-ocean/30 bg-card shadow-lg' : 'border-border'}`}>
             <button
               onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
-              className="w-full text-left px-5 py-4 flex items-center justify-between hover:bg-card transition-colors"
+              className="w-full text-left px-6 py-5 flex items-center justify-between gap-4 hover:bg-card/50 transition-colors"
             >
               <span className="font-semibold text-base text-foreground">{faq.q}</span>
-              <span className={`text-ocean transition-transform duration-300 ${openIndex === idx ? 'rotate-180' : ''}`}>
-                ▼
+              <span className={`text-ocean transition-transform duration-300 flex-shrink-0 ${openIndex === idx ? 'rotate-180' : ''}`}>
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
               </span>
             </button>
             <div
               className={`overflow-hidden transition-all duration-300 ease-out ${
-                openIndex === idx ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
+                openIndex === idx ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'
               }`}
             >
-              <div className="px-5 pb-4 pt-2 text-base text-muted leading-relaxed">
+              <div className="px-6 pb-5 text-base text-muted leading-relaxed">
                 {faq.a}
               </div>
             </div>
           </div>
         ))}
       </div>
-      <p className="text-sm text-muted text-center mt-6">
-        Fant du ikke svar? <a href="/kontakt" className="underline hover:text-ocean">Ta kontakt</a> så hjelper jeg deg.
+      <p className="text-sm text-muted text-center">
+        Fant du ikke svar? <a href="/kontakt" className="text-ocean hover:underline font-medium">Ta kontakt</a> så hjelper jeg deg.
       </p>
     </section>
   );
