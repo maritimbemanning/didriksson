@@ -35,15 +35,34 @@ export default function HeroA() {
 
           {/* Value proposition */}
           <p className='text-lg md:text-xl text-muted max-w-xl leading-relaxed'>
-            Profesjonelle nettsider for <strong className='text-foreground'>små og mellomstore bedrifter</strong>.
-            <span className='block mt-3 p-4 bg-gradient-to-r from-emerald-50 to-green-50 dark:from-emerald-950/30 dark:to-green-950/30 rounded-xl border border-emerald-200 dark:border-emerald-800'>
-              <span className='block text-sm text-muted uppercase tracking-wide mb-1'>Desembertilbud</span>
-              <span className='line-through text-muted/60 text-base'>Normalpris 15 000 kr</span>
-              <span className='ml-3 text-emerald-600 dark:text-emerald-400 font-bold text-3xl'>10 000 kr</span>
-              <span className='block text-sm text-emerald-700 dark:text-emerald-400 mt-1 font-medium'>Spar 5 000 kr · Gjelder hele desember</span>
-            </span>
-            Ferdig på under 2 uker.
+            Profesjonelle nettsider for <strong className='text-foreground'>små og mellomstore bedrifter</strong>. Ferdig på under 2 uker.
           </p>
+
+          {/* December Offer Box - Standalone */}
+          <div className='relative max-w-md'>
+            {/* Glow effect */}
+            <div className='absolute -inset-1 bg-gradient-to-r from-emerald-500 to-green-600 rounded-2xl blur opacity-20 dark:opacity-30' />
+
+            <div className='relative bg-gradient-to-br from-emerald-50 via-green-50 to-emerald-50 dark:from-emerald-950/50 dark:via-green-950/40 dark:to-emerald-950/50 rounded-2xl border border-emerald-200/80 dark:border-emerald-700/50 p-5 shadow-lg'>
+              <div className='flex items-start justify-between gap-4'>
+                <div>
+                  <p className='text-xs font-semibold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider mb-2'>Desembertilbud</p>
+                  <div className='flex items-baseline gap-3'>
+                    <span className='text-3xl md:text-4xl font-bold text-emerald-700 dark:text-emerald-300'>10 000 kr</span>
+                    <span className='text-base text-muted/70 line-through'>15 000 kr</span>
+                  </div>
+                  <p className='text-sm text-emerald-600 dark:text-emerald-400 mt-1.5 font-medium'>
+                    Spar 5 000 kr · Gjelder hele desember
+                  </p>
+                </div>
+                <div className='flex-shrink-0 w-12 h-12 rounded-full bg-emerald-600 dark:bg-emerald-500 flex items-center justify-center shadow-lg'>
+                  <svg className='w-6 h-6 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2.5} d='M5 13l4 4L19 7' />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
 
           {/* Trust indicators */}
           <div className='flex flex-wrap gap-4 text-sm text-muted'>

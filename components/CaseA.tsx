@@ -136,14 +136,14 @@ export default function CaseA() {
       </div>
 
       {/* Testimonial */}
-      <div className='bg-ocean/5 border border-ocean/20 rounded-2xl p-8 text-center'>
-        <svg className='w-10 h-10 text-ocean/40 mx-auto mb-4' fill='currentColor' viewBox='0 0 24 24'>
+      <div className='bg-gradient-to-br from-ocean/5 to-cyan-500/5 border border-ocean/20 rounded-2xl p-8 md:p-10 text-center'>
+        <svg className='w-12 h-12 text-ocean/30 mx-auto mb-6' fill='currentColor' viewBox='0 0 24 24'>
           <path d='M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z' />
         </svg>
-        <p className='text-lg text-foreground italic max-w-2xl mx-auto'>
+        <blockquote className='text-xl md:text-2xl text-foreground italic max-w-2xl mx-auto leading-relaxed'>
           &quot;Isak leverte langt over forventning. Vi fikk ikke bare en nettside, men et komplett system som har transformert måten vi jobber på.&quot;
-        </p>
-        <p className='text-muted mt-4 font-semibold'>— Daglig leder, Bluecrew AS</p>
+        </blockquote>
+        <p className='text-muted mt-6 font-semibold'>— Daglig leder, Bluecrew AS</p>
       </div>
     </section>
   );

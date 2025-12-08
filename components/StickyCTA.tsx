@@ -42,43 +42,50 @@ export default function StickyCTA() {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-40 bg-background/95 backdrop-blur-md border-t border-border shadow-lg transform transition-transform duration-300">
+    <div className="fixed bottom-0 left-0 right-0 z-40 bg-background/95 backdrop-blur-md border-t border-border shadow-[0_-4px_20px_rgba(0,0,0,0.1)] dark:shadow-[0_-4px_20px_rgba(0,0,0,0.3)] animate-slide-up">
       <div className="max-w-5xl mx-auto px-4 py-3">
         <div className="flex items-center justify-between gap-4">
           {/* Message */}
-          <div className="hidden sm:block">
+          <div className="hidden sm:flex items-center gap-3">
+            <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
             <p className="text-sm font-medium text-foreground">
-              Desembertilbud: <span className="text-emerald-600 dark:text-emerald-400 font-bold">Nettside for 10 000 kr</span> <span className="text-muted">(spar 5 000 kr)</span>
+              Desembertilbud: <span className="text-emerald-600 dark:text-emerald-400 font-bold">10 000 kr</span> <span className="text-muted text-xs">(spar 5 000 kr)</span>
             </p>
           </div>
 
+          {/* Mobile message */}
+          <div className="sm:hidden flex items-center gap-2">
+            <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
+            <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400">10 000 kr</span>
+          </div>
+
           {/* CTAs */}
-          <div className="flex items-center gap-3 flex-1 sm:flex-none justify-center sm:justify-end">
+          <div className="flex items-center gap-2 sm:gap-3">
             <a
               href="/book"
-              className="inline-flex items-center gap-2 bg-ocean hover:bg-ocean-dark text-white px-4 py-2.5 rounded-xl font-semibold text-sm transition-colors shadow-lg shadow-ocean/20"
+              className="inline-flex items-center gap-2 bg-ocean hover:bg-ocean-dark text-white px-4 py-2.5 rounded-xl font-semibold text-sm transition-all shadow-lg shadow-ocean/20 hover:shadow-ocean/30"
             >
               <CalendarIcon className="w-4 h-4" />
-              Book møte
+              <span className="hidden xs:inline">Book møte</span>
+              <span className="xs:hidden">Book</span>
             </a>
             <a
               href="tel:+4792328850"
               onClick={trackPhoneClick}
-              className="inline-flex items-center gap-2 border border-border hover:border-ocean text-muted hover:text-ocean px-4 py-2.5 rounded-xl font-semibold text-sm transition-colors"
+              className="inline-flex items-center gap-2 border border-border hover:border-ocean bg-card text-foreground hover:text-ocean px-4 py-2.5 rounded-xl font-semibold text-sm transition-all"
             >
               <PhoneIcon className="w-4 h-4" />
               <span className="hidden sm:inline">923 28 850</span>
-              <span className="sm:hidden">Ring</span>
             </a>
           </div>
 
           {/* Close button */}
           <button
             onClick={() => setIsDismissed(true)}
-            className="text-muted hover:text-foreground transition-colors p-1"
+            className="text-muted hover:text-foreground transition-colors p-1.5 hover:bg-card rounded-lg"
             aria-label="Lukk"
           >
-            <XIcon className="w-5 h-5" />
+            <XIcon className="w-4 h-4" />
           </button>
         </div>
       </div>
