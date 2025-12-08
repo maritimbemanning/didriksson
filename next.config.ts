@@ -11,6 +11,7 @@ const nextConfig: NextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 60 * 60 * 24 * 365, // 1 year
   },
+  turbopack: {},
   webpack: (config: Configuration) => {
     if (isAnalyzeEnabled) {
       config.plugins = config.plugins ?? [];
