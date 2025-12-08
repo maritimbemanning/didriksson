@@ -1,7 +1,4 @@
-// Optimized icon imports - only load what we use
-import dynamic from 'next/dynamic';
-
-// Dynamically import only the icons we need
+// Centralized icon exports from lucide-react
 export { 
   Activity, 
   AlertTriangle, 
