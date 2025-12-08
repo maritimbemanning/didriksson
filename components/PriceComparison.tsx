@@ -1,6 +1,16 @@
 'use client';
 
-import { Check, X } from 'lucide-react';
+const CheckIcon = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+  </svg>
+);
+
+const XIcon = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+  </svg>
+);
 
 export default function PriceComparison() {
   const comparisons = [
@@ -44,13 +54,13 @@ export default function PriceComparison() {
                 <td className="p-4 font-medium text-foreground">{row.feature}</td>
                 <td className="p-4 text-center">
                   <div className="flex items-center justify-center gap-2 text-red-600 dark:text-red-400">
-                    <X className="w-4 h-4 flex-shrink-0" />
+                    <XIcon className="w-4 h-4 flex-shrink-0" />
                     <span className="text-sm">{row.agency}</span>
                   </div>
                 </td>
                 <td className="p-4 text-center">
                   <div className="flex items-center justify-center gap-2 text-green-600 dark:text-green-400">
-                    <Check className="w-4 h-4 flex-shrink-0" />
+                    <CheckIcon className="w-4 h-4 flex-shrink-0" />
                     <span className="text-sm font-medium">{row.me}</span>
                   </div>
                 </td>
