@@ -7,6 +7,10 @@ import CalendlyWidget from './CalendlyWidget';
 export default function HeroA() {
   // Dynamisk måned for urgency
   const currentMonth = new Date().toLocaleString('nb-NO', { month: 'long' });
+  const formattedMonth =
+    currentMonth.length > 0
+      ? currentMonth.charAt(0).toUpperCase() + currentMonth.slice(1)
+      : 'måneden';
 
   return (
     <section className='py-12 md:py-20 relative overflow-hidden'>
@@ -59,7 +63,7 @@ export default function HeroA() {
                     <span className='text-base text-muted/70 line-through'>15 000 kr</span>
                   </div>
                   <p className='text-sm text-green-700 dark:text-green-400 mt-1.5 font-semibold'>
-                    Spar 5 000 kr · Gjelder hele desember
+                    Spar 5 000 kr · Gjelder hele {formattedMonth}
                   </p>
                 </div>
                 <div className='flex-shrink-0 w-14 h-14 rounded-full bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center shadow-lg border-2 border-white/30'>

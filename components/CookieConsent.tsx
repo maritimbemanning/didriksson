@@ -6,12 +6,24 @@ export default function CookieConsent() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
+    if (typeof window === 'undefined') {
+      return;
+    }
+
     // Check if user has already consented
-    const consent = localStorage.getItem('cookie-consent');
+    const consent = window.localStorage.getItem('cookie-consent');
+    let timer: number | null = null;
+
     if (!consent) {
       // Show after 1 second
-      setTimeout(() => setShow(true), 1000);
+      timer = window.setTimeout(() => setShow(true), 1000);
     }
+
+    return () => {
+      if (timer !== null) {
+        window.clearTimeout(timer);
+      }
+    };
   }, []);
 
   const handleAccept = () => {

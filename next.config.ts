@@ -1,4 +1,8 @@
 import type { NextConfig } from "next";
+import type { Configuration } from "webpack";
+import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
+
+const isAnalyzeEnabled = process.env.ANALYZE === 'true';
 
 const nextConfig: NextConfig = {
   images: {
@@ -7,9 +11,9 @@ const nextConfig: NextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 60 * 60 * 24 * 365, // 1 year
   },
-  ...(process.env.ANALYZE === 'true' && {
-    webpack: (config: any) => {
-      const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+  webpack: (config: Configuration) => {
+    if (isAnalyzeEnabled) {
+      config.plugins = config.plugins ?? [];
       config.plugins.push(
         new BundleAnalyzerPlugin({
           analyzerMode: 'static',
@@ -17,9 +21,9 @@ const nextConfig: NextConfig = {
           openAnalyzer: true,
         })
       );
-      return config;
-    },
-  }),
+    }
+    return config;
+  },
 };
 
 export default nextConfig;

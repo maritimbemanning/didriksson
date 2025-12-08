@@ -9,6 +9,9 @@ interface CalendlyWidgetProps {
   buttonClassName?: string;
 }
 
+const CALENDLY_SCRIPT_SRC = 'https://assets.calendly.com/assets/external/widget.js';
+const CALENDLY_STYLESHEET_HREF = 'https://assets.calendly.com/assets/external/widget.css';
+
 declare global {
   interface Window {
     Calendly?: {
@@ -27,22 +30,46 @@ export default function CalendlyWidget({
   const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL || 'https://calendly.com/didriksson/new-meeting';
 
   useEffect(() => {
-    // Load Calendly script
-    if (typeof window !== 'undefined' && !document.querySelector('script[src*="calendly"]')) {
-      const script = document.createElement('script');
-      script.src = 'https://assets.calendly.com/assets/external/widget.js';
-      script.async = true;
-      script.onload = () => setIsScriptLoaded(true);
-      document.head.appendChild(script);
+    if (typeof window === 'undefined' || typeof document === 'undefined') {
+      return;
+    }
 
-      // Also add the CSS
+    let cancelled = false;
+    const markLoaded = () => {
+      if (!cancelled) {
+        setIsScriptLoaded(true);
+      }
+    };
+
+    const existingScript = document.querySelector<HTMLScriptElement>(
+      `script[src="${CALENDLY_SCRIPT_SRC}"]`
+    );
+
+    if (existingScript) {
+      const frameId = window.requestAnimationFrame(markLoaded);
+      return () => {
+        cancelled = true;
+        window.cancelAnimationFrame(frameId);
+      };
+    }
+
+    const script = document.createElement('script');
+    script.src = CALENDLY_SCRIPT_SRC;
+    script.async = true;
+    script.onload = markLoaded;
+    document.head.appendChild(script);
+
+    if (!document.querySelector(`link[href="${CALENDLY_STYLESHEET_HREF}"]`)) {
       const link = document.createElement('link');
-      link.href = 'https://assets.calendly.com/assets/external/widget.css';
+      link.href = CALENDLY_STYLESHEET_HREF;
       link.rel = 'stylesheet';
       document.head.appendChild(link);
-    } else {
-      setIsScriptLoaded(true);
     }
+
+    return () => {
+      cancelled = true;
+      script.onload = null;
+    };
   }, []);
 
   const openCalendlyPopup = () => {
