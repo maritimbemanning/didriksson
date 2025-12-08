@@ -1,8 +1,8 @@
 import type { NextConfig } from "next";
-import type { Configuration } from "webpack";
 import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
 
 const isAnalyzeEnabled = process.env.ANALYZE === 'true';
+type WebpackConfig = Parameters<NonNullable<NextConfig['webpack']>>[0];
 
 const nextConfig: NextConfig = {
   images: {
@@ -12,7 +12,7 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 60 * 60 * 24 * 365, // 1 year
   },
   turbopack: {},
-  webpack: (config: Configuration) => {
+  webpack: (config: WebpackConfig) => {
     if (isAnalyzeEnabled) {
       config.plugins = config.plugins ?? [];
       config.plugins.push(
