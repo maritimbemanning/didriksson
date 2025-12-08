@@ -14,7 +14,8 @@
       "Bash(git checkout:*)",
       "Bash(git pull:*)",
       "Bash(git merge:*)",
-      "Bash(gh pr create --title \"Polish UI/UX for marketing launch\" --body \"$(cat <<''EOF''\n## Summary\n- Fix Hero section pricing box with stunning December offer card\n- Fix Next.js 16 dynamic import issue (ClientOnlyComponents wrapper)\n- Polish all major components (CTA, PriceComparison, StickyCTA, AboutMe, CaseA, FAQ)\n- Update December pricing (10,000 kr) across all components\n- Better mobile responsiveness and dark mode support\n\n## Test plan\n- [ ] Check Hero section December offer box on desktop/mobile\n- [ ] Verify dark mode looks correct\n- [ ] Test all CTAs (Calendly, phone, booking)\n- [ ] Check /tjenester pricing cards\n- [ ] Verify build passes\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\nEOF\n)\" --base main)"
+      "Bash(gh pr create --title \"Polish UI/UX for marketing launch\" --body \"$(cat <<''EOF''\n## Summary\n- Fix Hero section pricing box with stunning December offer card\n- Fix Next.js 16 dynamic import issue (ClientOnlyComponents wrapper)\n- Polish all major components (CTA, PriceComparison, StickyCTA, AboutMe, CaseA, FAQ)\n- Update December pricing (10,000 kr) across all components\n- Better mobile responsiveness and dark mode support\n\n## Test plan\n- [ ] Check Hero section December offer box on desktop/mobile\n- [ ] Verify dark mode looks correct\n- [ ] Test all CTAs (Calendly, phone, booking)\n- [ ] Check /tjenester pricing cards\n- [ ] Verify build passes\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\nEOF\n)\" --base main)",
+      "Bash(git fetch:*)"
     ],
     "deny": [],
     "ask": []
