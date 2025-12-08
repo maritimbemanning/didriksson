@@ -11,10 +11,12 @@ export default function AboutMe() {
             <Image
               src="/images/isak-profil.jpg"
               alt="Isak Didriksson - Webutvikler"
-              width={400}
-              height={400}
+              width={500}
+              height={500}
+              quality={85}
               className="relative w-full h-full object-cover rounded-3xl shadow-2xl"
               priority
+              sizes="(max-width: 768px) 100vw, 500px"
             />
           </div>
         </div>

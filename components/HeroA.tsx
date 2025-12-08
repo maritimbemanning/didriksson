@@ -91,10 +91,12 @@ export default function HeroA() {
               <Image
                 src='/images/isak-hero.jpg'
                 alt='Isak Didriksson - Webutvikler'
-                width={80}
-                height={80}
+                width={96}
+                height={96}
+                quality={90}
                 className='w-16 h-16 md:w-24 md:h-24 mx-auto rounded-full object-cover shadow-lg border-2 border-ocean/20'
                 priority
+                sizes='(max-width: 768px) 64px, 96px'
               />
               {/* Online indicator */}
               <div className='absolute bottom-0 right-1/2 translate-x-6 md:translate-x-8 w-4 h-4 md:w-5 md:h-5 bg-green-500 rounded-full border-2 border-card' />
