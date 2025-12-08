@@ -25,7 +25,7 @@ const getStoredTheme = (): Theme | null => {
   return isTheme(stored) ? stored : null;
 };
 
-const getSystemPreference = () => {
+const getSystemPreference = (): 'light' | 'dark' => {
   if (typeof window === 'undefined') {
     return 'light';
   }
@@ -49,10 +49,10 @@ const subscribeToSystemPreference = (callback: () => void) => {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const systemTheme = useSyncExternalStore(
+  const systemTheme = useSyncExternalStore<'light' | 'dark'>(
     subscribeToSystemPreference,
     getSystemPreference,
-    () => 'light'
+    () => 'light' as const
   );
 
   const [theme, setThemeState] = useState<Theme>(() => getStoredTheme() ?? 'light');
