@@ -20,9 +20,10 @@ export default function HeroA() {
         {/* Left side - Content */}
         <div className='lg:col-span-3 space-y-6'>
           {/* Christmas Offer Badge */}
-          <div className='inline-flex items-center gap-2 text-sm font-bold bg-gradient-to-r from-emerald-600 to-green-700 text-white border border-white/20 rounded-full px-5 py-2.5 shadow-lg'>
-            <span className='w-2 h-2 bg-white rounded-full animate-pulse' />
-            <span>DESEMBERTILBUD: Profesjonell nettside for 10.000kr</span>
+          <div className='inline-flex items-center gap-2.5 text-sm font-bold bg-gradient-to-r from-red-600 to-red-700 text-white border border-white/20 rounded-full px-5 py-2.5 shadow-lg shadow-red-500/20'>
+            <span className='text-lg'>🎄</span>
+            <span>JULETILBUD: Profesjonell nettside for 10.000kr</span>
+            <span className='text-lg'>🎁</span>
           </div>
 
           {/* Main headline */}
@@ -38,27 +39,31 @@ export default function HeroA() {
             Profesjonelle nettsider for <strong className='text-foreground'>små og mellomstore bedrifter</strong>. Ferdig på under 2 uker.
           </p>
 
-          {/* December Offer Box - Standalone */}
+          {/* Christmas Offer Box - Festive */}
           <div className='relative max-w-md'>
-            {/* Glow effect */}
-            <div className='absolute -inset-1 bg-gradient-to-r from-emerald-500 to-green-600 rounded-2xl blur opacity-20 dark:opacity-30' />
+            {/* Glow effect - red/green christmas gradient */}
+            <div className='absolute -inset-1 bg-gradient-to-r from-red-500 via-green-500 to-red-500 rounded-2xl blur opacity-25 dark:opacity-35' />
 
-            <div className='relative bg-gradient-to-br from-emerald-50 via-green-50 to-emerald-50 dark:from-emerald-950/50 dark:via-green-950/40 dark:to-emerald-950/50 rounded-2xl border border-emerald-200/80 dark:border-emerald-700/50 p-5 shadow-lg'>
+            <div className='relative bg-gradient-to-br from-red-50 via-green-50 to-red-50 dark:from-red-950/40 dark:via-green-950/40 dark:to-red-950/40 rounded-2xl border-2 border-red-200/80 dark:border-red-700/50 p-5 shadow-xl overflow-hidden'>
+              {/* Decorative corner ornaments */}
+              <div className='absolute top-2 right-2 text-2xl opacity-80'>🎄</div>
+              <div className='absolute bottom-2 left-2 text-xl opacity-60'>❄️</div>
+
               <div className='flex items-start justify-between gap-4'>
                 <div>
-                  <p className='text-xs font-semibold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider mb-2'>Desembertilbud</p>
+                  <p className='text-xs font-bold text-red-700 dark:text-red-400 uppercase tracking-wider mb-2 flex items-center gap-1.5'>
+                    <span>🎁</span> Juletilbud
+                  </p>
                   <div className='flex items-baseline gap-3'>
-                    <span className='text-3xl md:text-4xl font-bold text-emerald-700 dark:text-emerald-300'>10 000 kr</span>
+                    <span className='text-3xl md:text-4xl font-bold text-red-700 dark:text-red-300'>10 000 kr</span>
                     <span className='text-base text-muted/70 line-through'>15 000 kr</span>
                   </div>
-                  <p className='text-sm text-emerald-600 dark:text-emerald-400 mt-1.5 font-medium'>
+                  <p className='text-sm text-green-700 dark:text-green-400 mt-1.5 font-semibold'>
                     Spar 5 000 kr · Gjelder hele desember
                   </p>
                 </div>
-                <div className='flex-shrink-0 w-12 h-12 rounded-full bg-emerald-600 dark:bg-emerald-500 flex items-center justify-center shadow-lg'>
-                  <svg className='w-6 h-6 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2.5} d='M5 13l4 4L19 7' />
-                  </svg>
+                <div className='flex-shrink-0 w-14 h-14 rounded-full bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center shadow-lg border-2 border-white/30'>
+                  <span className='text-2xl'>🎅</span>
                 </div>
               </div>
             </div>

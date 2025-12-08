@@ -1,22 +1,10 @@
 'use client';
 
-import { useState } from 'react';
-import Image from 'next/image';
-import BeforeAfterSlider from './BeforeAfterSlider';
-
 export default function CaseA() {
-  const [activeImage, setActiveImage] = useState(0);
-
-  const screenshots = [
-    { src: '/images/bluecrew-admin.jpg', alt: 'Bluecrew Admin Portal - Hovedmeny' },
-    { src: '/images/bluecrew-import.jpg', alt: 'Bluecrew Import Management' },
-    { src: '/images/bluecrew-iso.jpg', alt: 'Bluecrew ISO 9001 Internstyring' },
-  ];
-
   return (
     <section className='space-y-8'>
       <div className='text-center'>
-        <p className='text-ocean font-semibold mb-2'>Kundecase</p>
+        <p className='text-ocean font-semibold mb-2 text-sm uppercase tracking-wider'>Kundecase</p>
         <h2 className='text-3xl md:text-4xl font-bold text-foreground'>
           Fra 1% til 3× flere henvendelser
         </h2>
@@ -25,55 +13,56 @@ export default function CaseA() {
         </p>
       </div>
 
-      {/* Before/After Comparison */}
-      <div className='space-y-3'>
-        <h3 className='text-center text-sm font-semibold text-muted uppercase tracking-wider'>
-          Se forskjellen selv
-        </h3>
-        <BeforeAfterSlider
-          beforeImage='/images/bluecrew-before.jpg'
-          afterImage='/images/bluecrew-after.jpg'
-          beforeLabel='Gammel side'
-          afterLabel='Ny side'
-        />
-        <p className='text-center text-sm text-muted'>
-          Dra slideren for å se transformasjonen
-        </p>
-      </div>
-
       {/* Main case study */}
-      <div className='bg-card rounded-3xl p-6 md:p-10'>
+      <div className='bg-card rounded-3xl p-6 md:p-10 border border-border'>
         <div className='grid lg:grid-cols-2 gap-8 items-center'>
-          {/* Screenshots carousel */}
-          <div className='space-y-4'>
-            <div className='relative aspect-video bg-background rounded-2xl shadow-2xl overflow-hidden border border-border'>
-              <Image
-                src={screenshots[activeImage].src}
-                alt={screenshots[activeImage].alt}
-                fill
-                quality={85}
-                className='object-cover object-top transition-opacity duration-300'
-                sizes='(max-width: 768px) 100vw, 50vw'
-              />
+          {/* Left side - Results highlight */}
+          <div className='space-y-6'>
+            {/* Results - Big numbers */}
+            <div className='grid grid-cols-3 gap-4'>
+              <div className='text-center p-4 bg-ocean/5 rounded-2xl'>
+                <div className='text-4xl md:text-5xl font-bold text-ocean'>3×</div>
+                <div className='text-sm text-muted mt-1'>Flere leads</div>
+              </div>
+              <div className='text-center p-4 bg-ocean/5 rounded-2xl'>
+                <div className='text-4xl md:text-5xl font-bold text-ocean'>85%</div>
+                <div className='text-sm text-muted mt-1'>Mindre admin</div>
+              </div>
+              <div className='text-center p-4 bg-ocean/5 rounded-2xl'>
+                <div className='text-4xl md:text-5xl font-bold text-ocean'>&lt;1s</div>
+                <div className='text-sm text-muted mt-1'>Lastetid</div>
+              </div>
             </div>
-            <div className='flex gap-2 justify-center'>
-              {screenshots.map((_, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => setActiveImage(idx)}
-                  className={`h-3 rounded-full transition-all hover-scale ${
-                    activeImage === idx
-                      ? 'bg-ocean w-8'
-                      : 'bg-muted/50 hover:bg-muted w-3'
-                  }`}
-                  aria-label={`Vis bilde ${idx + 1}`}
-                />
-              ))}
+
+            {/* Website preview link */}
+            <div className='bg-gradient-to-br from-ocean/10 to-cyan-500/10 rounded-2xl p-6 border border-ocean/20'>
+              <div className='flex items-center gap-3 mb-3'>
+                <div className='w-10 h-10 bg-ocean rounded-xl flex items-center justify-center'>
+                  <svg className='w-5 h-5 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9' />
+                  </svg>
+                </div>
+                <div>
+                  <p className='font-semibold text-foreground'>bluecrew.no</p>
+                  <p className='text-sm text-muted'>Maritim bemanning</p>
+                </div>
+              </div>
+              <a
+                href='https://www.bluecrew.no/'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='inline-flex items-center gap-2 bg-ocean hover:bg-ocean-dark text-white px-5 py-3 rounded-xl font-semibold transition-all hover:-translate-y-0.5 shadow-lg shadow-ocean/20'
+              >
+                Besøk nettsiden
+                <svg className='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                  <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14' />
+                </svg>
+              </a>
             </div>
           </div>
 
-          {/* Case details */}
-          <div className='space-y-6'>
+          {/* Right side - Case details */}
+          <div className='space-y-5'>
             <div>
               <div className='inline-flex items-center gap-2 bg-ocean/10 text-ocean text-sm font-semibold px-3 py-1 rounded-full mb-4'>
                 <span className='w-2 h-2 bg-ocean rounded-full' />
@@ -87,50 +76,55 @@ export default function CaseA() {
 
             {/* Problem */}
             <div className='bg-red-500/10 border border-red-500/30 rounded-xl p-4'>
-              <h4 className='font-semibold text-red-600 dark:text-red-400 mb-2'>Utfordringen</h4>
+              <h4 className='font-semibold text-red-600 dark:text-red-400 mb-2 flex items-center gap-2'>
+                <svg className='w-5 h-5' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                  <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z' />
+                </svg>
+                Utfordringen
+              </h4>
               <ul className='space-y-1 text-sm text-foreground'>
-                <li>• Gammel nettside med 4+ sekunder lastetid</li>
-                <li>• Kun 1% av besøkende tok kontakt</li>
-                <li>• Manuelle prosesser tok 10+ timer i uken</li>
+                <li className='flex items-start gap-2'>
+                  <span className='text-red-500 mt-0.5'>•</span>
+                  Gammel nettside med 4+ sekunder lastetid
+                </li>
+                <li className='flex items-start gap-2'>
+                  <span className='text-red-500 mt-0.5'>•</span>
+                  Kun 1% av besøkende tok kontakt
+                </li>
+                <li className='flex items-start gap-2'>
+                  <span className='text-red-500 mt-0.5'>•</span>
+                  Manuelle prosesser tok 10+ timer i uken
+                </li>
               </ul>
             </div>
 
             {/* Solution */}
             <div className='bg-green-500/10 border border-green-500/30 rounded-xl p-4'>
-              <h4 className='font-semibold text-green-600 dark:text-green-400 mb-2'>Løsningen</h4>
+              <h4 className='font-semibold text-green-600 dark:text-green-400 mb-2 flex items-center gap-2'>
+                <svg className='w-5 h-5' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                  <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z' />
+                </svg>
+                Løsningen
+              </h4>
               <ul className='space-y-1 text-sm text-foreground'>
-                <li>• Ny nettside i Next.js med &lt;1s lastetid</li>
-                <li>• Admin-portal for HMS og kandidathåndtering</li>
-                <li>• ISO 9001 kvalitetsstyringssystem</li>
-                <li>• Automatisert import og onboarding</li>
+                <li className='flex items-start gap-2'>
+                  <span className='text-green-500 mt-0.5'>•</span>
+                  Ny nettside i Next.js med &lt;1s lastetid
+                </li>
+                <li className='flex items-start gap-2'>
+                  <span className='text-green-500 mt-0.5'>•</span>
+                  Admin-portal for HMS og kandidathåndtering
+                </li>
+                <li className='flex items-start gap-2'>
+                  <span className='text-green-500 mt-0.5'>•</span>
+                  ISO 9001 kvalitetsstyringssystem
+                </li>
+                <li className='flex items-start gap-2'>
+                  <span className='text-green-500 mt-0.5'>•</span>
+                  Automatisert import og onboarding
+                </li>
               </ul>
             </div>
-
-            {/* Results */}
-            <div className='grid grid-cols-3 gap-4'>
-              <div className='text-center'>
-                <div className='text-3xl font-bold text-ocean'>3×</div>
-                <div className='text-xs text-muted'>Flere leads</div>
-              </div>
-              <div className='text-center'>
-                <div className='text-3xl font-bold text-ocean'>85%</div>
-                <div className='text-xs text-muted'>Mindre admin</div>
-              </div>
-              <div className='text-center'>
-                <div className='text-3xl font-bold text-ocean'>&lt;1s</div>
-                <div className='text-xs text-muted'>Lastetid</div>
-              </div>
-            </div>
-
-            <a
-              href='https://www.bluecrew.no/'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='inline-flex items-center gap-2 text-ocean font-semibold hover:gap-3 transition-all'
-            >
-              Se bluecrew.no
-              <span>→</span>
-            </a>
           </div>
         </div>
       </div>

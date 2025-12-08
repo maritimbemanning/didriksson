@@ -64,9 +64,10 @@ export default function TjenesterPage(){
   return (
     <main className="space-y-10">
       <header className="space-y-4">
-        <div className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-600 to-green-700 text-white px-5 py-2.5 rounded-full text-sm font-bold shadow-lg">
-          <span className='w-2 h-2 bg-white rounded-full animate-pulse' />
-          <span>DESEMBERTILBUD AKTIV - SPAR 5 000 KR</span>
+        <div className="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-red-700 text-white px-5 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-red-500/20">
+          <span className='text-lg'>🎄</span>
+          <span>JULETILBUD AKTIV - SPAR 5 000 KR</span>
+          <span className='text-lg'>🎁</span>
         </div>
         <h1 className="text-3xl font-semibold tracking-tight text-foreground">Tjenester & Priser</h1>
         <p className="text-muted max-w-2xl">Transparente pakker med fastpris. Du vet hva du får og hva det koster før vi starter.</p>
@@ -74,16 +75,16 @@ export default function TjenesterPage(){
 
       <section className="grid md:grid-cols-3 gap-6" aria-label="Prispakker">
         {packs.map(p => (
-          <div key={p.t} className={`border ${p.christmasOffer ? 'border-emerald-300 dark:border-emerald-700 ring-2 ring-emerald-500/20' : p.popular ? 'border-ocean ring-2 ring-ocean/20' : 'border-border'} rounded-2xl p-6 flex flex-col relative bg-card hover:shadow-xl transition-shadow`}>
+          <div key={p.t} className={`border ${p.christmasOffer ? 'border-red-300 dark:border-red-700 ring-2 ring-red-500/20' : p.popular ? 'border-ocean ring-2 ring-ocean/20' : 'border-border'} rounded-2xl p-6 flex flex-col relative bg-card hover:shadow-xl transition-shadow`}>
             {p.popular && !p.christmasOffer && (
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-ocean text-white text-xs font-semibold px-4 py-1.5 rounded-full shadow-lg">
                 Mest populær
               </div>
             )}
             {p.christmasOffer && (
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-emerald-600 to-green-600 text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-lg flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse" />
-                DESEMBERTILBUD
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-red-600 to-red-700 text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-lg flex items-center gap-1.5">
+                <span>🎅</span>
+                JULETILBUD
               </div>
             )}
 
@@ -95,9 +96,9 @@ export default function TjenesterPage(){
                 {p.originalPrice && (
                   <p className="text-base line-through text-muted/60">{p.originalPrice}</p>
                 )}
-                <p className={`text-3xl font-bold ${p.christmasOffer ? 'text-emerald-600 dark:text-emerald-400' : 'text-ocean'}`}>{p.price}</p>
+                <p className={`text-3xl font-bold ${p.christmasOffer ? 'text-red-600 dark:text-red-400' : 'text-ocean'}`}>{p.price}</p>
                 {p.christmasOffer && (
-                  <p className="text-sm text-emerald-600 dark:text-emerald-400 font-medium mt-1">Spar 5 000 kr i desember</p>
+                  <p className="text-sm text-green-600 dark:text-green-400 font-medium mt-1">🎁 Spar 5 000 kr - Juletilbud!</p>
                 )}
                 <p className="text-xs text-muted mt-2">Engangspris, ingen abonnement</p>
               </div>
@@ -147,7 +148,7 @@ export default function TjenesterPage(){
             <a
               href={`/kontakt?pakke=${p.q}`}
               onClick={() => handlePackageClick(p.t, p.priceNum)}
-              className={`inline-flex items-center justify-center gap-2 ${p.christmasOffer ? 'bg-emerald-600 hover:bg-emerald-700' : 'bg-ocean hover:bg-ocean-dark'} text-white transition-all rounded-xl px-5 py-3 font-semibold shadow-lg ${p.christmasOffer ? 'shadow-emerald-500/20' : 'shadow-ocean/20'} hover:-translate-y-0.5`}
+              className={`inline-flex items-center justify-center gap-2 ${p.christmasOffer ? 'bg-red-600 hover:bg-red-700' : 'bg-ocean hover:bg-ocean-dark'} text-white transition-all rounded-xl px-5 py-3 font-semibold shadow-lg ${p.christmasOffer ? 'shadow-red-500/20' : 'shadow-ocean/20'} hover:-translate-y-0.5`}
             >
               Forespørsel
               <span>→</span>
