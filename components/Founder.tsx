@@ -66,10 +66,10 @@ export function Founder() {
           >
             <div className="relative w-56 h-56 md:w-64 md:h-64 rounded-3xl overflow-hidden glass shadow-glow-md">
               <Image
-                src="/images/founder.jpg"
+                src="/images/Isak.jpg"
                 alt="Isak Didriksson, grunnlegger av Didriksson Digital"
                 fill
-                className="object-cover"
+                className="object-cover grayscale"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
               <div className="absolute bottom-4 left-4 right-4 text-sm text-white/90">
