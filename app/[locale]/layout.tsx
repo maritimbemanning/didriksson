@@ -38,6 +38,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     authors: [{ name: "Didriksson Digital" }],
     creator: "Didriksson Digital",
     publisher: "Didriksson Digital",
+    icons: {
+      icon: '/branding.png',
+      shortcut: '/branding.png',
+      apple: '/branding.png',
+    },
     openGraph: {
       type: "website",
       locale: locale === 'no' ? 'nb_NO' : 'en_US',
