@@ -24,7 +24,7 @@ export default function HomePage() {
         <Hero onBookClick={openCalendly} />
         <ValueProposition />
         <BentoGrid />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <Founder />
         <Pricing onBookClick={openCalendly} />
       </main>
