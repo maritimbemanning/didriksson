@@ -139,7 +139,7 @@ export function BentoGrid() {
 
                       <div className="mt-6">
                         <div className="text-sm text-slate-400 uppercase tracking-wider font-semibold mb-1">{item.result_label}</div>
-                        <div className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-amber-200">
+                        <div className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-amber-200">
                           {item.metric}
                         </div>
                       </div>
