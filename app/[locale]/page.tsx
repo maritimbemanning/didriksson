@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Header, Footer } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { ValueProposition } from "@/components/ValueProposition";
+import { Testimonials } from "@/components/Testimonials";
 import { BentoGrid } from "@/components/Portfolio/BentoGrid";
 import { Pricing } from "@/components/Pricing";
 import { Founder } from "@/components/Founder";
@@ -23,6 +24,7 @@ export default function HomePage() {
         <Hero onBookClick={openCalendly} />
         <ValueProposition />
         <BentoGrid />
+        <Testimonials />
         <Founder />
         <Pricing onBookClick={openCalendly} />
       </main>

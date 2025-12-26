@@ -4,45 +4,44 @@ import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import { useTranslations } from 'next-intl';
 import { Container } from "@/components/ui";
 import { fadeInUp, staggerContainer, testimonialSlide } from "@/lib/animations";
 
-const testimonials = [
-  {
-    id: 1,
-    quote:
-      "Før: 2 000 kr/mnd fra nettsiden. Etter: 45 000 kr/mnd på 3 måneder. Didriksson Digital forsto målgruppen vår fra dag 1.",
-    author: "Jonas Hansen",
-    role: "CEO",
-    company: "BedriftAS",
-    image: "/images/testimonials/jonas.jpg",
-    rating: 5,
-  },
-  {
-    id: 2,
-    quote:
-      "97/100 på PageSpeed. Kunder kommenterer hvor rask nettsiden er. Beste investeringen vi har gjort.",
-    author: "Maria Olsen",
-    role: "Daglig Leder",
-    company: "ShopNorge",
-    image: "/images/testimonials/maria.jpg",
-    rating: 5,
-  },
-  {
-    id: 3,
-    quote:
-      "Fra kontakt til lansering: 14 dager. Prosessen var knirkefri, og resultatet overgikk forventningene.",
-    author: "Erik Johansen",
-    role: "Founder",
-    company: "StartupX",
-    image: "/images/testimonials/erik.jpg",
-    rating: 5,
-  },
-];
-
 export function Testimonials() {
+  const t = useTranslations('Testimonials');
   const [[activeIndex, direction], setActiveIndex] = useState([0, 0]);
   const [isPaused, setIsPaused] = useState(false);
+
+  const testimonials = [
+    {
+      id: 1,
+      quote: t('items.1.quote'),
+      author: "Jonas Hansen",
+      role: t('items.1.role'),
+      company: "BedriftAS",
+      image: "/images/testimonials/jonas.jpg",
+      rating: 5,
+    },
+    {
+      id: 2,
+      quote: t('items.2.quote'),
+      author: "Maria Olsen",
+      role: t('items.2.role'),
+      company: "ShopNorge",
+      image: "/images/testimonials/maria.jpg",
+      rating: 5,
+    },
+    {
+      id: 3,
+      quote: t('items.3.quote'),
+      author: "Erik Johansen",
+      role: t('items.3.role'),
+      company: "StartupX",
+      image: "/images/testimonials/erik.jpg",
+      rating: 5,
+    },
+  ];
 
   const paginate = useCallback(
     (newDirection: number) => {
@@ -50,7 +49,7 @@ export function Testimonials() {
         (activeIndex + newDirection + testimonials.length) % testimonials.length;
       setActiveIndex([newIndex, newDirection]);
     },
-    [activeIndex]
+    [activeIndex, testimonials.length]
   );
 
   // Auto-scroll
@@ -84,13 +83,13 @@ export function Testimonials() {
             variants={fadeInUp}
             className="inline-block text-[var(--color-accent)] text-sm font-semibold uppercase tracking-wider mb-3"
           >
-            Kundehistorier
+            {t('label')}
           </motion.span>
           <motion.h2
             variants={fadeInUp}
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--color-primary)]"
           >
-            Hva kundene sier
+            {t('title')}
           </motion.h2>
         </motion.div>
 
@@ -117,7 +116,7 @@ export function Testimonials() {
               </div>
 
               {/* Quote */}
-              <blockquote className="text-xl md:text-2xl text-[var(--color-primary)] mb-8 leading-relaxed max-w-3xl mx-auto">
+              <blockquote className="text-xl md:text-2xl text-[var(--color-text-primary)] mb-8 leading-relaxed max-w-3xl mx-auto">
                 &ldquo;{currentTestimonial.quote}&rdquo;
               </blockquote>
 

@@ -1,14 +1,17 @@
 "use client";
 
 import { Star, TrendingUp, Shield } from "lucide-react";
-
-const trustItems = [
-  { icon: TrendingUp, text: "350+ nettsider levert" },
-  { icon: Star, text: "4.9 gjennomsnittsrating" },
-  { icon: Shield, text: "Google Partner" },
-];
+import { useTranslations } from 'next-intl';
 
 export function TrustBar() {
+  const t = useTranslations('TrustBar');
+
+  const trustItems = [
+    { icon: TrendingUp, text: t('delivered') },
+    { icon: Star, text: t('rating') },
+    { icon: Shield, text: t('partner') },
+  ];
+
   // Duplicate items for seamless infinite scroll
   const duplicatedItems = [...trustItems, ...trustItems, ...trustItems, ...trustItems];
 

@@ -1,0 +1,260 @@
+{
+  "Metadata": {
+    "title": "Didriksson Digital | Nettsider som konverterer",
+    "description": "Skreddersydde nettsider for bedrifter som vil ha resultater. Vi bygger raske, Google-vennlige løsninger som gjør besøkende til kunder. Se våre referanser.",
+    "keywords": "ny nettside bedrift, skreddersydd nettside, rask nettside, seo optimalisering, next.js utvikler, nettsider oslo, webutvikling norge",
+    "og_title": "Didriksson Digital - Nettsider som kjennes raske og ryddige"
+  },
+  "Hero": {
+    "badge": "7/10 plasser ledige i desember",
+    "title": "Skreddersydde nettsider som konverterer. En nettside du er stolt av.",
+    "description": "Er du flau over å sende kunder til nettsiden din? Vi bygger moderne, lynraske løsninger som bygger tillit, rangerer høyt i Google og konverterer besøkende til salg.",
+    "founder": "Isak Didriksson – grunnlegger. Bygger nettsider som er raske, synlige i Google, og enkle å bruke.",
+    "cta_book": "Book gratis konsultasjon",
+    "cta_cases": "Se våre caser",
+    "stats": {
+      "based_in_norway": "Basert i Norge",
+      "fast_contact": "Fast kontaktperson",
+      "response_time": "Svar innen 24t"
+    }
+  },
+  "Navigation": {
+    "services": "Tjenester",
+    "portfolio": "Caser",
+    "pricing": "Priser",
+    "blog": "Fagblogg",
+    "book_meeting": "Book konsultasjon"
+  },
+  "Blog": {
+    "title": "Fagblogg & Innsikt",
+    "subtitle": "Tips og triks for å lykkes digitalt.",
+    "read_more": "Les artikkelen",
+    "back": "Tilbake til oversikten",
+    "published": "Publisert",
+    "read_time": "lesetid"
+  },
+  "ValueProposition": {
+    "title": "Hvorfor <span>Didriksson?</span>",
+    "values": {
+      "speed": {
+        "title": "Lynrask levering",
+        "description": "Fra første møte til ferdig nettside på 14 dager"
+      },
+      "design": {
+        "title": "Premium design",
+        "description": "Design som bygger tillit og konverterer besøkende"
+      },
+      "results": {
+        "title": "Målbare resultater",
+        "description": "Tydelige KPI-rapporter med Google Analytics og Search Console"
+      },
+      "process": {
+        "title": "Trygg prosess",
+        "description": "Du er involvert hele veien. Ingen overraskelser, bare resultater."
+      },
+      "tech": {
+        "title": "Teknologi som varer",
+        "description": "Vi bygger på moderne plattformer som er enkle å vedlikeholde."
+      },
+      "seo": {
+        "title": "Synlig i Google",
+        "description": "Teknisk optimalisert slik at kundene faktisk finner deg."
+      }
+    }
+  },
+  "BentoGrid": {
+    "title": "Vi lar resultatene <span>snakke for seg selv</span>",
+    "subtitle": "Ingen synsing, bare målbare forbedringer. Her er noen av bedriftene vi har hjulpet med å øke salget og profesjonalisere sin digitale tilstedeværelse.",
+    "cases": {
+      "bluecrew": {
+        "title": "Bluecrew",
+        "metric": "Lansert 2025",
+        "label": "Maritim bemanning",
+        "description": "Norges mest moderne bemanningsbyrå for maritim sektor. Vi kobler kvalifiserte sjøfolk med ledende rederier.",
+        "result_label": "Resultat"
+      },
+      "case2": {
+        "title": "Optima",
+        "metric": "+127% konvertering",
+        "label": "Digital markedsføring",
+        "description": "Datadrevet markedsføring som skaper resultater. Fra usynlig til å dominere søkeresultatene.",
+        "result_label": "Resultat"
+      },
+      "eiendomsmegler": {
+        "title": "Eiendomsmegler 1",
+        "metric": "Raskere side",
+        "label": "Lastetid ned fra 4s til 0.8s",
+        "result_label": "Resultat"
+      },
+      "cta": {
+        "title": "Din Bedrift Her?",
+        "metric": "Neste suksess",
+        "label": "Vi har plass til ett prosjekt til i år",
+        "button": "Book et møte"
+      }
+    }
+  },
+  "Testimonials": {
+    "label": "Kundehistorier",
+    "title": "Hva kundene sier",
+    "items": {
+      "1": {
+        "quote": "Før: 2 000 kr/mnd fra nettsiden. Etter: 45 000 kr/mnd på 3 måneder. Didriksson Digital forsto målgruppen vår fra dag 1.",
+        "role": "CEO"
+      },
+      "2": {
+        "quote": "97/100 på PageSpeed. Kunder kommenterer hvor rask nettsiden er. Beste investeringen vi har gjort.",
+        "role": "Daglig Leder"
+      },
+      "3": {
+        "quote": "Fra kontakt til lansering: 14 dager. Prosessen var knirkefri, og resultatet overgikk forventningene.",
+        "role": "Founder"
+      }
+    }
+  },
+  "Founder": {
+    "label": "Om grunnleggeren",
+    "title": "Teknisk founder som bygger selv – ikke et anonymt byrå",
+    "p1": "Jeg heter <span>Isak Didriksson</span> og har fullstack-bakgrunn med Next.js, TypeScript og moderne skyplattformer. I stedet for å delegere alt til juniorer i et byrå, er jeg personlig inne i arkitektur, kode og konverteringsstrategi på hver eneste side.",
+    "p2": "Målet mitt er enkelt: at mellomstore bedrifter som din skal slippe trege, uoversiktlige WordPress-løsninger og byråavhengighet. Du får en skreddersydd, teknisk solid side som er enkel å eie selv – med fokus på fart, SEO og målbare resultater.",
+    "p3": "Hver leveranse inkluderer tydelige måltall, PageSpeed-rapporter og innsikt i hva som faktisk driver trafikk og leads. Slik ser du svart på hvitt at investeringen betaler seg.",
+    "list": {
+      "1": "10+ års erfaring med webutvikling og produkt",
+      "2": "Spisskompetanse på ytelse, SEO og konvertering",
+      "3": "Jobber direkte med gründere og daglige ledere",
+      "4": "Én ansvarlig person – ikke fem forskjellige kontaktpunkter"
+    },
+    "image_caption": {
+      "name": "Isak Didriksson",
+      "role": "Grunnlegger · Fullstack utvikler"
+    }
+  },
+  "Pricing": {
+    "title": "Transparent <span>prising</span>",
+    "subtitle": "Ingen skjulte kostnader. Ingen abonnement. Bare resultater.",
+    "popular": "MEST POPULÆR",
+    "tiers": {
+      "starter": {
+        "name": "Starter",
+        "description": "Perfekt for små bedrifter",
+        "features": [
+          "1-3 sider",
+          "Responsivt design",
+          "Basic SEO",
+          "Google Analytics",
+          "7 dagers levering"
+        ]
+      },
+      "business": {
+        "name": "Business",
+        "description": "For bedrifter som vil vokse og ha enkel booking",
+        "features": [
+          "5-10 sider",
+          "Premium design",
+          "Full SEO optimalisering",
+          "Blog / nyhetsmodul",
+          "14 dagers levering",
+          "30 dagers support",
+          "2 revisjonsrunder"
+        ]
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "Skreddersydd løsning",
+        "features": [
+          "Unlimited sider",
+          "Custom CMS",
+          "Avanserte funksjoner",
+          "E-commerce / booking",
+          "API integrasjoner",
+          "Dedikert utvikler"
+        ]
+      }
+    },
+    "cta": "Velg pakke"
+  },
+  "Footer": {
+    "description": "Nettsider som føles raske, ryddige og enkle å bruke. Bygget for flere gode henvendelser – ikke tomme løfter.",
+    "contact": "Kontakt",
+    "follow": "Følg oss",
+    "privacy": "Personvernerklæring"
+  },
+  "CTASection": {
+    "badge": "Ledige plasser denne måneden",
+    "title": "Klar for en nettside som <span class='text-accent'>faktisk selger?</span>",
+    "description": "Book et uforpliktende strategimøte og la oss diskutere hvordan vi kan hjelpe bedriften din med å vokse digitalt.",
+    "button": "Book gratis 30-min strategisamtale",
+    "trust": {
+      "payment": "Sikker betaling via Vipps/Stripe",
+      "response": "Svar innen 24 timer (man-fre)",
+      "process": "Trygg prosess med godkjenning underveis"
+    },
+    "disclaimer": "Ingen forpliktelser. 30 minutters samtale for å diskutere ditt prosjekt."
+  },
+  "FAQ": {
+    "badge": "Spørsmål",
+    "title": "Ofte stilte spørsmål",
+    "items": {
+      "0": {
+        "question": "Hvordan kan dere levere på 14 dager?",
+        "answer": "Vi har en velprøvd prosess og bruker moderne teknologi som Next.js og Tailwind CSS. Dette, kombinert med et dedikert team og tett kommunikasjon med deg, gjør det mulig å levere kvalitetsnettsider på kort tid."
+      },
+      "1": {
+        "question": "Hva er inkludert i prisen?",
+        "answer": "Prisen inkluderer design, utvikling, SEO-optimalisering, hosting første året, SSL-sertifikat og opplæring i hvordan du oppdaterer innholdet. Det er ingen skjulte kostnader."
+      },
+      "2": {
+        "question": "Kan jeg få endringer etter lansering?",
+        "answer": "Ja! Alle pakker inkluderer 2 revisjonsrunder i prosjektet. Etter lansering tilbyr vi vedlikeholdsavtaler fra 999 kr/mnd som inkluderer løpende endringer og support."
+      },
+      "3": {
+        "question": "Hvordan fungerer SEO-optimaliseringen?",
+        "answer": "Vi bygger nettsiden med SEO i tankene fra start. Dette inkluderer teknisk SEO (hastighet, struktur, metadata), on-page SEO (innhold, overskrifter, bilder), og oppsett av Google Search Console og Analytics."
+      },
+      "4": {
+        "question": "Trenger jeg teknisk kunnskap for å oppdatere nettsiden?",
+        "answer": "Nei! Vi setter opp et brukervennlig CMS (innholdsstyringssystem) der du enkelt kan oppdatere tekst og bilder uten teknisk kunnskap. Vi gir deg også opplæring."
+      },
+      "5": {
+        "question": "Hva skjer hvis jeg ikke er fornøyd?",
+        "answer": "Vi tilbyr 100 % fornøydgaranti. Hvis du ikke er fornøyd med designet etter første utkast, jobber vi gratis til du er fornøyd – eller så får du pengene tilbake."
+      }
+    }
+  },
+  "Process": {
+    "badge": "Prosessen",
+    "title": "Fra idé til lansering på 14 dager",
+    "description": "En strukturert prosess som sikrer kvalitet og forutsigbarhet.",
+    "steps": {
+      "0": {
+        "title": "DISCOVERY",
+        "days": "Dag 1-2",
+        "description": "Vi kartlegger målgruppe, konkurrenter og tydelige mål",
+        "deliverable": "Strategi-PDF"
+      },
+      "1": {
+        "title": "DESIGN",
+        "days": "Dag 3-7",
+        "description": "Iterativ prosess, du godkjenner underveis",
+        "deliverable": "Figma prototype"
+      },
+      "2": {
+        "title": "BUILD",
+        "days": "Dag 8-12",
+        "description": "Next.js, SEO implementering, testing",
+        "deliverable": "Staging-link"
+      },
+      "3": {
+        "title": "LAUNCH",
+        "days": "Dag 13-14",
+        "description": "DNS setup, analytics, support dokumentasjon",
+        "deliverable": "Live nettside"
+      }
+    }
+  },
+  "TrustBar": {
+    "delivered": "350+ nettsider levert",
+    "rating": "4.9 gjennomsnittsrating",
+    "partner": "Google Partner"
+  }
+}

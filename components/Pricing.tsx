@@ -2,60 +2,63 @@
 
 import { motion } from "framer-motion";
 import { Check, Sparkles } from "lucide-react";
+import { useTranslations } from 'next-intl';
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { formatNOK } from "@/lib/utils";
-
-const tiers = [
-  {
-    name: "Starter",
-    price: 39000,
-    description: "Perfekt for små bedrifter",
-    features: [
-      "1-3 sider",
-      "Responsivt design",
-      "Basic SEO",
-      "Google Analytics",
-      "7 dagers levering",
-    ],
-    popular: false,
-  },
-  {
-    name: "Business",
-    price: 79000,
-    description: "For bedrifter som vil vokse og ha enkel booking",
-    features: [
-      "5-10 sider",
-      "Premium design",
-      "Full SEO optimalisering",
-      "Blog / nyhetsmodul",
-      "14 dagers levering",
-      "30 dagers support",
-      "2 revisjonsrunder",
-    ],
-    popular: true,
-  },
-  {
-    name: "Enterprise",
-    price: 150000,
-    description: "Skreddersydd løsning",
-    features: [
-      "Unlimited sider",
-      "Custom CMS",
-      "Avanserte funksjoner",
-      "E-commerce / booking",
-      "API integrasjoner",
-      "Dedikert utvikler",
-    ],
-    popular: false,
-  },
-];
 
 interface PricingProps {
   onBookClick?: () => void;
 }
 
 export function Pricing({ onBookClick }: PricingProps) {
+  const t = useTranslations('Pricing');
+
+  const tiers = [
+    {
+      name: t('tiers.starter.name'),
+      price: 39000,
+      description: t('tiers.starter.description'),
+      features: [
+        t('tiers.starter.features.0'),
+        t('tiers.starter.features.1'),
+        t('tiers.starter.features.2'),
+        t('tiers.starter.features.3'),
+        t('tiers.starter.features.4'),
+      ],
+      popular: false,
+    },
+    {
+      name: t('tiers.business.name'),
+      price: 79000,
+      description: t('tiers.business.description'),
+      features: [
+        t('tiers.business.features.0'),
+        t('tiers.business.features.1'),
+        t('tiers.business.features.2'),
+        t('tiers.business.features.3'),
+        t('tiers.business.features.4'),
+        t('tiers.business.features.5'),
+        t('tiers.business.features.6'),
+      ],
+      popular: true,
+    },
+    {
+      name: t('tiers.enterprise.name'),
+      price: 150000,
+      description: t('tiers.enterprise.description'),
+      features: [
+        t('tiers.enterprise.features.0'),
+        t('tiers.enterprise.features.1'),
+        t('tiers.enterprise.features.2'),
+        t('tiers.enterprise.features.3'),
+        t('tiers.enterprise.features.4'),
+        t('tiers.enterprise.features.5'),
+      ],
+      popular: false,
+    },
+  ];
+
   return (
     <section id="pricing" className="py-32 relative">
       <Container>
@@ -66,10 +69,12 @@ export function Pricing({ onBookClick }: PricingProps) {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-semibold tracking-tight mb-4">
-            Transparent <span className="text-accent">prising</span>
+            {t.rich('title', {
+              span: (chunks) => <span className="text-accent">{chunks}</span>
+            })}
           </h2>
           <p className="text-xl text-[#94A3B8]">
-            Ingen skjulte kostnader. Ingen abonnement. Bare resultater.
+            {t('subtitle')}
           </p>
         </motion.div>
 
@@ -88,7 +93,7 @@ export function Pricing({ onBookClick }: PricingProps) {
                   <div className="glass px-4 py-1 rounded-full flex items-center gap-2 shadow-glow-sm">
                     <Sparkles size={14} className="text-accent" />
                     <span className="text-sm font-semibold text-accent">
-                      MEST POPULÆR
+                      {t('popular')}
                     </span>
                   </div>
                 </div>

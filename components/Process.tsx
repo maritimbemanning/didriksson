@@ -2,45 +2,48 @@
 
 import { motion } from "framer-motion";
 import { Search, Palette, Code, Rocket } from "lucide-react";
+import { useTranslations } from 'next-intl';
 import { Container } from "@/components/ui";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 
-const steps = [
-  {
-    number: "01",
-    icon: Search,
-    title: "DISCOVERY",
-    days: "Dag 1-2",
-    description: "Vi kartlegger målgruppe, konkurrenter og tydelige mål",
-    deliverable: "Strategi-PDF",
-  },
-  {
-    number: "02",
-    icon: Palette,
-    title: "DESIGN",
-    days: "Dag 3-7",
-    description: "Iterativ prosess, du godkjenner underveis",
-    deliverable: "Figma prototype",
-  },
-  {
-    number: "03",
-    icon: Code,
-    title: "BUILD",
-    days: "Dag 8-12",
-    description: "Next.js, SEO implementering, testing",
-    deliverable: "Staging-link",
-  },
-  {
-    number: "04",
-    icon: Rocket,
-    title: "LAUNCH",
-    days: "Dag 13-14",
-    description: "DNS setup, analytics, support dokumentasjon",
-    deliverable: "Live nettside",
-  },
-];
-
 export function Process() {
+  const t = useTranslations('Process');
+
+  const steps = [
+    {
+      number: "01",
+      icon: Search,
+      title: t('steps.0.title'),
+      days: t('steps.0.days'),
+      description: t('steps.0.description'),
+      deliverable: t('steps.0.deliverable'),
+    },
+    {
+      number: "02",
+      icon: Palette,
+      title: t('steps.1.title'),
+      days: t('steps.1.days'),
+      description: t('steps.1.description'),
+      deliverable: t('steps.1.deliverable'),
+    },
+    {
+      number: "03",
+      icon: Code,
+      title: t('steps.2.title'),
+      days: t('steps.2.days'),
+      description: t('steps.2.description'),
+      deliverable: t('steps.2.deliverable'),
+    },
+    {
+      number: "04",
+      icon: Rocket,
+      title: t('steps.3.title'),
+      days: t('steps.3.days'),
+      description: t('steps.3.description'),
+      deliverable: t('steps.3.deliverable'),
+    },
+  ];
+
   return (
     <section id="process" className="py-[var(--spacing-section)] bg-[var(--color-primary)]">
       <Container>
@@ -55,19 +58,19 @@ export function Process() {
             variants={fadeInUp}
             className="inline-block text-[var(--color-accent)] text-sm font-semibold uppercase tracking-wider mb-3"
           >
-            Prosessen
+            {t('badge')}
           </motion.span>
           <motion.h2
             variants={fadeInUp}
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4"
           >
-            Fra idé til lansering på 14 dager
+            {t('title')}
           </motion.h2>
           <motion.p
             variants={fadeInUp}
             className="text-lg text-white/70 max-w-2xl mx-auto"
           >
-            En strukturert prosess som sikrer kvalitet og forutsigbarhet.
+            {t('description')}
           </motion.p>
         </motion.div>
 

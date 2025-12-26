@@ -2,20 +2,23 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar, CreditCard, Phone, CheckCircle } from "lucide-react";
+import { useTranslations } from 'next-intl';
 import { Container, Button } from "@/components/ui";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
-
-const trustIndicators = [
-  { icon: CreditCard, text: "Sikker betaling via Vipps/Stripe" },
-  { icon: Phone, text: "Svar innen 24 timer (man-fre)" },
-  { icon: CheckCircle, text: "Trygg prosess med godkjenning underveis" },
-];
 
 interface CTASectionProps {
   onBookClick?: () => void;
 }
 
 export function CTASection({ onBookClick }: CTASectionProps) {
+  const t = useTranslations('CTASection');
+
+  const trustIndicators = [
+    { icon: CreditCard, text: t('trust.payment') },
+    { icon: Phone, text: t('trust.response') },
+    { icon: CheckCircle, text: t('trust.process') },
+  ];
+
   return (
     <section
       id="contact"
@@ -42,7 +45,7 @@ export function CTASection({ onBookClick }: CTASectionProps) {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--color-accent)] opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[var(--color-accent)]"></span>
               </span>
-              Ledige plasser denne måneden
+              {t('badge')}
             </span>
           </motion.div>
 
@@ -50,17 +53,17 @@ export function CTASection({ onBookClick }: CTASectionProps) {
             variants={fadeInUp}
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"
           >
-            Klar for en nettside som
-            <br />
-            <span className="text-[var(--color-accent)]">faktisk selger?</span>
+            {t.rich('title', {
+              span: (chunks) => <span className="text-[var(--color-accent)]">{chunks}</span>,
+              br: () => <br />
+            })}
           </motion.h2>
 
           <motion.p
             variants={fadeInUp}
             className="text-lg md:text-xl text-white/80 mb-8"
           >
-            Book et uforpliktende strategimøte og la oss diskutere hvordan
-            vi kan hjelpe bedriften din med å vokse digitalt.
+            {t('description')}
           </motion.p>
 
           <motion.div
@@ -69,7 +72,7 @@ export function CTASection({ onBookClick }: CTASectionProps) {
           >
             <Button size="lg" onClick={onBookClick} className="gap-2">
               <Calendar size={20} />
-              <span>Book gratis 30-min strategisamtale</span>
+              <span>{t('button')}</span>
               <ArrowRight size={20} />
             </Button>
           </motion.div>
@@ -94,7 +97,7 @@ export function CTASection({ onBookClick }: CTASectionProps) {
             variants={fadeInUp}
             className="mt-8 text-white/40 text-sm"
           >
-            Ingen forpliktelser. 30 minutters samtale for å diskutere ditt prosjekt.
+            {t('disclaimer')}
           </motion.p>
         </motion.div>
       </Container>

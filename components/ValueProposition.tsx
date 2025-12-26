@@ -2,48 +2,51 @@
 
 import { motion } from "framer-motion";
 import { Zap, Sparkles, TrendingUp, Shield, Code, Rocket } from "lucide-react";
+import { useTranslations } from 'next-intl';
 import { Container } from "@/components/ui/Container";
 
-const values = [
-  {
-    icon: Zap,
-    title: "Lynrask levering",
-    description: "Fra første møte til ferdig nettside på 14 dager",
-    color: "text-yellow-400",
-  },
-  {
-    icon: Sparkles,
-    title: "Premium design",
-    description: "Design som bygger tillit og konverterer besøkende",
-    color: "text-accent",
-  },
-  {
-    icon: TrendingUp,
-    title: "Målbare resultater",
-    description: "Tydelige KPI-rapporter med Google Analytics og Search Console",
-    color: "text-green-400",
-  },
-  {
-    icon: Shield,
-    title: "Trygg prosess",
-    description: "Du godkjenner design og innhold underveis",
-    color: "text-amber-300",
-  },
-  {
-    icon: Code,
-    title: "Next.js & TypeScript",
-    description: "Moderne tech stack for hastighet og SEO",
-    color: "text-blue-400",
-  },
-  {
-    icon: Rocket,
-    title: "SEO-fokusert",
-    description: "Teknisk SEO, semantisk HTML og strukturerte data fra start",
-    color: "text-red-400",
-  },
-];
-
 export function ValueProposition() {
+  const t = useTranslations('ValueProposition');
+
+  const values = [
+    {
+      icon: Zap,
+      title: t('values.speed.title'),
+      description: t('values.speed.description'),
+      color: "text-yellow-400",
+    },
+    {
+      icon: Sparkles,
+      title: t('values.design.title'),
+      description: t('values.design.description'),
+      color: "text-accent",
+    },
+    {
+      icon: TrendingUp,
+      title: t('values.results.title'),
+      description: t('values.results.description'),
+      color: "text-green-400",
+    },
+    {
+      icon: Shield,
+      title: t('values.process.title'),
+      description: t('values.process.description'),
+      color: "text-amber-300",
+    },
+    {
+      icon: Code,
+      title: t('values.tech.title'),
+      description: t('values.tech.description'),
+      color: "text-blue-400",
+    },
+    {
+      icon: Rocket,
+      title: t('values.seo.title'),
+      description: t('values.seo.description'),
+      color: "text-red-400",
+    },
+  ];
+
   return (
     <section id="services" className="py-32 relative">
       <Container>
@@ -54,7 +57,9 @@ export function ValueProposition() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-semibold tracking-tight mb-4">
-            Hvorfor <span className="text-accent">Didriksson?</span>
+            {t.rich('title', {
+              span: (chunks) => <span className="text-accent">{chunks}</span>
+            })}
           </h2>
         </motion.div>
 

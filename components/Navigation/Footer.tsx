@@ -1,7 +1,12 @@
+"use client";
+
 import { Mail, Phone, Linkedin, Instagram } from "lucide-react";
 import { Container } from "@/components/ui/Container";
+import { useTranslations } from 'next-intl';
 
 export function Footer() {
+  const t = useTranslations('Footer');
+
   return (
     <footer className="border-t border-white/10 py-16">
       <Container>
@@ -11,14 +16,14 @@ export function Footer() {
               <span className="text-accent">Didriksson Digital</span>
             </h3>
             <p className="text-text-secondary mb-6">
-              Nettsider som føles raske, ryddige og enkle å bruke
-              <br />
-              Bygget for flere gode henvendelser – ikke tomme løfter.
+              {t.rich('description', {
+                br: () => <br />
+              })}
             </p>
           </div>
 
           <div>
-            <h4 className="font-bold mb-4 text-white">Kontakt</h4>
+            <h4 className="font-bold mb-4 text-white">{t('contact')}</h4>
             <div className="space-y-3 text-text-secondary">
               <a
                 href="mailto:isak@didriksson.no"
@@ -40,7 +45,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-bold mb-4 text-white">Følg oss</h4>
+            <h4 className="font-bold mb-4 text-white">{t('follow')}</h4>
             <div className="flex gap-4">
               <a
                 href="https://www.linkedin.com/in/isak-didriksson-855210362/"

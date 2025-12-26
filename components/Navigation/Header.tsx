@@ -4,23 +4,48 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { useLocale, useTranslations } from "next-intl";
+import { usePathname, useRouter } from "@/i18n/routing";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { scrollToSection } from "@/lib/utils";
-
-const navLinks = [
-  { href: "portfolio", label: "Caser" },
-  { href: "services", label: "Tjenester" },
-  { href: "pricing", label: "Priser" },
-];
 
 interface HeaderProps {
   onBookClick?: () => void;
 }
 
 export function Header({ onBookClick }: HeaderProps) {
+  const t = useTranslations('Navigation');
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const navLinks = [
+    { href: "portfolio", label: t('portfolio'), type: 'section' },
+    { href: "services", label: t('services'), type: 'section' },
+    { href: "pricing", label: t('pricing'), type: 'section' },
+    { href: "/blog", label: t('blog'), type: 'page' },
+  ];
+
+  const handleNavClick = (link: { href: string; type: string }) => {
+    if (link.type === 'page') {
+      router.push(link.href);
+      setIsMobileMenuOpen(false);
+    } else {
+      if (pathname === '/') {
+        scrollToSection(link.href);
+      } else {
+        router.push(`/#${link.href}`);
+      }
+      setIsMobileMenuOpen(false);
+    }
+  };
+
+  const switchLocale = (newLocale: string) => {
+    router.replace(pathname, { locale: newLocale });
+  };
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -57,21 +82,42 @@ export function Header({ onBookClick }: HeaderProps) {
             {navLinks.map((link) => (
               <button
                 key={link.href}
-                onClick={() => scrollToSection(link.href)}
+                onClick={() => handleNavClick(link)}
                 className="text-text-secondary hover:text-accent transition-colors font-medium"
               >
                 {link.label}
               </button>
             ))}
             <Button size="sm" onClick={onBookClick}>
-              Book konsultasjon
+              {t('book_meeting')}
             </Button>
+            
+            <div className="flex items-center gap-2 ml-2 border-l border-white/10 pl-4">
+              <button 
+                onClick={() => switchLocale('no')} 
+                className={`text-sm font-medium transition-colors ${locale === 'no' ? 'text-(--color-accent)' : 'text-(--color-text-secondary) hover:text-white'}`}
+              >
+                NO
+              </button>
+              <span className="text-(--color-text-secondary)">/</span>
+              <button 
+                onClick={() => switchLocale('en')} 
+                className={`text-sm font-medium transition-colors ${locale === 'en' ? 'text-(--color-accent)' : 'text-(--color-text-secondary) hover:text-white'}`}
+              >
+                EN
+              </button>
+            </div>
           </nav>
 
             <button
-              className="md:hidden text-text-primary"
+              className="md:hidden text-text-primary flex items-center gap-4"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
+            <div className="flex items-center gap-2 text-sm font-medium">
+               <span className={locale === 'no' ? 'text-(--color-accent)' : 'text-(--color-text-secondary)'} onClick={(e) => { e.stopPropagation(); switchLocale('no'); }}>NO</span>
+               <span className="text-(--color-text-secondary)">/</span>
+               <span className={locale === 'en' ? 'text-(--color-accent)' : 'text-(--color-text-secondary)'} onClick={(e) => { e.stopPropagation(); switchLocale('en'); }}>EN</span>
+            </div>
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -87,10 +133,7 @@ export function Header({ onBookClick }: HeaderProps) {
               {navLinks.map((link) => (
                 <button
                   key={link.href}
-                  onClick={() => {
-                    scrollToSection(link.href);
-                    setIsMobileMenuOpen(false);
-                  }}
+                  onClick={() => handleNavClick(link)}
                   className="block w-full text-left py-3 text-text-secondary hover:text-(--color-accent)"
                 >
                   {link.label}

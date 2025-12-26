@@ -1,0 +1,260 @@
+{
+  "Metadata": {
+    "title": "Didriksson Digital | Websites that convert",
+    "description": "Tailor-made websites for businesses that want results. We build fast, Google-friendly solutions that turn visitors into customers. See our references.",
+    "keywords": "new website business, custom website, fast website, seo optimization, next.js developer, websites oslo, web development norway",
+    "og_title": "Didriksson Digital - Websites that feel fast and tidy"
+  },
+  "Hero": {
+    "badge": "7/10 spots available in December",
+    "title": "A website you're proud of – and your customers love.",
+    "description": "Are you embarrassed to send customers to your website? We build modern, lightning-fast solutions that build trust, rank high in Google, and convert visitors into sales.",
+    "founder": "Isak Didriksson – founder. Building websites that are fast, visible in Google, and easy to use.",
+    "cta_book": "Book free consultation",
+    "cta_cases": "View our cases",
+    "stats": {
+      "based_in_norway": "Based in Norway",
+      "fast_contact": "Dedicated contact",
+      "response_time": "24h response time"
+    }
+  },
+  "Navigation": {
+    "services": "Services",
+    "portfolio": "Cases",
+    "pricing": "Pricing",
+    "blog": "Blog",
+    "book_meeting": "Book consultation"
+  },
+  "Blog": {
+    "title": "Blog & Insights",
+    "subtitle": "Tips and tricks for digital success.",
+    "read_more": "Read article",
+    "back": "Back to overview",
+    "published": "Published",
+    "read_time": "read"
+  },
+  "ValueProposition": {
+    "title": "Why <span>Didriksson?</span>",
+    "values": {
+      "speed": {
+        "title": "Lightning fast delivery",
+        "description": "From first meeting to finished website in 14 days"
+      },
+      "design": {
+        "title": "Premium design",
+        "description": "Design that builds trust and converts visitors"
+      },
+      "results": {
+        "title": "Measurable results",
+        "description": "Clear KPI reports with Google Analytics and Search Console"
+      },
+      "process": {
+        "title": "Safe process",
+        "description": "You are involved all the way. No surprises, just results."
+      },
+      "tech": {
+        "title": "Technology that lasts",
+        "description": "We build on modern platforms that are easy to maintain."
+      },
+      "seo": {
+        "title": "Visible in Google",
+        "description": "Technically optimized so customers actually find you."
+      }
+    }
+  },
+  "BentoGrid": {
+    "title": "We let the results <span>speak for themselves</span>",
+    "subtitle": "No guesswork, just measurable improvements. Here are some of the companies we have helped increase sales and professionalize their digital presence.",
+    "cases": {
+      "bluecrew": {
+        "title": "Bluecrew",
+        "metric": "Launched 2025",
+        "label": "Maritime Staffing",
+        "description": "Norway's most modern staffing agency for the maritime sector. Connecting qualified seafarers with leading shipping companies.",
+        "result_label": "Result"
+      },
+      "case2": {
+        "title": "Optima",
+        "metric": "+127% conversions",
+        "label": "Digital Marketing",
+        "description": "Data-driven marketing that delivers results. From invisible to dominating search results.",
+        "result_label": "Result"
+      },
+      "eiendomsmegler": {
+        "title": "Real Estate Agent 1",
+        "metric": "Faster site",
+        "label": "Load time down from 4s to 0.8s",
+        "result_label": "Result"
+      },
+      "cta": {
+        "title": "Your Company Here?",
+        "metric": "Next success",
+        "label": "We have room for one more project this year",
+        "button": "Book a meeting"
+      }
+    }
+  },
+  "Testimonials": {
+    "label": "Customer Stories",
+    "title": "What customers say",
+    "items": {
+      "1": {
+        "quote": "Before: 2,000 NOK/month from the website. After: 45,000 NOK/month in 3 months. Didriksson Digital understood our target audience from day 1.",
+        "role": "CEO"
+      },
+      "2": {
+        "quote": "97/100 on PageSpeed. Customers comment on how fast the website is. Best investment we've made.",
+        "role": "General Manager"
+      },
+      "3": {
+        "quote": "From contact to launch: 14 days. The process was smooth, and the result exceeded expectations.",
+        "role": "Founder"
+      }
+    }
+  },
+  "Founder": {
+    "label": "About the founder",
+    "title": "Technical founder who builds himself – not an anonymous agency",
+    "p1": "My name is <span>Isak Didriksson</span> and I have a fullstack background with Next.js, TypeScript and modern cloud platforms. Instead of delegating everything to juniors in an agency, I am personally involved in architecture, code and conversion strategy on every single page.",
+    "p2": "My goal is simple: that medium-sized companies like yours should avoid slow, confusing WordPress solutions and agency dependency. You get a tailor-made, technically solid site that is easy to own yourself – with a focus on speed, SEO and measurable results.",
+    "p3": "Every delivery includes clear metrics, PageSpeed reports and insight into what actually drives traffic and leads. This way you see in black and white that the investment pays off.",
+    "list": {
+      "1": "10+ years of experience with web development and product",
+      "2": "Expertise in performance, SEO and conversion",
+      "3": "Works directly with founders and general managers",
+      "4": "One responsible person – not five different contact points"
+    },
+    "image_caption": {
+      "name": "Isak Didriksson",
+      "role": "Founder · Fullstack Developer"
+    }
+  },
+  "Pricing": {
+    "title": "Transparent <span>pricing</span>",
+    "subtitle": "No hidden costs. No subscriptions. Just results.",
+    "popular": "MOST POPULAR",
+    "tiers": {
+      "starter": {
+        "name": "Starter",
+        "description": "Perfect for small businesses",
+        "features": [
+          "1-3 pages",
+          "Responsive design",
+          "Basic SEO",
+          "Google Analytics",
+          "7 days delivery"
+        ]
+      },
+      "business": {
+        "name": "Business",
+        "description": "For companies that want to grow and have easy booking",
+        "features": [
+          "5-10 pages",
+          "Premium design",
+          "Full SEO optimization",
+          "Blog / news module",
+          "14 days delivery",
+          "30 days support",
+          "2 revision rounds"
+        ]
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "Tailor-made solution",
+        "features": [
+          "Unlimited pages",
+          "Custom CMS",
+          "Advanced features",
+          "E-commerce / booking",
+          "API integrations",
+          "Dedicated developer"
+        ]
+      }
+    },
+    "cta": "Choose package"
+  },
+  "Footer": {
+    "description": "Websites that feel fast, tidy and easy to use. Built for more good inquiries – not empty promises.",
+    "contact": "Contact",
+    "follow": "Follow us",
+    "privacy": "Privacy Policy"
+  },
+  "CTASection": {
+    "badge": "Limited spots this month",
+    "title": "Ready for a website that <span class='text-accent'>actually sells?</span>",
+    "description": "Book a no-obligation strategy meeting and let's discuss how we can help your business grow digitally.",
+    "button": "Book free 30-min strategy call",
+    "trust": {
+      "payment": "Secure payment via Vipps/Stripe",
+      "response": "Response within 24 hours (Mon-Fri)",
+      "process": "Safe process with approval along the way"
+    },
+    "disclaimer": "No obligations. 30 minute call to discuss your project."
+  },
+  "FAQ": {
+    "badge": "Questions",
+    "title": "Frequently Asked Questions",
+    "items": {
+      "0": {
+        "question": "How can you deliver in 14 days?",
+        "answer": "We have a proven process and use modern technology like Next.js and Tailwind CSS. This, combined with a dedicated team and close communication with you, makes it possible to deliver quality websites in a short time."
+      },
+      "1": {
+        "question": "What is included in the price?",
+        "answer": "The price includes design, development, SEO optimization, hosting for the first year, SSL certificate, and training on how to update the content. There are no hidden costs."
+      },
+      "2": {
+        "question": "Can I get changes after launch?",
+        "answer": "Yes! All packages include 2 rounds of revisions in the project. After launch, we offer maintenance agreements starting at 999 NOK/month which include ongoing changes and support."
+      },
+      "3": {
+        "question": "How does SEO optimization work?",
+        "answer": "We build the website with SEO in mind from the start. This includes technical SEO (speed, structure, metadata), on-page SEO (content, headings, images), and setup of Google Search Console and Analytics."
+      },
+      "4": {
+        "question": "Do I need technical knowledge to update the website?",
+        "answer": "No! We set up a user-friendly CMS (content management system) where you can easily update text and images without technical knowledge. We also provide training."
+      },
+      "5": {
+        "question": "What happens if I am not satisfied?",
+        "answer": "We offer a 100% satisfaction guarantee. If you are not satisfied with the design after the first draft, we work for free until you are satisfied – or you get your money back."
+      }
+    }
+  },
+  "Process": {
+    "badge": "The Process",
+    "title": "From idea to launch in 14 days",
+    "description": "A structured process that ensures quality and predictability.",
+    "steps": {
+      "0": {
+        "title": "DISCOVERY",
+        "days": "Day 1-2",
+        "description": "We map out target audience, competitors, and clear goals",
+        "deliverable": "Strategy PDF"
+      },
+      "1": {
+        "title": "DESIGN",
+        "days": "Day 3-7",
+        "description": "Iterative process, you approve along the way",
+        "deliverable": "Figma prototype"
+      },
+      "2": {
+        "title": "BUILD",
+        "days": "Day 8-12",
+        "description": "Next.js, SEO implementation, testing",
+        "deliverable": "Staging link"
+      },
+      "3": {
+        "title": "LAUNCH",
+        "days": "Day 13-14",
+        "description": "DNS setup, analytics, support documentation",
+        "deliverable": "Live website"
+      }
+    }
+  },
+  "TrustBar": {
+    "delivered": "350+ websites delivered",
+    "rating": "4.9 average rating",
+    "partner": "Google Partner"
+  }
+}
