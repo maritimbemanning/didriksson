@@ -31,7 +31,7 @@ export function Founder() {
             </h2>
             <p className="text-[var(--color-text-secondary)] text-lg mb-4">
               {t.rich('p1', {
-                span: (chunks) => <span className="text-[var(--color-primary)] font-semibold">{chunks}</span>
+                span: (chunks) => <span className="text-[var(--color-accent)] font-semibold">{chunks}</span>
               })}
             </p>
             <p className="text-[var(--color-text-secondary)] mb-4">
