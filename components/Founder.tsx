@@ -66,7 +66,7 @@ export function Founder() {
           >
             <div className="relative w-56 h-72 md:w-64 md:h-80 rounded-3xl overflow-hidden glass shadow-glow-md">
               <Image
-                src="/isak.png"
+                src="/images/testimonials/Isak.jpeg"
                 alt="Isak Didriksson, grunnlegger av Didriksson Digital"
                 fill
                 className="object-cover object-center grayscale"
