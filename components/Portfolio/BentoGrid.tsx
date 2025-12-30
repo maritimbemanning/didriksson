@@ -31,7 +31,7 @@ export function BentoGrid() {
       description: t('cases.case2.description'),
       color: "from-blue-500/20 to-indigo-600/20",
       span: "md:col-span-1 md:row-span-2",
-      href: "https://optima.is",
+      href: "https://optima-steel.vercel.app/en",
       result_label: t('cases.case2.result_label'),
       image: "/images/portfolio/optima.jpg"
     },
