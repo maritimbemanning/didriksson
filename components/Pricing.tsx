@@ -114,7 +114,7 @@ export function Pricing({ onBookClick }: PricingProps) {
                   </p>
                   <div className="text-4xl font-semibold text-accent">
                     {tier.name === "Enterprise"
-                      ? "På forespørsel"
+                      ? "Ta kontakt"
                       : formatNOK(tier.price)}
                   </div>
                 </div>
