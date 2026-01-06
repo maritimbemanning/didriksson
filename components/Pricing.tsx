@@ -17,7 +17,7 @@ export function Pricing({ onBookClick }: PricingProps) {
   const tiers = [
     {
       name: t('tiers.starter.name'),
-      price: 39000,
+      price: 19500,
       description: t('tiers.starter.description'),
       features: [
         t('tiers.starter.features.0'),
@@ -30,7 +30,7 @@ export function Pricing({ onBookClick }: PricingProps) {
     },
     {
       name: t('tiers.business.name'),
-      price: 79000,
+      price: 39500,
       description: t('tiers.business.description'),
       features: [
         t('tiers.business.features.0'),
@@ -45,7 +45,7 @@ export function Pricing({ onBookClick }: PricingProps) {
     },
     {
       name: t('tiers.enterprise.name'),
-      price: 150000,
+      price: 75000,
       description: t('tiers.enterprise.description'),
       features: [
         t('tiers.enterprise.features.0'),
