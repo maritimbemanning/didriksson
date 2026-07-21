@@ -3,6 +3,7 @@ import { Inter, EB_Garamond } from "next/font/google";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import { getLocalizedAlternates, getLocalizedUrl, isSupportedLocale } from '@/lib/seo';
 import "../globals.css";
 
 const inter = Inter({
@@ -46,7 +47,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     openGraph: {
       type: "website",
       locale: locale === 'no' ? 'nb_NO' : 'en_US',
-      url: "https://didriksson.no",
+      url: getLocalizedUrl(locale),
       title: t('og_title'),
       description: t('description'),
       siteName: "Didriksson Digital",
@@ -65,9 +66,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       description: t('description'),
       images: ["/og-image.png"],
     },
-    alternates: {
-      canonical: "https://didriksson.no",
-    },
+    alternates: getLocalizedAlternates(locale),
     robots: {
       index: true,
       follow: true,
@@ -160,7 +159,7 @@ export default async function RootLayout({
   const { locale } = await params;
 
   // Ensure that the incoming `locale` is valid
-  if (!['en', 'no'].includes(locale)) {
+  if (!isSupportedLocale(locale)) {
     notFound();
   }
 

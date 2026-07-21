@@ -5,12 +5,12 @@ import { getBlogPost, getBlogPosts } from "@/lib/blog-data";
 import { ArrowLeft, Clock, Calendar, Share2 } from "lucide-react";
 import { Header, Footer } from "@/components/Navigation";
 import { notFound } from 'next/navigation';
+import { getLocalizedUrl, SUPPORTED_LOCALES } from '@/lib/seo';
 
 export async function generateStaticParams() {
-  const locales = ['no', 'en'];
   const params = [];
 
-  for (const locale of locales) {
+  for (const locale of SUPPORTED_LOCALES) {
     const posts = getBlogPosts(locale);
     for (const post of posts) {
       params.push({ locale, slug: post.slug });
@@ -26,9 +26,19 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
   if (!post) return {};
 
+  const pathname = `/blog/${slug}`;
+
   return {
     title: post.title,
     description: post.excerpt,
+    alternates: {
+      canonical: getLocalizedUrl(locale, pathname),
+    },
+    openGraph: {
+      url: getLocalizedUrl(locale, pathname),
+      title: post.title,
+      description: post.excerpt,
+    },
   };
 }
 

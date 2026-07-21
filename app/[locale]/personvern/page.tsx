@@ -1,12 +1,24 @@
-import { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { Header } from "@/components/Navigation/Header";
 import { Footer } from "@/components/Navigation/Footer";
+import { getLocalizedAlternates, getLocalizedUrl } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Personvernerklæring",
-  description: "Personvernerklæring for Didriksson Digital – hvordan vi håndterer dine personopplysninger.",
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const title = "Personvernerklæring";
+  const description = "Personvernerklæring for Didriksson Digital – hvordan vi håndterer dine personopplysninger.";
+
+  return {
+    title,
+    description,
+    alternates: getLocalizedAlternates(locale, '/personvern'),
+    openGraph: {
+      url: getLocalizedUrl(locale, '/personvern'),
+      title,
+      description,
+    },
+  };
+}
 
 export default function PersonvernPage() {
   return (
