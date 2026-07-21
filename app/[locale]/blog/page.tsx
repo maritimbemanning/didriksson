@@ -4,6 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { getBlogPosts } from "@/lib/blog-data";
 import { ArrowRight, Clock, Calendar } from "lucide-react";
 import { Header, Footer } from "@/components/Navigation";
+import { getLocalizedAlternates, getLocalizedUrl } from "@/lib/seo";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -12,6 +13,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: t('title'),
     description: t('subtitle'),
+    alternates: getLocalizedAlternates(locale, '/blog'),
+    openGraph: {
+      url: getLocalizedUrl(locale, '/blog'),
+      title: t('title'),
+      description: t('subtitle'),
+    },
   };
 }
 

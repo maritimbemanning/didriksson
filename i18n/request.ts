@@ -1,13 +1,12 @@
 import {getRequestConfig} from 'next-intl/server';
+import {DEFAULT_LOCALE, isSupportedLocale} from '@/lib/seo';
  
 export default getRequestConfig(async ({requestLocale}) => {
   // This typically corresponds to the `[locale]` segment
-  let locale = await requestLocale;
- 
-  // Ensure that a valid locale is used
-  if (!locale || !['en', 'no'].includes(locale)) {
-    locale = 'no';
-  }
+  const requestedLocale = await requestLocale;
+  const locale = requestedLocale && isSupportedLocale(requestedLocale)
+    ? requestedLocale
+    : DEFAULT_LOCALE;
  
   return {
     locale,
